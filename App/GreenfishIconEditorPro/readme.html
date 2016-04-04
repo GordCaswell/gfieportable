@@ -46,23 +46,36 @@ a:hover {
 </head><body bgcolor=#f8f8f8>
 <span class="n">
 
-Greenfish Icon Editor Pro is open source. It is released under the <a href="license.txt">GNU General Public License version 3</a>. By using the software, you accept the terms of the license. Source code is in <a href="src.7z">this</a> archive.<br/>
-Some portions of Greenfish Icon Editor Pro come with their own license: <a href="Help/license/libpng.txt">libpng</a>, <a href="Help/license/openjpeg.txt">openjpeg</a>, <a href="Help/license/zlib.txt">zlib</a>. In addition, the UI controls are licensed under the zlib license (see <em>src.7z/Components</em>).<br/>
+Greenfish Icon Editor Pro is open source. It is released under the <a href="license.txt">GNU General Public License version 3</a>. By using the software, you accept the terms of the license.<br/>
+
+Greenfish Icon Editor Pro uses an altered version of RemObjects PascalScript as a scripting engine (see its license <a href="Help/license/pascalscript.txt">here</a>). The original RemObjects PascalScript can be found <a href='https://github.com/remobjects/pascalscript'>here</a>.<br/>
+
+Some portions of Greenfish Icon Editor Pro come with their own license:
+<a href="Help/license/libpng.txt">libpng</a>, 
+<a href="Help/license/openjpeg.txt">openjpeg</a>, 
+<a href="Help/license/pascalscript.txt">RemObjects PascalScript</a>, 
+<a href="Help/license/zlib.txt">zlib</a>. 
+
+In addition, some parts are also licensed under the zlib license (see <em>src.7z/Components</em>).<br/>
+
+Greenfish Image Converter is a separate program which is bundled with GFIE and is licensed under the <a href="Help/license/zlib.txt">zlib</a> license. This program is needed for processing TIFF and SVG files. This program needs <a href='http://go.microsoft.com/fwlink/?LinkId=124150'>.NET Framework 3.5</a> and includes the <a href='https://svg.codeplex.com/'>SVG Rendering Library</a> which is licensed under the <a href='Help/license/mspl.txt'>Microsoft Public License</a>.<p>
+
+<b>Source code can be found in <a href="src.7z">this</a> archive.</b><br/>
 
 <a href="http://greenfishsoftware.blogspot.com/">Greenfish Homepage</a><p>
-<span class="d">Please help Greenfish Corporation by <a href="http://greenfishsoftware.blogspot.com/2012/07/donate.html">donating</a>.</span><p>
 
 <span class="t">Greenfish Icon Editor Pro</span><p>
 
 <div class="info">
 
-Version: <b>3.31</b><br>
+Version: <b>3.4</b><br>
 Open source software for editing icons, cursors and other pixelgraphic images.<p>
 
-<b>Copyright &copy; 2007-2013 Bal&aacute;zs Szalkai</b><br>
+<b>Copyright &copy; 2007-2016 Bal&aacute;zs Szalkai</b><br>
 <b>Tested by:</b> Claude Charries, Paul Vansumsen, XnTriq<p>
 
 <b>Translated by:</b>
+Aryo Adhi Wibisono,
 Anonimac,
 Wojciech Berkowski,
 François Cerveau,
@@ -99,7 +112,7 @@ Xinleibird
 You can <b>send translations</b> <a href="http://greenfishsoftware.blogspot.com/2013/07/help-by-translating.html">here</a>.<br>
 Check for <b>new releases</b> at <a href="http://greenfishsoftware.blogspot.com/2012/07/greenfish-icon-editor-pro.html">this</a> page.<p>
 
-Developed with help of <a href="http://www.lazarus.freepascal.org/" target="_blank">the Lazarus IDE</a>. This software uses libpng, zlib and openjpeg.<br>
+Developed with help of <a href="http://www.lazarus.freepascal.org/" target="_blank">the Lazarus IDE</a>.<br/>
 </div><p>
 
 <span class="h">Uninstalling GFIE properly:</span><p>
@@ -116,6 +129,18 @@ If you unpacked a <b>portable version</b> of GFIE, you have to:<p>
 <span class="h">Version history (What's new?)</span><p>
 
 <ul>
+
+<li>3.4<p><ul>
+	<li>New: Create Android drawable, test 9-patch button</li>
+	<li>New: Import SVG</li>
+	<li>New: Load/Save TIFF (no layers yet)</li>
+	<li>New: Set DPI of document and pages</li>
+	<li>New: Test image as 3D texture</li>
+	<li>New: Pascal-based scripting</li>
+	<li>Faster, more responsive drawing</li>
+	<li>Faster GIF load/save</li>
+	<li>Fixed numerous bugs</li>
+</ul></p></li>
 
 <li>3.31<p><ul>
 	<li>Reintroduced Win32 support.</li>

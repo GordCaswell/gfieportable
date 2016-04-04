@@ -1,0 +1,511 @@
+; Greenfish Icon Editor Pro
+; Language pack: Bulgarian
+; Created by: за v.3.31  tomob ttomob@gmail.com
+
+; General dictionary
+LABEL_WIDTH=Широчина
+LABEL_HEIGHT=Височина
+LABEL_SIZE=Размер
+LABEL_COLOR=Цвят
+LABEL_KIND=Вид
+LABEL_ANTIALIAS=Заглаждане
+LABEL_POSITION=Позиция
+LABEL_FILE_SIZE=Размер на файла
+UNTITLED=Неозаглавен
+
+; Buttons
+B_OK=OK
+B_CANCEL=Отказ
+B_YES=Да
+B_NO=Не
+B_RESET=Нулиране
+B_ADD=Добавяне
+B_REMOVE=Премахване
+B_CLEAR=Изчистване
+B_CLOSE=Изход
+B_ALL=Всичко
+B_NONE=Никакви
+B_PRINT=Печат
+B_PRINTER_SETUP=Принтер
+B_PREVIEW=Преглед
+B_COMPILE=Компилиране
+
+; Shown messages
+MSG_CONFIRMATION=Потвърждение
+MSG_NOT_EXIST="%s" не съществува
+MSG_OVERWRITE=Искате ли да презапишете "%s"?
+MSG_UNKNOWN_FILE_TYPE=Файловият формат на "%s" не може да се определи автоматично.<br>Този файл не може да бъде зареден/запаметен от Greenfish Icon Editor Pro защото има грешно разширение.
+MSG_INVALID_FILE_FORMAT=Файла "%s" не отговаря на формата "%s".<br>Файлът може да е повреден, да има грешно разширение или в диалоговия прозорец Отваряне да е посочен неправилен филтър.
+MSG_CROPPED=Изображението е по-голямо от%dx%d и бе изрязано.<br>Записът на изображението ще доведе до загуба на данни.<br>Използвайте Настройки|Предпочитания за промяна разрешения размер на изображението.
+MSG_SAVE_CHANGES=Искате ли да запазите промените в "%s"?
+MSG_CONFIRM_REVERT=Всички промени на "%s" ще бъдат загубени и тази операция не може да бъде отменена.<br>Сигурни ли сте, че искате да продължите?
+MSG_CONFIRM_REMOVE=Наистина ли искате да премахнете избрания(те) елемент(и)?
+MSG_CONFIRM_DESTROY_EXE=Иконите/курсорите не могат лесно да бъдат заменени в този изпълним файл или библиотека с икони.<br><br>Ако тази програма или библиотека има друга цел, а не само съхраняване на икони другите възможности ще бъдат унищожени по време на запис.<br>Ако този файл е само библиотека за икони най-вероятно нищо лошо няма да се случи.<br><br> Продължаване?
+MSG_DATA_LOSS_INFO=За да избегнете загуба на данни, трябва да запишете документа и в друг файлов формат.
+MSG_DL_MULTIPAGE=Този файлов формат не поддържа много изображения съхранени в един файл.<br>Само на първия адър може да бъде запаметен.
+MSG_DL_LAYERS=Този файлов формат не поддържа запаметяване на информация за слоеве.<br>Изображението бе записано в един слой.
+MSG_DL_SIZE_256=Този файлов формат не поддържа запазване на изображения по-големи от 256x256.<br>Изображенията са изрязани до този размер.
+MSG_DL_TRANSPARENCY=Този файлов формат не поддържа прозрачност.
+MSG_DL_COLOR_DEPTH=Част от информацията за цвят не е запаметена.
+MSG_DL_ICNS=Някои страници не могат да бъдат запаметени, поради ограниченията на формата ICNS.<br>За повече подробности вижте в раздела помощ за файлови формати.
+MSG_FT_NO_OPTIONS=Избраният файлов формат не може да се персонализира
+MSG_ADD_FILES=Моля добавете файлове към списъка
+MSG_SELECT_PAGES=Моля, изберете някои изображения
+MSG_SELECT_ITEMS=Моля, изберете някои елементи
+MSG_NO_LAYERS=Не са налични слоеве
+MSG_NO_LAYERS_SELECTED=Не са селектирани слоеве
+MSG_RES_EXIST=Вече съществува ресурс с определения тип, име или език.<br>Моля, изберете друго име или език.
+MSG_ERROR_WRITE_RES=Възникна грешка, докато се опитвате да запишете промени в посочените ресурси.
+MSG_PAGE_SIZE_0=Грешка: широчината на страницата не може да бъде 0 мм.<br>Изберете друг формат на хартията.
+MSG_ERROR_ASSOC=Асоциациите на файловете не могат да бъдат определени.<br>Ако работите с GFIE в администраторски режим може да разрешите проблема.
+MSG_FAIL_SINGLE_OPEN=Неуспех при зареждане на избрания файл.
+MSG_FAIL_MULTIPLE_OPEN=Някои файлове не могат да бъдат отворени.
+
+; Open/Save dialog filters
+FF_ALL=Всички файлове
+FF_GFIE=Изходен формат на GFIE Pro
+FF_ICO=Икони
+FF_CUR=Курсори
+FF_ANI=Анимирани курсори
+FF_ICNS=Apple Icon Image Format
+FF_PNG=Преносими мрежови графики
+FF_XPM=X-Pixmaps
+FF_BMP=Windows Bitmaps
+FF_JPEG=Joint Photographic Experts Group
+FF_GIF=Graphics Interchange Format
+FF_JPEG_2000=JPEG 2000
+FF_PCX=Personal Computer eXchange
+FF_EXEC=Всички изпълними и библиотеки с икони
+FF_ICL=Библиотеки с икони
+FF_RES=Win32 ресурсни файлове
+
+; Tool names
+TOOL_SEL_RECT=Правоъгълен избор
+TOOL_SEL_ELLIPSE=Елипсовиден избор
+TOOL_LASSO=Ласо
+TOOL_WAND=Вълшебна пръчка
+TOOL_SEL_PENCIL=Избор с молив
+TOOL_TRANSFORM=Трансформация
+TOOL_CROP=Изрязване
+TOOL_HOTSPOT=Гореща точка
+TOOL_EYEDROPPER=Пипетка
+TOOL_RETOUCH=Ретуш
+TOOL_RECT=Правоъгълник
+TOOL_ELLIPSE=Елипса
+TOOL_LINE=Линия
+TOOL_TEXT=Текст
+TOOL_PENCIL=Молив
+TOOL_BRUSH=Четка
+TOOL_ERASER=Гумичка
+TOOL_RECOLOR=Преоцветяване
+TOOL_BUCKET=Запълване
+TOOL_GRADIENT=Градиентно запълване
+TOOL_NONE=Не
+
+; Menu shortcuts
+KEY_CTRL=Ctrl
+KEY_ALT=Alt
+KEY_SHIFT=Shift
+KEY_DEL=Del
+KEY_ENTER=Enter
+
+; Menu items
+MI_FILE=Файл
+MI_FILE_NEW_GRAPHIC=Нова графика
+MI_FILE_NEW_LIBRARY=Нова библиотека
+MI_FILE_OPEN=Отваряне
+MI_FILE_RECENT_FILES=Последно използвани
+MI_FILE_RF_CLEAR=Изчистване списъка
+MI_FILE_BATCH_CONVERT=Пакетно конвертиране
+MI_FILE_CLOSE=Изход
+MI_FILE_CLOSE_ALL=Затвори всичко
+MI_FILE_SAVE=Запис
+MI_FILE_SAVE_AS=Запис като
+MI_FILE_SAVE_COPY=Запис копие
+MI_FILE_SAVE_ALL=Запис всички
+MI_FILE_REVERT=Изходно състояние
+MI_FILE_METADATA=Мета-данни
+MI_FILE_PRINT=Печат
+MI_FILE_EXIT=Изход
+
+MI_EDIT=Редактиране
+MI_EDIT_UNDO=Отмяна
+MI_EDIT_CANT_UNDO=Не можете да отменяте
+MI_EDIT_REDO=Възстановяване
+MI_EDIT_CANT_REDO=Не можете да възстановявате
+MI_EDIT_CUT=Изрязване
+MI_EDIT_COPY=Копиране
+MI_EDIT_PASTE=Вмъкване
+MI_EDIT_PASTE_PAGE=Вмъкване като нова страница
+MI_EDIT_PASTE_DOC=Вмъкване като нов документ
+MI_EDIT_DELETE=Изтриване
+MI_EDIT_SEL_ALL=Маркиране всичко
+MI_EDIT_SEL_NONE=Демаркиране
+MI_EDIT_SEL_INVERT=Инвертиране маркираното
+MI_EDIT_SEL_LOAD=Зареждане маска от
+MI_EDIT_SEL_SAVE=Запис маска от маркираното
+MI_EDIT_CROP_TRANSPARENCY=Изрязване прозрачните части
+MI_EDIT_TRANSFORM=Трансформиране
+MI_EDIT_SEL_TRANSFORM=Трансформиране маркираното
+MI_EDIT_FLIP_HORIZ=Хоризонтално завъртане
+MI_EDIT_FLIP_VERT=Вертикално завъртане
+MI_EDIT_ROTATE_LEFT=Завъртане наляво на 90°
+MI_EDIT_ROTATE_RIGHT=Завъртане надясно на 90°
+MI_EDIT_ROTATE_180=Завъртане на 180°
+
+MI_VIEW=Изглед
+MI_VIEW_ZOOM_IN=Увеличаване мащаба
+MI_VIEW_ZOOM_OUT=Намаляване мащаба
+MI_VIEW_100_PERCENT=Нормален изглед 100%
+MI_VIEW_FIT_WINDOW=Побиране в прозореца
+MI_VIEW_GRID=Мрежа
+MI_VIEW_CELL_GRID=Вторична мрежа
+MI_VIEW_CENTER_LINES=Осови линии
+MI_VIEW_PAGES=Списък с изображения
+MI_VIEW_TOOLBAR=Лента с инструменти
+MI_VIEW_COLOR_PICKER=Цветови показалец
+MI_VIEW_TOOL_BEHAVIOR=Инструмент за поведение
+MI_VIEW_LAYERS=Слоеве
+MI_VIEW_STARTUP_SCREEN=Начален екран
+MI_VIEW_PANEL_LEFT=Панел отляво
+MI_VIEW_PANEL_RIGHT=Панел отдясно
+
+MI_FLT=Филтри
+MI_FLT_GRAYSCALE=Скала на сивото
+MI_FLT_INVERT=Инвертиране
+MI_FLT_SOLARIZE=Преекспониране
+MI_FLT_RGB=RGB канали
+MI_FLT_HS=Оттенък/Наситеност
+MI_FLT_EXPOSURE=Експониране
+MI_FLT_FORMULAE=RGB формули
+MI_FLT_AVERAGE=Усредняване
+MI_FLT_BLUR_SOFT=Леко размазване
+MI_FLT_BLUR_MORE=По-голямо размазване
+MI_FLT_BLUR_CUSTOM=Задаване на размазване
+MI_FLT_SHARPEN=Изостряне
+MI_FLT_UNSHARP_MASK=Изостряне на маската
+MI_FLT_REMOVE_MATTE=Премахване маска
+MI_FLT_OPACITY=Непрозрачност
+MI_FLT_PAINT_CONTOUR=Контур
+MI_FLT_DROP_SHADOW=Падаща сянка
+MI_FLT_GLOW=Осветяване
+MI_FLT_BEVEL=Фаска
+
+MI_LAYERS=Слоеве
+MI_LAYERS_NEW=Нов слой
+MI_LAYERS_DUPLICATE=Дублиране
+MI_LAYERS_DELETE=Изтриване
+MI_LAYERS_PROP=Свойства
+MI_LAYERS_MERGE_SELECTED=Обединяване избраните
+MI_LAYERS_MERGE_VISIBLE=Обединяване видимите
+MI_LAYERS_FLATTEN=Обединяване
+MI_LAYERS_FROM_SEL=Създаване от селекцията
+
+MI_ICON=Икони
+MI_ICON_PAGE_NEW=Нова страница
+MI_ICON_PAGE_DELETE=Изтриване
+MI_ICON_PAGE_PROP=Свойства
+MI_ICON_PAGE_IMPORT=Внасяне от
+MI_ICON_PAGE_EXPORT=Запис като
+MI_ICON_PAGE_EXPORT_ALL=Запис всички като
+MI_ICON_UNIFORM_RATE=Прилагане продължителността на всички кадри
+MI_ICON_CREATE_FROM_IMAGE=Създаване икона от изображение
+MI_ICON_CREATE_WIN=Създаване на Windows икона
+MI_ICON_CREATE_MAC=Създаване на Mac икона
+MI_ICON_TEST=Тест
+
+MI_LIB=Библиотека
+MI_LIB_ADD=Добавяне ресурс
+MI_LIB_REMOVE=Премахване ресурс
+MI_LIB_REPLACE=Замяна ресурс
+MI_LIB_PROP=Свойства на ресурса
+MI_LIB_EXTRACT_EDIT=Разархивиране и редактиране
+MI_LIB_EXTRACT_SAVE=Разархивиране и запис
+
+MI_SET=Настройки
+MI_SET_PREFERENCES=Предпочитани
+MI_SET_LANGUAGE=Език
+
+MI_HELP=Помощ
+MI_HELP_CONTENTS=Съдържание
+MI_HELP_HOMEPAGE=Домашна страница
+MI_HELP_SUPPORT=Онлайн поддръжка
+MI_HELP_DONATE=Дарете
+MI_HELP_ABOUT=За програмата
+
+; Pixel Format to String
+PF_1_BIT=1-бит
+PF_16_COLORS=16 цвята
+PF_256_COLORS=256 цвята
+PF_24_BIT=24-бита
+PF_32_BIT=32-бита
+
+; Undo captions
+UNDO_CREATE_FLOATING=Създаване плаваща селекция
+UNDO_MERGE_LAYERS=Обединяване слоеве
+UNDO_MOVE_LAYERS=Преместване слоя
+UNDO_MOVE_PAGE=Преместване кадъра
+UNDO_FLIP_ROTATE=Обръщане/Завъртане
+
+; Layers glossary
+LY_LAYER=Слой
+LY_BACKGROUND=Фон
+LY_FLOATING_SEL=Плаваща селекция
+
+; Page properties dialog
+PG_CAPTION_NEW_PAGE=Нова страница
+PG_CAPTION_PAGE_PROP=Свойства на страницата
+
+PG_SIZE_SMALLEST=най-малък
+PG_SIZE_TOOLBAR=панел с инструменти
+PG_SIZE_SMALL=малък
+PG_SIZE_MEDIUM=среден
+PG_SIZE_LARGE=голям
+PG_SIZE_HUGE_VISTA=огромен, Vista
+PG_SIZE_APPLE=Apple
+PG_CUSTOM_SIZE=Друг
+PG_SQUARE=Квадрат
+
+PG_CR=Дълбочина на цветовете
+PG_CR_BW=Черно-бяло
+PG_CR_16_WIN=16 цвята (Windows)
+PG_CR_16_MAC=16 цвята (Mac)
+PG_CR_256_ADAPT=256 цвята (адаптивен)
+PG_CR_256_MAC=256 цвята (Mac)
+PG_CR_24=24 битов цвят RGB
+PG_CR_32=Пълноцветен (32-бита)
+
+PG_ANIMATION=При запис като "Анимация" кадър с
+PG_FRAME_RATE=продължителност (в милисекунди)
+
+PG_CREATE_FROM_SELECTED=Създай от избраната страница
+PG_WHEN_RESIZING=При смяна на размера
+PG_STRETCH=Разтягане
+PG_CROP=Изрязване
+PG_IMAGE_ANCHORS=Закотвяне към:
+
+; Color Picker
+TAB_HSB_MAP=HSB Карта
+TAB_SWATCHES=Образци
+
+; Filter dialogs
+LABEL_RED=Червен
+LABEL_GREEN=Зелен
+LABEL_BLUE=Син
+LABEL_R=R
+LABEL_G=G
+LABEL_B=B
+LABEL_A=A
+LABEL_HUE_SHIFT=Смяна на оттенъка
+LABEL_SATURATION=Наситеност
+LABEL_GAMMA=Гама
+LABEL_BRIGHTNESS=Яркост
+LABEL_TORIC=Изпъкнал режим
+LABEL_GAUSSIAN_BLUR=Гаусово размазване
+LABEL_BOX_BLUR=Блоково размазване
+LABEL_MATTE_COLOR=Цвят
+LABEL_WHITE_MATTE=Бяла маска
+LABEL_BLACK_MATTE=Черна маска
+LABEL_INNER_GLOW=Вътрешно
+LABEL_OUTER_GLOW=Външно
+
+LABEL_AMOUNT=Величина
+LABEL_ANGLE_DEGREES=Ъгъл (градуси)
+LABEL_BLUR=Размазване
+LABEL_DISTANCE=Перспектива
+LABEL_INTENSITY=Интензивност
+LABEL_OPACITY=Видимост
+LABEL_RADIUS=Радиус
+LABEL_THRESHOLD=Праг
+
+; Batch conversion dialog
+BC_FILES=Файлове
+BC_SETTINGS=Настройки
+BC_FORMAT=Преобразуване в
+BC_FOLDER=Дестинация
+BC_OPEN=Отваряне на преобразуваните файлове с Greenfish Icon Editor Pro
+BC_ICON_FORMATS=Формати за създаване на икони
+
+; Cell grid dialog
+CG_ENABLED=Активиране
+CG_SIZE=Размер на клетката
+CG_SPACING=Допълнителни линии
+CG_OFFSET=Отместване
+
+; Create icon from image dialog
+CI_SELECT_FORMATS=Изберете формата които бихте искали да създадете
+
+; ICL format dialog
+IF_TITLE=Изберете ICL формата
+
+; Language dialog
+LABEL_LANG_PACK=Езиков пакет
+
+; Layer properties dialog
+LP_NAME=Име
+LP_VISIBLE=Видим
+LP_BLEND_MODE=Режим на смесване
+
+LP_BM_NORMAL=Нормален
+LP_BM_MASK=Маска
+LP_BM_BEHIND=Фон
+LP_BM_DISSOLVE=Разложение
+LP_BM_HUE=Оттенък
+LP_BM_HUE_SHIFT=Изменяне на цветовия тон
+LP_BM_SAT=Наситеност
+LP_BM_DARKEN=Затъмняване
+LP_BM_MULTIPLY=Умножение
+LP_BM_COLOR_BURN=Затъмняване на основата
+LP_BM_LINEAR_BURN=Линейно затъмняване
+LP_BM_DARKER_COLOR=Затъмнен цвят
+LP_BM_LIGHTEN=Замяна със светло
+LP_BM_SCREEN=Осветяване
+LP_BM_COLOR_DODGE=Осветяване на основата
+LP_BM_LINEAR_DODGE=Линеен осветлител (Add)
+LP_BM_LIGHTER_COLOR=Светъл цвят
+LP_BM_OVERLAY=Прикриване
+LP_BM_SOFT_LIGHT=Мека светлина
+LP_BM_HARD_LIGHT=Силна светлина
+LP_BM_VIVID_LIGHT=Ярка светлина
+LP_BM_LINEAR_LIGHT=Линейна светлина
+LP_BM_PIN_LIGHT=Точкова светлина
+LP_BM_HARD_MIX=Силно смесване
+LP_BM_DIFFERENCE=Разлика
+LP_BM_EXCLUSION=Изключение
+
+; Metadata dialog
+MD_TYPE= За %s файлове
+MD_TITLE=Заглавие
+MD_AUTHOR=Автор
+MD_COPYRIGHT=Авторски права
+MD_COMMENTS=Коментари
+MD_QUALITY=Запази като
+MD_LOOP_COUNT=Повторения (0 = безкрайно)
+
+; Preferences dialog
+PREF_MISC=Разни
+PREF_ENVIRONMENT=Обкръжение
+PREF_INSTALL=Инсталиране
+PREF_IMAGE_MAX=Максимално разрешен размер на образа
+PREF_PNG_ICONS=Използване на PNG компресия при .ICO/.CUR файлове
+PREF_PNG_LIMIT=Компресиране, ако размера е по-голям от:
+PREF_AA_IMAGES=Заглаждане на всички изменени образи
+PREF_COLORS=Видими цветове
+PREF_TRANSPARENT_HATCH=Щриховка
+PREF_GRID2=Вторична мрежа
+PREF_DVM=Вид диалог при Отваряне/Запис
+PREF_DVM_ITEMS=Икони<br>Списък<br>Таблица<br>Миниатюри<br>Заглавия
+PREF_MWA= Действия с колелото на мишката
+PREF_MWA_ITEMS=Без<br>Мащабиране<br>Превъртане
+PREF_SAVE_TOOL_SETTINGS=Запазване настройките на инструментите между сеансите
+PREF_FILE_ASSOC=Асоциирани файлове
+PREF_ADMIN=Имайте предвид че, ако използвате Windows Vista или Windows 7, GFIE не може да променя тези настройки на системата, освен ако не сте в администраторски режим.
+
+; Print dialog
+PRINT_COPIES=Копия
+PRINT_ZOOM=Мащаб (%)
+PRINT_CAPTION=Име
+PRINT_PAGES=Печат
+PRINT_PAGES_BUTTONS= Всички страници<br> Тази страница
+
+; Resource properties dialog
+RP_NAME=Име
+RP_LANGUAGE=Език
+RP_LANG_CUSTOM=ID език по избор
+RP_LANG_NEUTRAL=Неутрален език
+
+; Save options dialog
+SO_TITLE=Опции за запис
+SO_QUALITY=Качествено
+SO_LOSSLESS=Без загуби
+
+; Startup screen
+ST_WELCOME=Добре дошли!
+ST_CHOOSE_ACTION=Моля, изберете действие за изпълнение
+ST_NG=Създаване нова графика
+ST_NG_INFO=Създаване нова икона, курсор или анимация.
+ST_NL=Създаване нова библиотека
+ST_NL_INFO=Създаване празна библиотека с икони (.ICL) или файлов ресурс (.RES)
+ST_OPEN=Отваряне съществуващ документ
+ST_OPEN_INFO=Отваряне на изображение, библиотека с икони, изпълним файл или файлов ресурс...
+ST_CONVERT=Пакетно преобразуване файлове
+ST_CONVERT_INFO=Преобразуване на файлове с изображения в икони или други изображения.
+ST_NONE=Не изпълнявай никакви действия
+ST_NONE_INFO=Изход от началния екран.
+ST_RECENT_INFO=Отваряне на файл, редактиран с Greenfish Icon Editor Pro 
+ST_SHOW=Винаги показвай този екран при пускане
+
+; Test dialog
+LABEL_MOVE_OVER_IMAGE=Преместете курсора на мишката върху изображението по-долу
+
+; Insert Text dialog
+CAPTION_INSERT_TEXT=Вмъкване на текст
+
+; Tool Behavior dialog
+TB_NOTHING=Текущия инструмент не може да бъде настроен
+TB_PATTERN=Шаблон
+TB_SAMPLE_ALL_LAYERS=Вземат се проби от всички слоеве
+TB_BRUSH_SIZE=Размер на четката
+TB_BRUSH_SHAPE=Форма на четката
+TB_BRUSH_ITEMS=Кръгла<br>Заострена<br>Наклонена<br>Обратно накл.<br>Норизонтална<br>Вертикална<br>Спрей
+TB_LINE_WIDTH=Широчина на линията
+TB_TOLERANCE=Плътно/Преоцветяване/Заливка (%)
+TB_CONTIGUOUS=Граница
+TB_SHAPE_FRAMED=Рамкирани фигури
+TB_SHAPE_FILLED=Запълнени фигури
+TB_EYEDROPPER_BACK=Пипетата превключва обратно на предишния инструмент
+TB_RETOUCH_MODE=Режим ретуш
+TB_RETOUCH_ITEMS=Размазано<br>Изострено<br>Осветяване<br>Затъмняване<br>Оттенък<br>Гумичка
+TB_ERASER_STRENGTH=Сила на изтриване (%)
+TB_G_LINEAR=Линеен градиент
+TB_G_RADIAL=Радиален градиент
+TB_G_CONICAL=Коничен градиент
+TB_G_SPIRAL=Спирален градиент
+TB_REP_NONE=Без повторение
+TB_REP_SYM=Симетрично повторение
+TB_REP_ASYM=Асиметрично повторение
+TB_MODE_COLOR=Режим на цвета
+TB_MODE_TRANSPARENCY=Режим на прозрачността
+
+; Transform Selection dialog
+XF_UNITS_ITEMS=пиксели<br>%
+
+; Hints
+HINT_COMPACT=Компактен вид
+
+HINT_CP_FORE_COLOR=Основен цвят
+HINT_CP_BACK_COLOR=Фонов цвят
+HINT_CP_SWAP_COLORS=Смяна на цветовете
+HINT_CP_DEFAULT=По подразбиране
+HINT_CP_TRANSPARENT=Прозрачен
+HINT_CP_INVERTED=Инвертиран
+HINT_CP_TOGGLE_CHOOSER=Превключване на HSB карти и палитри
+HINT_CP_SWATCHES=Ляв бутон - избор на цвят, десен бутон - запис образец от текущия цвят
+HINT_CP_SWATCH_LOAD=Зареждане на мостри
+HINT_CP_SWATCH_SAVE=Запис на мостри
+HINT_CP_RED=Червен компонент
+HINT_CP_GREEN=Зелен компонент
+HINT_CP_BLUE=Син компонент
+HINT_CP_ALPHA=Алфа канал (Непрозрачност)
+HINT_CP_HTML=HTML Код
+HINT_CP_WCP=Цветен показалец на Windows
+
+HINT_DOC_LB=Списък на страниците (формати икони/кадри)
+HINT_DOC_LB_PAGE=Страница %d, размер: %d x %d пиксела
+HINT_DOC_LB_PNG=PNG ще бъде компресиран при запис на документа като .ICO/.CUR
+HINT_DOC_ZOOM_MENU=Мащаб
+HINT_DOC_NODES=%d възела
+HINT_DOC_TOGGLE_PAGES=Скриване/Показване списък на страниците
+
+HINT_RES_FOLDER=Моля, изберете папка за извличане на файловете
+
+HINT_STARTUP_HELP=Помощ
+HINT_TEST_BGR_LOAD=Зареждане на фон
+HINT_TEST_BGR_DEFAULT=Фон по подразбиране
+
+HINT_TEXT_FACE=Шрифт
+HINT_TEXT_BOLD=Получер
+HINT_TEXT_ITALIC=Курсив
+HINT_TEXT_UNDERLINE=Подчертан
+
+; eof

@@ -1,19 +1,23 @@
 ﻿; Greenfish Icon Editor Pro
 ; Language pack: Swedish
 ; Translator: Åke Engelbrektson
-; Translator Contact: eson57@gmail.com
-; Translator URL: http://svenskasprakfiler.se
-; Last Updated: 13 Jul 2012
+; Translator Contact: eson@svenskasprakfiler.se
+; Translator URL: https://svenskasprakfiler.se
+; Last Updated: 24 Mar 2016
 
 ; General dictionary
 LABEL_WIDTH=Bredd
 LABEL_HEIGHT=Höjd
 LABEL_SIZE=Storlek
+LABEL_DPI=DPI
+LABEL_PIXELS_SHORT=px
 LABEL_COLOR=Färg
 LABEL_KIND=Sort
 LABEL_ANTIALIAS=Antialias
 LABEL_POSITION=Position
 LABEL_FILE_SIZE=Filstorlek
+LABEL_REDRAW=Rita om
+LABEL_REFRESH=Uppdatera
 UNTITLED=Namnlös
 
 ; Buttons
@@ -37,21 +41,28 @@ B_COMPILE=Kompilera
 MSG_CONFIRMATION=Bekräfta
 MSG_NOT_EXIST="%s" finns inte
 MSG_OVERWRITE=Vill du skriva över "%s"?
-MSG_UNKNOWN_FILE_TYPE=Filformatet på "%s" kan inte avgöras automatiskt.<br>Den här filen kan inte läsas och sparas av Greenfish Icon Editor Pro, eller har fel filändelse.
+MSG_OVERWRITE_MULTIPLE=Vill du skriva över följande filer?
+MSG_UNKNOWN_FILE_TYPE=Filformatet för "%s" kan inte avgöras automatiskt.<br>Den här filen kan inte läsas in eller sparas av Greenfish Icon Editor Pro, eller har fel filändelse.
 MSG_INVALID_FILE_FORMAT="%s" stämmer inte med filformatet "%s".<br>Filen kan vara korrupt, ha fel filändelse, eller fel filter kan ha blivit specificerat i öppningsdialogen.
 MSG_CROPPED=Bilden var större än %dx%d och blev beskuren.<br>Att spara bilden innebär dataförluster.<br>Använd Inställningar/Alternativ för att ändra storleksbegränsningen.
 MSG_SAVE_CHANGES=Vill du spara ändringarna för "%s"?
 MSG_CONFIRM_REVERT=Alla ändringar för "%s" kommer att förloras och åtgärden kan inte ångras.<br>Vill du verkligen fortsätta?
 MSG_CONFIRM_REMOVE=Vill du verkligen ta bort valda objekt?
 MSG_CONFIRM_DESTROY_EXE=Ikonerna/pekarna kan inte bytas ut på något enkelt sätt, i den här exekverbara filen eller ikonbiblioteket.<br><br>Om det här är ett program eller en DLL som har något annat syfte än att bara lagra ikoner, kommer dessa resurser att förstöras när du sparar.<br>Om denna fil bara är ett ikonbibliotek, kommer troligtvis inget negativt att hända.<br><br>Vill du fortsätta ändå?
-MSG_DATA_LOSS_INFO=För att undvika dataförlust, spara även filen i ett annat filformat.
+MSG_DATA_LOSS_INFO=Spara även filen i ett annat filformat, för att undvika dataförlust.
 MSG_DL_MULTIPAGE=Det här filformatet stöder inte sammanslagning av flera bilder till en fil.<br>Endast första bilden kunde sparas.
 MSG_DL_LAYERS=Det här filformatet stöder inte sparande av lager-information. Bilden sparades som en enkel bild.
-MSG_DL_SIZE_256=Det här filformatet stöder inte sparande av bilder större än 256x256.<br>dom här bilderna blev beskurna.
+MSG_DL_SIZE_256=Det här filformatet stöder inte sparande av bilder större än 256x256.<br>De här bilderna blev beskurna.
 MSG_DL_TRANSPARENCY=Det här filformatet stöder inte transparens.
 MSG_DL_COLOR_DEPTH=Delar av färginformationen kunde inte sparas.
-MSG_DL_ICNS=En del bildsidor kunde inte sparas på grund av begränsningar i ICNS-formatet. Se hjälpsektionen om filformat för fler detaljer.
+MSG_DL_ICNS=En del bildsidor kunde inte sparas på grund av begränsningar i ICNS-formatet. Se hjälpsektionen om filformat, för fler detaljer.
+MSG_DL_ERROR=Ett okänt fel uppstod vid sparandet.<br>Dokumentet kunde inte sparas.
 MSG_FT_NO_OPTIONS=Det valda filformatet kan inte anpassas
+MSG_EXPORT_ANDROID_ERROR=Tips: Aktuellt dokument är troligen inte en  multi-DPI Android drawable. Du kan skapa en Android drawable med menyvalet, Ikon|Skapa Android drawable av bild.
+MSG_EXPORT_ANDROID_NO_TITLE=Ange dokumentets namn som önskad Android resursidentifierare. (Se Arkiv|Metadata)
+MSG_EXPORT_ANDROID_NO_DPI=DPI-värdet måste vara inom %s för alla sidorna.
+MSG_EXPORT_ANDROID_SELECT_FOLDER=Välj resursmapp för Android-projektet
+MSG_EXPORT_ANDROID_INVALID_RES_FOLDER=Ogiltig Android-resursmapp. Välj den mapp som har undermappar "drawable-*".
 MSG_ADD_FILES=Lägg till filer till listan
 MSG_SELECT_PAGES=Välj minst en bildsida
 MSG_SELECT_ITEMS=Välj minst ett objekt
@@ -63,12 +74,15 @@ MSG_PAGE_SIZE_0=Error: Sidbredden kan inte vara 0 mm.<br>Välj en annan papperss
 MSG_ERROR_ASSOC=Filassociationerna kan inte konfigureras. Starta GFIE som Administratör för att försöka lösa problemet.
 MSG_FAIL_SINGLE_OPEN=Kunde inte läsa in den specificerade filen
 MSG_FAIL_MULTIPLE_OPEN=En del filer kunde inte öppnas.
+MSG_PROGRAM_NEEDED=%s behövs för att bearbeta filen, %s.<br>Tillse att nödvändiga komponenter är korrekt installerade.
+MSG_ERROR_NO_TEXTURE_COORDS=Fel: Inga texturkoordinater hittades i specificerat 3d-objekt.
+MSG_ERROR_FILTER_OPAQUE=Detta filter gör inget med helt opaka bilder. Bilden behöver transparenta delar för att filtret skall fungera.
 
 ; Open/Save dialog filters
 FF_ALL=Alla filer
-FF_GFIE=GFIE Pro internt format
-FF_ICO=Ikon-filer
-FF_CUR=Pekar-filer
+FF_GFIE=GFIE Pro - Internt format
+FF_ICO=Ikonfiler
+FF_CUR=Pekarfiler
 FF_ANI=Animerade pekare
 FF_ICNS=Apple ikonformat
 FF_PNG=Portable Network Graphics
@@ -76,17 +90,21 @@ FF_XPM=X-Pixmaps
 FF_BMP=Windows bitmaps
 FF_JPEG=JPEG-filer
 FF_GIF=Graphics Interchange Format
+FF_TIFF=Tagged Image File Format
 FF_JPEG_2000=JPEG 2000-filer
 FF_PCX=PCX-filer
+FF_SVG=Skalbar vektorgrafik
 FF_EXEC=Alla exekverbara filer och ikonbibliotek
 FF_ICL=Ikonbibliotek
-FF_RES=Win32 resurs-filer
+FF_RES=Win32 resursfiler
+FF_PAS=Pascal källfiler
+FF_OBJ_3D=Wavefront objekt-filer
 
 ; Tool names
 TOOL_SEL_RECT=Rektangel
 TOOL_SEL_ELLIPSE=Ellips/Cirkel
 TOOL_LASSO=Lasso
-TOOL_WAND=Trollspö
+TOOL_WAND=Trollstav
 TOOL_SEL_PENCIL=Penna
 TOOL_TRANSFORM=Omforma
 TOOL_CROP=Beskär
@@ -117,14 +135,19 @@ MI_FILE=Arkiv
 MI_FILE_NEW_GRAPHIC=Ny grafik
 MI_FILE_NEW_LIBRARY=Nytt bibliotek
 MI_FILE_OPEN=Öppna
+MI_FILE_OPEN_SCRIPT=Öppna skript
 MI_FILE_RECENT_FILES=Nyligen använda filer
 MI_FILE_RF_CLEAR=Rensa lista
 MI_FILE_BATCH_CONVERT=Batch-konvertera filer
 MI_FILE_CLOSE=Stäng
 MI_FILE_CLOSE_ALL=Stäng alla
 MI_FILE_SAVE=Spara
+MI_FILE_SAVE_SCRIPT=Spara skript
 MI_FILE_SAVE_AS=Spara som
+MI_FILE_SAVE_SCRIPT_AS=Spara skript som
+MI_FILE_SAVE_COPY=Spara en kopia
 MI_FILE_SAVE_ALL=Spara alla
+MI_FILE_EXPORT_ANDROID=Exportera Android drawable
 MI_FILE_REVERT=Återställ
 MI_FILE_METADATA=Metadata
 MI_FILE_PRINT=Skriv ut
@@ -192,6 +215,7 @@ MI_FLT_PAINT_CONTOUR=Markerad kontur
 MI_FLT_DROP_SHADOW=Konturskugga
 MI_FLT_GLOW=Glödkontur
 MI_FLT_BEVEL=Fasad kontur
+MI_FLT_SCRIPTING=Skripthantering
 
 MI_LAYERS=Lager
 MI_LAYERS_NEW=Nytt lager
@@ -213,6 +237,7 @@ MI_ICON_PAGE_EXPORT_ALL=Exportera alla bildsidor
 MI_ICON_UNIFORM_RATE=Tillämpa samma varaktighet för alla rutor
 MI_ICON_CREATE_WIN=Skapa Windows-ikon av bild
 MI_ICON_CREATE_MAC=Skapa Mac-ikon av bild
+MI_ICON_CREATE_ANDROID=Skapa Android drawable av bild
 MI_ICON_TEST=Test
 
 MI_LIB=Bibliotek
@@ -233,6 +258,10 @@ MI_HELP_HOMEPAGE=Hemsida
 MI_HELP_SUPPORT=Online-support
 MI_HELP_DONATE=Donera
 MI_HELP_ABOUT=Om
+
+MI_RUN=Kör
+MI_RUN_RUN=Kör
+MI_RUN_STOP=Stopp
 
 ; Pixel Format to String
 PF_1_BIT=1-bit
@@ -276,8 +305,9 @@ PG_CR_256_MAC=256 färger (Mac-palett)
 PG_CR_24=24-bit RGB
 PG_CR_32=Ingen reduktion (32-bit)
 
-PG_ANIMATION=Vid "Spara som animation"
+PG_OTHER=Annat
 PG_FRAME_RATE=Varaktighet (millisekunder)
+PG_DPI=Sid-DPI (0 = Använd dokumentets DPI)
 
 PG_CREATE_FROM_SELECTED=Skapa från markerad bildsida
 PG_WHEN_RESIZING=Vid storleksändring
@@ -330,7 +360,15 @@ CG_SPACING=Cellavstånd
 CG_OFFSET=Kompensation
 
 ; Create icon from image dialog
-CI_SELECT_FORMATS=Välj dom format du vill skapa
+CI_SELECT_FORMATS=Välj de format du vill skapa
+
+; Create Android drawable from image dialog
+CAI_ID=Android resursidentifierare
+CAI_CURRENT_DPI=Aktuell DPI
+CAI_RESOLUTIONS=Upplösningar att skapa
+CAI_CREATE_DPI=Skapa %s-version
+CAI_ERROR_EMPTY_ID=Ange en resursidentifierare.
+CAI_ERROR_NO_RESOLUTIONS=Välj minst en upplösning.
 
 ; ICL format dialog
 IF_TITLE=Välj ICL-format
@@ -376,8 +414,9 @@ MD_TITLE=Namn
 MD_AUTHOR=Utvecklare
 MD_COPYRIGHT=Copyright
 MD_COMMENTS=Kommentarer
-MD_QUALITY=Spara i kvallitet
-MD_LOOP_COUNT=Loop antal (0 = oändligt)
+MD_QUALITY=Spara i kvalitet
+MD_LOOP_COUNT=Loop-antal (0 = Oändligt)
+MD_DPI=Global DPI (0 = Odefinierad)
 
 ; Preferences dialog
 PREF_MISC=Diverse
@@ -413,8 +452,19 @@ RP_LANG_NEUTRAL=Standardspråk
 
 ; Save Options dialog
 SO_TITLE=Sparalternativ
-SO_QUALITY=Kvallitet
+SO_QUALITY=Kvalitet
 SO_LOSSLESS=Förlustfri
+
+; Scripting dialog
+SC_TITLE=GFIE Skripthantering
+SC_RUNNING=Kör
+SC_CONSOLE=Konsoll
+SC_COMPILING_SCRIPT=Kompilerar skript...
+SC_COMPILED=Skriptet kompilerat!
+SC_COMPILE_FAILED=Kompileringen misslyckades!
+SC_RUNNING_SCRIPT=Kör skriptet...
+SC_TERMINATED=Skriptet avslutat.
+SC_WARNING=Skript kan få GFIE att krascha, komma åt din hårddisk, ansluta till internet och mycket mer som kan orsaka potentiell data- och sekretessförlust. Genom att köra skript medger du att du själv är ansvarig för all eventuell skada dessa skript kan orsaka dig eller andra.
 
 ; Startup screen
 ST_WELCOME=Välkommen!
@@ -432,8 +482,18 @@ ST_NONE_INFO=Stänger det här startfönstret
 ST_RECENT_INFO=Öppnar en fil som nyligen har redigerats i Greenfish Icon Editor Pro
 ST_SHOW=Visa alltid detta startfönster vid uppstart
 
+; SVG open options dialog
+SOO_SVG_OPTIONS=SVG-alternativ
+SOO_DEFAULT_SIZE=Standardstorlek: %g x %g
+SOO_SCALE_FACTOR=Skalfaktor
+
 ; Test dialog
 LABEL_MOVE_OVER_IMAGE=Rör pekaren över bilden nedanför
+TS_CURSOR=Pekare
+TS_9PATCH=9-patch (Android-knapp)
+TS_TEXTURE_3D=3D-textur
+TS_TEXTURE_MULTIPLIER=Texturmultiplikator
+TS_NOT_9PATCH=Denna bild kan inte tolkas som en 9-patch-bild.
 
 ; Insert Text dialog
 CAPTION_INSERT_TEXT=Mata in text
@@ -482,22 +542,26 @@ HINT_CP_SWATCH_SAVE=Spara färgkarta
 HINT_CP_RED=Röd
 HINT_CP_GREEN=Grön
 HINT_CP_BLUE=Blå
-HINT_CP_ALPHA=Alfafärg (Opacitet)
+HINT_CP_ALPHA=Färgalfa (Opacitet)
 HINT_CP_HTML=HTML-kod
 HINT_CP_WCP=Windows färgväljare
 
-HINT_DOC_LB=Sidlista (ikon format/ramar)
+HINT_DOC_LB=Sidlista (ikon format/bildrutor)
 HINT_DOC_LB_PAGE=Bildsida %d, storlek: %d x %d pixel
+HINT_DOC_LB_DPI=%g DPI
+HINT_DOC_LB_DOC_DPI=%g DPI (Global DPI)
 HINT_DOC_LB_PNG=kommer att PNG-komprimeras när dokumentet sparas som .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Zooma
 HINT_DOC_NODES=%d noder
 HINT_DOC_TOGGLE_PAGES=Dölj/Visa sidlista
 
-HINT_RES_FOLDER=Välj en mapp för dom extraherade filerna
+HINT_RES_FOLDER=Välj en mapp för de extraherade filerna
 
 HINT_STARTUP_HELP=Hjälp
 HINT_TEST_BGR_LOAD=Läs in bakgrund
 HINT_TEST_BGR_DEFAULT=Standardbakgrund
+HINT_TEST_OBJ_LOAD=Läs in 3D-objekt
+HINT_TEST_LIGHTING=Ljus
 
 HINT_TEXT_FACE=Teckensnitt
 HINT_TEXT_BOLD=Fet

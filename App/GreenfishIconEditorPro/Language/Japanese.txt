@@ -6,11 +6,15 @@
 LABEL_WIDTH=幅
 LABEL_HEIGHT=高さ
 LABEL_SIZE=サイズ
+LABEL_DPI=DPI
+LABEL_PIXELS_SHORT=px
 LABEL_COLOR=カラー
 LABEL_KIND=種類
 LABEL_ANTIALIAS=アンチエイリアス
 LABEL_POSITION=位置
 LABEL_FILE_SIZE=ファイルサイズ
+LABEL_REDRAW=再描画
+LABEL_REFRESH=更新
 UNTITLED=無題
 
 ; Buttons
@@ -30,10 +34,11 @@ B_PRINTER_SETUP=プリンタ設定
 B_PREVIEW=プレビュー
 B_COMPILE=コンパイル
 
-; Shown messages 
+; Shown messages
 MSG_CONFIRMATION=確認
 MSG_NOT_EXIST="%s" は存在しません
 MSG_OVERWRITE=本当に "%s" を上書きしますか?
+MSG_OVERWRITE_MULTIPLE=本当に次のファイルを上書きしますか?
 MSG_UNKNOWN_FILE_TYPE=このファイル形式 "%s" は自動的に特定することが出来ない為、Greenfish Icon Editor Pro で読み込み/保存することが出来ません... また、拡張子が誤っている可能性があります。
 MSG_INVALID_FILE_FORMAT=ファイル "%s" は "%s" 形式のファイルではありません。このファイルは破損しているか、または誤った拡張子が使用されている可能性があります。
 MSG_CROPPED=トリミングしたイメージサイズが %dx%d より大きいサイズになっています<br>このまま保存するとイメージを損なう可能性があります<br>ヘルプ|イメージサイズの増加を参照してください
@@ -48,7 +53,13 @@ MSG_DL_SIZE_256=このファイル形式の、256x256以上のサイズの保存
 MSG_DL_TRANSPARENCY=このファイル形式は、透過処理に対応していません。
 MSG_DL_COLOR_DEPTH=いくつかの色情報は保存されませんでした。
 MSG_DL_ICNS=ICNS 形式の制限により、幾つかのページは保存できませんでした。このファイル形式に関する更に詳細な説明はヘルプセクションを参照してください。
+MSG_DL_ERROR=保存の実行中に不明なエラーが発生しました<br>この文書は保存されていません。
 MSG_FT_NO_OPTIONS=選択されたファイル形式はカスタマイズに対応していません。
+MSG_EXPORT_ANDROID_ERROR=ヒント: 現在のファイルはおそらく Android で描画可能なマルチ-DPI ではありません。Android 用のアイコンは、「アイコン」->「イメージから Android 描画可能なアイコンを作成」 を選択
+MSG_EXPORT_ANDROID_NO_TITLE=Android リソース識別子に希望するタイトルをセットしてください (ファイル|メタデータ)
+MSG_EXPORT_ANDROID_NO_DPI=全ページ間の DPI 値はすべて %s とする必要があります。
+MSG_EXPORT_ANDROID_SELECT_FOLDER=Android プロジェクトのリソース フォルダを選択
+MSG_EXPORT_ANDROID_INVALID_RES_FOLDER=無効な Android リソース フォルダです、 drawable-* サブディレクトリを選択してください。
 MSG_ADD_FILES=ファイルをリストに追加してください。
 MSG_SELECT_PAGES=ページを選択してください
 MSG_SELECT_ITEMS=いくつかのアイテムを選択してください
@@ -60,6 +71,9 @@ MSG_PAGE_SIZE_0=エラー: ページの幅が 0 mm になっています。別�
 MSG_ERROR_ASSOC=ファイルの関連付けに失敗しました、GFIE を管理者権限で実行することで解決する可能性があります。
 MSG_FAIL_SINGLE_OPEN=選択されたファイルを読み込めません
 MSG_FAIL_MULTIPLE_OPEN=いくつかのファイルを開くことができませんでした。
+MSG_PROGRAM_NEEDED=%s が必要です(ファイル %s の処理に対して)<br>必要なコンポーネントが正しくインストールされているかを確認してください。
+MSG_ERROR_NO_TEXTURE_COORDS=エラー: 指定された 3D オブエクトにはテクスチャ座標が存在しません
+MSG_ERROR_FILTER_OPAQUE=このフィルターは完全な不透明なものです、フィルターの適用には画像に不透明パートが必要です。
 
 ; Open/Save dialog filters
 FF_ALL=すべてのファイル
@@ -68,16 +82,20 @@ FF_ICO=アイコン
 FF_CUR=カーソル
 FF_ANI=アニメーションカーソル
 FF_ICNS=Apple アイコンイメージ形式
-FF_PNG=PNG
+FF_PNG=ポータブル ネットワーク グラフィックス
 FF_XPM=X-Pixmaps
 FF_BMP=ビットマップ
 FF_JPEG=JPEG
 FF_GIF=Graphics Interchange 形式
+FF_TIFF=Tagged イメージファイル形式
 FF_JPEG_2000=JPEG 2000 ファイル
 FF_PCX=PCX ファイル
-FF_EXEC=すべての実行形式ファイルとアイコンライブラリ
+FF_SVG=スケーラブル ベクタ グラフィックス
+FF_EXEC=すべての実行可能ファイルとアイコンライブラリ
 FF_ICL=アイコンライブラリ形式
 FF_RES=Win32 リソースファイル
+FF_PAS=Pascal ソースファイル
+FF_OBJ_3D=Wavefront オブジェクト ファイル
 
 ; Tool names
 TOOL_SEL_RECT=矩形選択
@@ -114,14 +132,19 @@ MI_FILE=ファイル(&F)
 MI_FILE_NEW_GRAPHIC=新規画像を作成&
 MI_FILE_NEW_LIBRARY=新規ライブラリ(&E)
 MI_FILE_OPEN=ファイルを開く&
+MI_FILE_OPEN_SCRIPT=スクリプトを開く
 MI_FILE_RECENT_FILES=最近使用したファイル(&R)
 MI_FILE_RF_CLEAR=リストをクリア(&C)
 MI_FILE_BATCH_CONVERT=ファイルの一括変換&
 MI_FILE_CLOSE=閉じる&
 MI_FILE_CLOSE_ALL=すべて閉じる&
 MI_FILE_SAVE=保存...&
+MI_FILE_SAVE_SCRIPT=スクリプトを保存
 MI_FILE_SAVE_AS=名前をつけて保存(&A)
+MI_FILE_SAVE_SCRIPT_AS=スクリプトを別名保存
+MI_FILE_SAVE_COPY=コピーを保存
 MI_FILE_SAVE_ALL=すべて保存(&V)
+MI_FILE_EXPORT_ANDROID=Android 描画可能にエクスポート
 MI_FILE_REVERT=反転&
 MI_FILE_METADATA=メタデータ&
 MI_FILE_PRINT=印刷&
@@ -129,13 +152,13 @@ MI_FILE_EXIT=終了(&X)
 
 MI_EDIT=編集(&E)
 MI_EDIT_UNDO=元に戻す&
-MI_EDIT_CANT_UNDO=元に戻せません&
+MI_EDIT_CANT_UNDO=アンドゥ データなし&
 MI_EDIT_REDO=やり直す&
-MI_EDIT_CANT_REDO=やり直せません&
+MI_EDIT_CANT_REDO=リドゥ データなし&
 MI_EDIT_CUT=切り取り&
 MI_EDIT_COPY=コピー&
 MI_EDIT_PASTE=貼り付け&
-MI_EDIT_PASTE_PAGE=新規ページとして貼り付け&  
+MI_EDIT_PASTE_PAGE=新規ページとして貼り付け&
 MI_EDIT_PASTE_DOC=新規文書として貼り付け&
 MI_EDIT_DELETE=削除&
 MI_EDIT_SEL_ALL=すべて選択&
@@ -189,6 +212,7 @@ MI_FLT_PAINT_CONTOUR=輪郭に色付け&
 MI_FLT_DROP_SHADOW=影をつける&
 MI_FLT_GLOW=発光&
 MI_FLT_BEVEL=べベル&
+MI_FLT_SCRIPTING=スクリプト処理
 
 MI_LAYERS=レイヤー(&L)
 MI_LAYERS_NEW=新規レイヤー&
@@ -210,6 +234,7 @@ MI_ICON_PAGE_EXPORT_ALL=すべてのページをエクスポート
 MI_ICON_UNIFORM_RATE=すべてのフレームに適用&
 MI_ICON_CREATE_WIN=イメージから Windows 用のアイコンを作成
 MI_ICON_CREATE_MAC=イメージから Mac 用のアイコンを作成
+MI_ICON_CREATE_ANDROID=イメージから Android 描画可能アイコンを作成
 MI_ICON_TEST=テスト&
 
 MI_LIB=ライブラリ(&B)
@@ -230,6 +255,10 @@ MI_HELP_HOMEPAGE=ホームページ(&H)
 MI_HELP_SUPPORT=オンラインサポート(&O)
 MI_HELP_DONATE=寄付
 MI_HELP_ABOUT=バージョン情報(&A)
+
+MI_RUN=実行(&R)
+MI_RUN_RUN=実行
+MI_RUN_STOP=停止
 
 ; Pixel Format to String
 PF_1_BIT=1-bit
@@ -273,8 +302,9 @@ PG_CR_256_MAC=256 色 (Mac パレット)
 PG_CR_24=24-bit RGB
 PG_CR_32=減少なし (32-bit)
 
-PG_ANIMATION=アニメーションとして保存
+PG_OTHER=その他
 PG_FRAME_RATE=フレームレート (単位: 1/60 秒)
+PG_DPI=ページ DPI (0 = 文書の DPI を使用)
 
 PG_CREATE_FROM_SELECTED=選択されたページから作成
 PG_WHEN_RESIZING=拡大縮小
@@ -293,7 +323,7 @@ LABEL_A=A
 LABEL_HUE_SHIFT=色相シフト
 LABEL_SATURATION=彩度
 LABEL_GAMMA=ガンマ
-LABEL_BRIGHTNESS=明るさ  
+LABEL_BRIGHTNESS=明るさ
 LABEL_TORIC=トーラスモード
 LABEL_GAUSSIAN_BLUR=ガウシアンぼかし
 LABEL_BOX_BLUR=矩形ぼかし
@@ -329,6 +359,14 @@ CG_OFFSET=オフセット調整
 ; Create icon from image dialog
 CI_SELECT_FORMATS=作成したい形式を選択してください。
 
+; Create Android drawable from image dialog
+CAI_ID=Android リソース識別子
+CAI_CURRENT_DPI=現在の DPI
+CAI_RESOLUTIONS=作成する解像度
+CAI_CREATE_DPI=%s バージョンを作成
+CAI_ERROR_EMPTY_ID=リソース識別子を入力してください。
+CAI_ERROR_NO_RESOLUTIONS=解像度をどれかひとつ選択してください
+
 ; ICL format dialog
 IF_TITLE=ICL 形式の選択
 
@@ -338,7 +376,7 @@ LABEL_LANG_PACK=言語パック
 ; Layer properties dialog
 LP_NAME=名前
 LP_VISIBLE=可視化
-LP_BLEND_MODE=ブレンドモード  
+LP_BLEND_MODE=ブレンドモード
 
 LP_BM_NORMAL=標準
 LP_BM_MASKマスク
@@ -375,6 +413,7 @@ MD_COPYRIGHT=著作権
 MD_COMMENTS=コメント
 MD_QUALITY=保存品質
 MD_LOOP_COUNT=ループ数 (0 = 無限大)
+MD_DPI=グローバル DPI (0 = 未定義)
 
 ; Preferences dialog
 PREF_MISC=その他
@@ -408,10 +447,21 @@ RP_LANGUAGE=言語
 RP_LANG_CUSTOM=カスタム言語 ID
 RP_LANG_NEUTRAL=ニュートラル言語
 
-; Save Options dialog
+; Save options dialog
 SO_TITLE=オプションを保存
 SO_QUALITY=品質
 SO_LOSSLESS=ロスレス
+
+; Scripting dialog
+SC_TITLE=GFIE スクリプト処理
+SC_RUNNING=実行中
+SC_CONSOLE=コンソール
+SC_COMPILING_SCRIPT=スクリプトをコンパイル中...
+SC_COMPILED=コンパイルが完了しました!
+SC_COMPILE_FAILED=コンパイルに失敗!
+SC_RUNNING_SCRIPT=スクリプトを実行中...
+SC_TERMINATED=スクリプトを終了
+SC_WARNING=スクリプトの実行には、GFIE のクラッシュ、ハードディスク内へのアクセス、インターネットへのアクセス等々、潜在的なデータおよびプライバシー損失の可能性があります。自己責任で使用してください。作者はいかなる損害についても一切の責任を負いません。
 
 ; Startup screen
 ST_WELCOME=ようこそ !
@@ -429,8 +479,18 @@ ST_NONE_INFO= - スタートアップ画面を閉じます。
 ST_RECENT_INFO= - Greenfish Icon Editor Pro で、最近使用したファイルを開きます。
 ST_SHOW=常にスタートアップ画面を表示する
 
+; SVG open options dialog
+SOO_SVG_OPTIONS=SVG 設定
+SOO_DEFAULT_SIZE=既定サイズ: %g x %g
+SOO_SCALE_FACTOR=スケール係数
+
 ; Test dialog
-LABEL_MOVE_OVER_IMAGE=下のイメージ上でカーソルを動かしてください
+LABEL_MOVE_OVER_IMAGE=下の画像上でカーソルを動かしてください
+TS_CURSOR=カーソル
+TS_9PATCH=9-patch (Android ボタン)
+TS_TEXTURE_3D=3D テクスチャ
+TS_TEXTURE_MULTIPLIER=テクスチャ乗数
+TS_NOT_9PATCH=このピクチャは 9-patch 画像として解釈できません。
 
 ; Insert Text dialog
 CAPTION_INSERT_TEXT=テキストの挿入
@@ -485,6 +545,8 @@ HINT_CP_WCP=Windows カラーピッカー
 
 HINT_DOC_LB=ページの一覧 (アイコン形式/フレーム)
 HINT_DOC_LB_PAGE=ページ %d, サイズ: %d x %d ピクセル
+HINT_DOC_LB_DPI=%g DPI
+HINT_DOC_LB_DOC_DPI=%g DPI (グローバル DPI)
 HINT_DOC_LB_PNG=.ICO/.CUR 形式でファイルを保存する時に圧縮(PNG)する
 HINT_DOC_ZOOM_MENU=拡大
 HINT_DOC_NODES=%d ノード
@@ -495,6 +557,8 @@ HINT_RES_FOLDER=ファイルを抽出するフォルダを選択してくださ�
 HINT_STARTUP_HELP=ヘルプ
 HINT_TEST_BGR_LOAD=背景を読み込み
 HINT_TEST_BGR_DEFAULT=デフォルト背景
+HINT_TEST_OBJ_LOAD=3D オブジェクト読み込み
+HINT_TEST_LIGHTING=照明
 
 HINT_TEXT_FACE=フォントスタイル
 HINT_TEXT_BOLD=太字

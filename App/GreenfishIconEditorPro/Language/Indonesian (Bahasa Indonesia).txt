@@ -121,6 +121,7 @@ MI_FILE_CLOSE=Tutup
 MI_FILE_CLOSE_ALL=Tutup semua
 MI_FILE_SAVE=Simpan
 MI_FILE_SAVE_AS=Simpan sebagai
+MI_FILE_SAVE_COPY=Simpan salinan
 MI_FILE_SAVE_ALL=Simpan semua
 MI_FILE_REVERT=Batalkan perubahan
 MI_FILE_METADATA=Metadata

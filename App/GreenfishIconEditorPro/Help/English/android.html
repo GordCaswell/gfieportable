@@ -1,0 +1,63 @@
+<html><head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>How to create Android drawables and buttons</title>
+
+</head><body>
+<span class="n">
+
+How to...
+
+<center><h1>Create Android drawables and buttons</h1></center>
+
+Android drawables (icons) need to be drawn in multiple sizes for <a href='http://developer.android.com/guide/practices/screens_support.html#range'>multiple screen resolutions<img src="../images/extern.png"></a>. Android <a href='http://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch'>9-patch buttons<img src="../images/extern.png"></a> need to have fixed and expandable parts defined so they can be properly scaled. This tutorial will explain how to design an Android drawable or button with Greenfish Icon Editor Pro.<p>
+
+The standard resolutions defined by Android are:
+
+<ul>
+	<li>ldpi (120dpi)</li>
+	<li>mdpi (160dpi)</li>
+	<li>hdpi (240dpi)</li>
+	<li>xhdpi (320dpi)</li>
+	<li>xxhdpi (480dpi)</li>
+	<li>xxxhdpi (640dpi)</li>
+</ul><p>
+
+<h2>Converting an existing image to an Android drawable</h2><p>
+
+<ol>
+	<li>Open your existing image file.</li>
+	<li>Should it have multiple pages, select the page you want to create the new drawable from.</li>
+	<li>Choose the menu item <em>Icon|Create Android drawable from image</em>.</li>
+	<li>Put a check in the boxes corresponding to the resolutions you want to create.</li>
+	<li>Set the identifier you want to assign to this Android drawable. This should be a valid Java identifier.</li>
+	<li>Set the DPI for the source file. Essentially this is what controls how big the resulting drawable will be.</li>
+	<li>Click OK.</li>
+</ol><p>
+
+The resulting document will be a multipage document with the following properties:<p>
+
+<ul>
+	<li>Each page will have a DPI value, corresponding to the resolution (ldpi, mdpi, hdpi, xhdpi, ...) the page is designed for.</li>
+	<li>The document title (see <em>File|Metadata</em>) will be set to the Android drawable identifier.</li>
+</ul><p>
+
+<em>Tip</em>: Always save the resulting document as a <em>.gfie</em> file somewhere, to preserve all information.<p>
+
+<em>Tip</em>: Start designing your drawable prototype in a very big size before choosing <em>Icon|Create Android drawable from image</em>. Keep in mind that lowering the resolution is always an option.<p>
+
+<h2>Exporting an Android drawable</h2><p>
+
+After you have created and edited the drawable, you can export it to the resources folder of your Android project. Choose <em>File|Export Android drawable</em> to do this.<p>
+
+The pages will be saved to the corresponding subfolder (drawable-ldpi, drawable-mdpi, etc.). The saved files will have the name <em>[title].png</em>, where <em>[title]</em> equals to the document title. The document title can be set in the document metadata dialog box (see <em>File|Metadata</em>).<p>
+
+<h2>Creating and testing an Android button</h2><p>
+
+Android buttons have nine-patch images as backgrounds. A <em>nine-patch</em> image is a regular image with an extra two-color border. This border encodes how the image will be scaled up. Black pixels of the border mark the expandable parts, while the remaining pixels mark the fixed parts of the image. See <em>Samples/ninepatch.gfie</em> for an example 9-patch image.<p>
+
+<center><img src="../images/9patch.png"></center><p>
+
+You can draw a 9-patch button as a normal image in GFIE, by drawing the image and adding a 1-pixel wide frame of the above format. Then choose <em>Icon|Test</em> and select the <em>9-Patch</em> tab to view multiple buttons at randomly generated positions.<p>
+
+</span>
+</body></html>

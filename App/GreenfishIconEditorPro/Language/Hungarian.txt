@@ -6,11 +6,15 @@
 LABEL_WIDTH=Szélesség
 LABEL_HEIGHT=Magasság
 LABEL_SIZE=Méret
+LABEL_DPI=DPI
+LABEL_PIXELS_SHORT=px
 LABEL_COLOR=Szín
 LABEL_KIND=Típus
 LABEL_ANTIALIAS=Élsimítás
 LABEL_POSITION=Pozíció
 LABEL_FILE_SIZE=Fájlméret
+LABEL_REDRAW=Újrarajzol
+LABEL_REFRESH=Frissít
 UNTITLED=Névtelen
 
 ; Buttons
@@ -34,6 +38,7 @@ B_COMPILE=Lefordít
 MSG_CONFIRMATION=Megerősítés
 MSG_NOT_EXIST="%s" nem található
 MSG_OVERWRITE=Biztosan felül akarod írni "%s"-t?
+MSG_OVERWRITE_MULTIPLE=Felülírod ezeket a fájlokat?
 MSG_UNKNOWN_FILE_TYPE="%s" fájlformátuma nem dönthető el automatikusan.<br>Ezt a fájlt a Greenfish Icon Editor Pro nem tudja megnyitni vagy elmenteni, vagy hibás a fájl kiterjesztése.
 MSG_INVALID_FILE_FORMAT=A(z) "%s" fájl nem "%s" formátumú.<br>A fájl hibás, helytelen a kiterjesztése, vagy nem megfelelő fájltípus lett kiválasztva a Megnyitás párbeszédablakban.
 MSG_CROPPED=A kép %dx%d-nél nagyobb volt, így a GFIE méretre vágta.<br>A kép mentése adatvesztést fog okozni.<br>A Beállítások|Konfiguráció menüpont segítségével növelheted a megengedett képméretet.
@@ -48,7 +53,13 @@ MSG_DL_SIZE_256=Ez a fájlformátum nem támogatja 256x256-nál nagyobb képek m
 MSG_DL_TRANSPARENCY=Ez a fájlformátum nem támogatja az átlátszóságot.
 MSG_DL_COLOR_DEPTH=A színinformáció egy részét nem sikerült menteni.
 MSG_DL_ICNS=Egy vagy több oldal nem került mentésre az ICNS formátum korlátai miatt. Lásd a Súgó fájlformátumokról szóló részét.
+MSG_DL_ERROR=Ismeretlen hiba történt mentéskor.<br>A dokumentum nem került mentésre.
 MSG_FT_NO_OPTIONS=A kiválasztott fájlformátum nem szabható testre.
+MSG_EXPORT_ANDROID_ERROR=Megjegyzés: A jelenlegi dokumentum valószínűleg nem egy multi-DPI Android drawable. Android drawable-t az "Ikon|Android drawable készítése a képből" paranccsal hozhatsz létre.
+MSG_EXPORT_ANDROID_NO_TITLE=Állítsd be a dokumentum címét a kívánt Android erőforrás-azonosítóra. (File|Metaadat)
+MSG_EXPORT_ANDROID_NO_DPI=Minden oldal DPI értéke %s egyike kell, hogy legyen.
+MSG_EXPORT_ANDROID_SELECT_FOLDER=Válaszd ki az Android projekted res mappáját
+MSG_EXPORT_ANDROID_INVALID_RES_FOLDER=Érvénytelen Android res mappa. Válaszd azt a mappát, melyben a drawable-* almappák találhatóak.
 MSG_ADD_FILES=Adj hozzá egy vagy több fájlt a listához!
 MSG_SELECT_PAGES=Jelölj ki egy vagy több oldalt!
 MSG_SELECT_ITEMS=Jelölj ki egy vagy több elemet!
@@ -60,6 +71,8 @@ MSG_PAGE_SIZE_0=Hiba: az oldal fizikai szélessége nem lehet 0 mm.<br>Válassz 
 MSG_ERROR_ASSOC=A fájltársításokat nem sikerült beállítani. A GFIE rendszergazdai módban való futtatása megoldhatja a problémát.
 MSG_FAIL_SINGLE_OPEN=A kiválasztott fájlt nem lehetett betölteni.
 MSG_FAIL_MULTIPLE_OPEN=Néhány fájlt nem lehetett megnyitni.
+MSG_PROGRAM_NEEDED=%s kell a(z) %s fájl feldolgozásához.<br>Győződj meg róla, hogy a szükséges komponensek installálva lettek.
+MSG_ERROR_NO_TEXTURE_COORDS=Hiba: a megadott 3D objektum nem tartalmaz textúra-koordinátákat.
 
 ; Open/Save dialog filters
 FF_ALL=Minden fájl
@@ -73,11 +86,15 @@ FF_XPM=X-Pixmap fájlok
 FF_BMP=Windows bitképek
 FF_JPEG=JPEG fájlok
 FF_GIF=GIF fájlok
+FF_TIFF=Tagged Image File Format
 FF_JPEG_2000=JPEG 2000 fájlok
 FF_PCX=PCX fájlok
+FF_SVG=Skálázható vektorgrafika
 FF_EXEC=Minden futtatható fájl és ikonkönyvtár
 FF_ICL=Ikonkönyvtárak
 FF_RES=Win32 resource fájlok
+FF_PAS=Pascal forrásfájlok
+FF_OBJ_3D=Wavefront objektumfájlok
 
 ; Tool names
 TOOL_SEL_RECT=Téglalap kijelölése
@@ -114,15 +131,19 @@ MI_FILE=File
 MI_FILE_NEW_GRAPHIC=Új grafika
 MI_FILE_NEW_LIBRARY=Új könyvtár
 MI_FILE_OPEN=Megnyitás
+MI_FILE_OPEN_SCRIPT=Script megnyitása
 MI_FILE_RECENT_FILES=Legutóbbi fájlok
 MI_FILE_RF_CLEAR=Lista törlése
 MI_FILE_BATCH_CONVERT=Több fájl konverziója
 MI_FILE_CLOSE=Bezárás
 MI_FILE_CLOSE_ALL=Mindet bezárja
 MI_FILE_SAVE=Mentés
+MI_FILE_SAVE_SCRIPT=Script mentése
 MI_FILE_SAVE_AS=Mentés másként
+MI_FILE_SAVE_SCRIPT_AS=Script mentése másként
 MI_FILE_SAVE_COPY=Másolat mentése
 MI_FILE_SAVE_ALL=Mindent menti
+MI_FILE_EXPORT_ANDROID=Android drawable exportálása
 MI_FILE_REVERT=Visszaállítás
 MI_FILE_METADATA=Metaadat
 MI_FILE_PRINT=Nyomtatás
@@ -190,6 +211,7 @@ MI_FLT_PAINT_CONTOUR=Kontúr kihúzása
 MI_FLT_DROP_SHADOW=Árnyékvetés
 MI_FLT_GLOW=Ragyogás
 MI_FLT_BEVEL=Kidomborítás
+MI_FLT_SCRIPTING=Scriptelés
 
 MI_LAYERS=Rétegek
 MI_LAYERS_NEW=Új réteg
@@ -211,6 +233,7 @@ MI_ICON_PAGE_EXPORT_ALL=Az összes oldal exportálása
 MI_ICON_UNIFORM_RATE=Időtartam alkalmazása az összes képkockára
 MI_ICON_CREATE_WIN=Windows ikon készítése a képből
 MI_ICON_CREATE_MAC=Mac ikon készítése a képből
+MI_ICON_CREATE_ANDROID=Android drawable készítése a képből
 MI_ICON_TEST=Teszt
 
 MI_LIB=Könyvtár
@@ -231,6 +254,10 @@ MI_HELP_HOMEPAGE=Honlap
 MI_HELP_SUPPORT=Online support
 MI_HELP_DONATE=Adomány
 MI_HELP_ABOUT=Névjegy
+
+MI_RUN=Futtatás
+MI_RUN_RUN=Futtatás
+MI_RUN_STOP=Leállítás
 
 ; Pixel Format to String
 PF_1_BIT=1-bit
@@ -274,8 +301,9 @@ PG_CR_256_MAC=256 szín (Mac paletta)
 PG_CR_24=24-bites RGB
 PG_CR_32=Nincs csökkentés (32-bit)
 
-PG_ANIMATION=Animáció
+PG_OTHER=Egyéb
 PG_FRAME_RATE=Képkocka időtartama (ezredmásodperc)
+PG_DPI=Oldal DPI-je (0 = dokumentum-DPI használata)
 
 PG_CREATE_FROM_SELECTED=Létrehozás a kijelölt oldal alapján
 PG_WHEN_RESIZING=Átméretezéskor
@@ -330,6 +358,14 @@ CG_OFFSET=Eltolás
 ; Create icon from image dialog
 CI_SELECT_FORMATS=Válaszd ki a kívánt képformátumokat
 
+; Create Android drawable from image dialog
+CAI_ID=Android erőforrás-azonosító
+CAI_CURRENT_DPI=Jelenlegi DPI
+CAI_RESOLUTIONS=Készítendő felbontások
+CAI_CREATE_DPI=%s verzió készítése
+CAI_ERROR_EMPTY_ID=Adj meg egy erőforrás-azonosítót.
+CAI_ERROR_NO_RESOLUTIONS=Válassz ki legalább egy felbontást.
+
 ; ICL format dialog
 IF_TITLE=Válassz formátumot
 
@@ -376,6 +412,7 @@ MD_COPYRIGHT=Copyright
 MD_COMMENTS=Megjegyzés
 MD_QUALITY=Minőség
 MD_LOOP_COUNT=Ismétlésszám (0 = végtelen)
+MD_DPI=Globális DPI (0 = definiálatlan)
 
 ; Preferences dialog
 PREF_MISC=Vegyes
@@ -409,10 +446,21 @@ RP_LANGUAGE=Nyelv
 RP_LANG_CUSTOM=Egyéni nyelvazonosító
 RP_LANG_NEUTRAL=Nyelvsemleges
 
-; Save Options dialog
+; Save options dialog
 SO_TITLE=Mentési beállítások
 SO_QUALITY=Minőség
 SO_LOSSLESS=Veszteségmentes
+
+; Scripting dialog
+SC_TITLE=GFIE Scriptelés
+SC_RUNNING=Fut
+SC_CONSOLE=Konzol
+SC_COMPILING_SCRIPT=Script fordítása...
+SC_COMPILED=A script sikeresen lefordult!
+SC_COMPILE_FAILED=Fordítás sikertelen!
+SC_RUNNING_SCRIPT=Script futtatása...
+SC_TERMINATED=A script lefutott.
+SC_WARNING=A scriptek összeomlást okozhatnak, elérhetik a merevlemezt és az internetet, és még sok minden mást tehetnek, ezzel esetlegesen adatvesztést vagy személyes adatok kikerülését okozva. A scriptek futtatásával kijelented, hogy felelős vagy bármely kárért, amit a scriptek neked vagy másoknak okozhatnak.
 
 ; Startup screen
 ST_WELCOME=Üdvözöllek!
@@ -430,8 +478,18 @@ ST_NONE_INFO=Bezárja ezt a kezdőképernyőt
 ST_RECENT_INFO=Egy, a Greenfish Icon Editor Pro-val nemrég szerkesztett fájlt nyit meg
 ST_SHOW=Indításkor mindig jelenjen meg ez az ablak
 
+; SVG open options dialog
+SOO_SVG_OPTIONS=SVG opciók
+SOO_DEFAULT_SIZE=Alapértelmezett méret: %g x %g
+SOO_SCALE_FACTOR=Skálázási paraméter
+
 ; Test dialog
 LABEL_MOVE_OVER_IMAGE=Vidd a kurzort a kép fölé
+TS_CURSOR=Kurzor
+TS_9PATCH=9-patch (Android gomb)
+TS_TEXTURE_3D=3D textúra
+TS_TEXTURE_MULTIPLIER=Textúra szorzója
+TS_NOT_9PATCH=Ez a kép nem értelmezhető 9-patch gombként.
 
 ; Insert Text dialog
 CAPTION_INSERT_TEXT=Szöveg beszúrása
@@ -482,10 +540,12 @@ HINT_CP_GREEN=Zöld komponens
 HINT_CP_BLUE=Kék komponens
 HINT_CP_ALPHA=Alpha (átlátszatlanság)
 HINT_CP_HTML=HTML kód
-HINT_CP_WCP=Windows színválasztó
+HINT_CP_WCP=Színválasztó párbeszédablak
 
 HINT_DOC_LB=Oldalak listája (ikonformátumok/képkockák)
 HINT_DOC_LB_PAGE=%d. oldal, méret: %d x %d pixel
+HINT_DOC_LB_DPI=%g DPI
+HINT_DOC_LB_DOC_DPI=%g DPI (globális DPI)
 HINT_DOC_LB_PNG=.ICO/.CUR fájlokban PNG-tömörítve kerül mentésre
 HINT_DOC_ZOOM_MENU=Méretarány
 HINT_DOC_NODES=%d csúcs
@@ -496,6 +556,8 @@ HINT_RES_FOLDER=Válassz egy mappát a kibontott fájlok számára
 HINT_STARTUP_HELP=Súgó
 HINT_TEST_BGR_LOAD=Háttér betöltése
 HINT_TEST_BGR_DEFAULT=Alapértelmezett háttér
+HINT_TEST_OBJ_LOAD=3D objektum betöltése
+HINT_TEST_LIGHTING=Megvilágítás
 
 HINT_TEXT_FACE=Betűtípus
 HINT_TEXT_BOLD=Félkövér

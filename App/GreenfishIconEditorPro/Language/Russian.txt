@@ -1,6 +1,6 @@
 ; Greenfish Icon Editor Pro
 ; Language pack: Russian
-; Created by: для v.3.25  JohnyZlo  johnyzlo@gmail.com
+; Created by: для v.3.31  JohnyZlo  johnyzlo@gmail.com
 
 ; General dictionary
 LABEL_WIDTH=Ширина
@@ -111,6 +111,7 @@ MI_FILE_CLOSE=&Закрыть
 MI_FILE_CLOSE_ALL=З&акрыть Все
 MI_FILE_SAVE=Сохранить
 MI_FILE_SAVE_AS=&Сохранить Как
+MI_FILE_SAVE_COPY=Сохранить копию
 MI_FILE_SAVE_ALL=Сохра&нить Все
 MI_FILE_REVERT=В Ис&ходное Состояние
 MI_FILE_METADATA=Метаданные
@@ -256,7 +257,13 @@ PG_CUSTOM_SIZE=Пользовательский размер
 PG_SQUARE=Квадрат
 
 PG_CR=Сокращение цветов
-PG_CR_ITEMS=Черный и Белый<br>16 цветов (системная палитра)<br>256 цветов (адаптивное)<br>24-бит RGB<br>Без сокращения (32-бит)
+PG_CR_BW=Черный и Белый
+PG_CR_16_WIN=16 цветов (палитра Windows)
+PG_CR_16_MAC=16 цветов (палитра Mac)
+PG_CR_256_ADAPT=256 цветов (адаптивная)
+PG_CR_256_MAC=256 цветов (палитра Mac)
+PG_CR_24=24-бит RGB
+PG_CR_32=Без сокращения (32-бит)
 
 PG_ANIMATION=При сохранении как Анимация
 PG_FRAME_RATE= Длительность кадра (миллисекунды)

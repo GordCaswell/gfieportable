@@ -6,11 +6,15 @@
 LABEL_WIDTH=Width
 LABEL_HEIGHT=Height
 LABEL_SIZE=Size
+LABEL_DPI=DPI
+LABEL_PIXELS_SHORT=px
 LABEL_COLOR=Color
 LABEL_KIND=Kind
 LABEL_ANTIALIAS=Antialias
 LABEL_POSITION=Position
 LABEL_FILE_SIZE=File size
+LABEL_REDRAW=Redraw
+LABEL_REFRESH=Refresh
 UNTITLED=Untitled
 
 ; Buttons
@@ -34,6 +38,7 @@ B_COMPILE=Compile
 MSG_CONFIRMATION=Confirmation
 MSG_NOT_EXIST="%s" does not exist
 MSG_OVERWRITE=Do you want to overwrite "%s"?
+MSG_OVERWRITE_MULTIPLE=Do you want to overwrite the following files?
 MSG_UNKNOWN_FILE_TYPE=The file format of "%s" could not be automatically determined.<br>This file cannot be loaded or saved by Greenfish Icon Editor Pro or has a wrong extension.
 MSG_INVALID_FILE_FORMAT=File "%s" does not meet the format "%s".<br>The file may be corrupt, may have a wrong extension, or an incorrect filter may have been specified in the Open dialog box.
 MSG_CROPPED=The image was bigger than %dx%d and was cropped.<br>Saving the image will cause loss of data.<br>Use Settings|Preferences to increase the limit of image size.
@@ -48,7 +53,13 @@ MSG_DL_SIZE_256=This file format does not support saving images larger than 256x
 MSG_DL_TRANSPARENCY=This file format does not support transparency.
 MSG_DL_COLOR_DEPTH=Some part of the color information could not be saved.
 MSG_DL_ICNS=Some pages could not be saved due to the limitations of the ICNS format. See the help section on file formats for more details.
+MSG_DL_ERROR=Unknown error occured while trying to save.<br>The document could not be saved.
 MSG_FT_NO_OPTIONS=The selected file format cannot be customized
+MSG_EXPORT_ANDROID_ERROR=Hint: The current document is probably not a multi-DPI Android drawable. You can create an Android drawable using Icon|Create Android drawable from image.
+MSG_EXPORT_ANDROID_NO_TITLE=Please set the document title to the desired Android resource identifier. (See File|Metadata)
+MSG_EXPORT_ANDROID_NO_DPI=DPI value must be among %s for all the pages.
+MSG_EXPORT_ANDROID_SELECT_FOLDER=Select Android project resource folder
+MSG_EXPORT_ANDROID_INVALID_RES_FOLDER=Invalid Android resource folder. Choose the folder which has the drawable-* subdirectories.
 MSG_ADD_FILES=Please add some files to the list
 MSG_SELECT_PAGES=Please select some pages
 MSG_SELECT_ITEMS=Please select some items
@@ -60,6 +71,9 @@ MSG_PAGE_SIZE_0=Error: physical page width cannot be 0 mm.<br>Choose another pap
 MSG_ERROR_ASSOC=The file associations could not be set. Running GFIE in administrator mode may resolve the issue.
 MSG_FAIL_SINGLE_OPEN=Could not load the selected file.
 MSG_FAIL_MULTIPLE_OPEN=Some files could not be opened.
+MSG_PROGRAM_NEEDED=%s needed for processing file %s.<br>Please make sure that the necessary components are installed properly.
+MSG_ERROR_NO_TEXTURE_COORDS=Error: no texture coordinates found in the specified 3d object.
+MSG_ERROR_FILTER_OPAQUE=This filter does nothing on fully opaque images. The image needs transparent parts for the filter to work.
 
 ; Open/Save dialog filters
 FF_ALL=All files
@@ -73,11 +87,15 @@ FF_XPM=X-Pixmaps
 FF_BMP=Windows bitmaps
 FF_JPEG=JPEG files
 FF_GIF=Graphics Interchange Format
+FF_TIFF=Tagged Image File Format
 FF_JPEG_2000=JPEG 2000 files
 FF_PCX=PCX files
+FF_SVG=Scalable Vector Graphics
 FF_EXEC=All executable files and icon libraries
 FF_ICL=Icon libraries
 FF_RES=Win32 resource files
+FF_PAS=Pascal source files
+FF_OBJ_3D=Wavefront object files
 
 ; Tool names
 TOOL_SEL_RECT=Rectangular select
@@ -114,15 +132,19 @@ MI_FILE=File
 MI_FILE_NEW_GRAPHIC=New graphic
 MI_FILE_NEW_LIBRARY=New library
 MI_FILE_OPEN=Open
+MI_FILE_OPEN_SCRIPT=Open script
 MI_FILE_RECENT_FILES=Recent files
 MI_FILE_RF_CLEAR=Clear list
 MI_FILE_BATCH_CONVERT=Batch convert files
 MI_FILE_CLOSE=Close
 MI_FILE_CLOSE_ALL=Close all
 MI_FILE_SAVE=Save
+MI_FILE_SAVE_SCRIPT=Save script
 MI_FILE_SAVE_AS=Save as
+MI_FILE_SAVE_SCRIPT_AS=Save script as
 MI_FILE_SAVE_COPY=Save a copy
 MI_FILE_SAVE_ALL=Save all
+MI_FILE_EXPORT_ANDROID=Export Android drawable
 MI_FILE_REVERT=Revert
 MI_FILE_METADATA=Metadata
 MI_FILE_PRINT=Print
@@ -190,6 +212,7 @@ MI_FLT_PAINT_CONTOUR=Paint contour
 MI_FLT_DROP_SHADOW=Drop shadow
 MI_FLT_GLOW=Glow
 MI_FLT_BEVEL=Bevel
+MI_FLT_SCRIPTING=Scripting
 
 MI_LAYERS=Layers
 MI_LAYERS_NEW=New layer
@@ -211,6 +234,7 @@ MI_ICON_PAGE_EXPORT_ALL=Export all pages
 MI_ICON_UNIFORM_RATE=Apply frame duration to all frames
 MI_ICON_CREATE_WIN=Create Windows icon from image
 MI_ICON_CREATE_MAC=Create Mac icon from image
+MI_ICON_CREATE_ANDROID=Create Android drawable from image
 MI_ICON_TEST=Test
 
 MI_LIB=Library
@@ -231,6 +255,10 @@ MI_HELP_HOMEPAGE=Homepage
 MI_HELP_SUPPORT=Online support
 MI_HELP_DONATE=Donate
 MI_HELP_ABOUT=About
+
+MI_RUN=Run
+MI_RUN_RUN=Run
+MI_RUN_STOP=Stop
 
 ; Pixel Format to String
 PF_1_BIT=1-bit
@@ -274,8 +302,9 @@ PG_CR_256_MAC=256 colors (Mac palette)
 PG_CR_24=24-bit RGB
 PG_CR_32=No reduction (32-bit)
 
-PG_ANIMATION=Animation
+PG_OTHER=Other
 PG_FRAME_RATE=Frame duration (milliseconds)
+PG_DPI=Page DPI (0 = use document DPI)
 
 PG_CREATE_FROM_SELECTED=Create from selected page
 PG_WHEN_RESIZING=When resizing
@@ -330,6 +359,14 @@ CG_OFFSET=Offset
 ; Create icon from image dialog
 CI_SELECT_FORMATS=Select the formats you would like to create
 
+; Create Android drawable from image dialog
+CAI_ID=Android resource identifier
+CAI_CURRENT_DPI=Current DPI
+CAI_RESOLUTIONS=Resolutions to create
+CAI_CREATE_DPI=Create %s version
+CAI_ERROR_EMPTY_ID=Please enter a resource identifier.
+CAI_ERROR_NO_RESOLUTIONS=Please select at least one resolution.
+
 ; ICL format dialog
 IF_TITLE=Select ICL format
 
@@ -376,6 +413,7 @@ MD_COPYRIGHT=Copyright
 MD_COMMENTS=Comments
 MD_QUALITY=Save in quality
 MD_LOOP_COUNT=Loop count (0 = infinity)
+MD_DPI=Global DPI (0 = undefined)
 
 ; Preferences dialog
 PREF_MISC=Misc
@@ -414,6 +452,17 @@ SO_TITLE=Save options
 SO_QUALITY=Quality
 SO_LOSSLESS=Lossless
 
+; Scripting dialog
+SC_TITLE=GFIE Scripting
+SC_RUNNING=Running
+SC_CONSOLE=Console
+SC_COMPILING_SCRIPT=Compiling script...
+SC_COMPILED=Script compiled successfully!
+SC_COMPILE_FAILED=Compile failed!
+SC_RUNNING_SCRIPT=Running script...
+SC_TERMINATED=Script terminated.
+SC_WARNING=Scripts can cause GFIE to crash, access your hard disk, access the internet, and do much more, causing potential data and privacy loss. By running scripts you declare that you are responsible for any damage these scripts may cause to you or others.
+
 ; Startup screen
 ST_WELCOME=Welcome!
 ST_CHOOSE_ACTION=Please choose an action to perform
@@ -430,8 +479,18 @@ ST_NONE_INFO=Closes this startup screen
 ST_RECENT_INFO=Opens a file which was recently edited in Greenfish Icon Editor Pro
 ST_SHOW=Always show this screen on startup
 
+; SVG open options dialog
+SOO_SVG_OPTIONS=SVG options
+SOO_DEFAULT_SIZE=Default size: %g x %g
+SOO_SCALE_FACTOR=Scale factor
+
 ; Test dialog
 LABEL_MOVE_OVER_IMAGE=Move the cursor over the image below
+TS_CURSOR=Cursor
+TS_9PATCH=9-patch (Android button)
+TS_TEXTURE_3D=3D texture
+TS_TEXTURE_MULTIPLIER=Texture multiplier
+TS_NOT_9PATCH=This picture cannot be interpreted as a 9-patch image.
 
 ; Insert Text dialog
 CAPTION_INSERT_TEXT=Insert text
@@ -482,10 +541,12 @@ HINT_CP_GREEN=Green component
 HINT_CP_BLUE=Blue component
 HINT_CP_ALPHA=Color alpha (opacity)
 HINT_CP_HTML=HTML code
-HINT_CP_WCP=Windows Color Picker
+HINT_CP_WCP=Color picker dialog
 
 HINT_DOC_LB=List of pages (icon formats/frames)
 HINT_DOC_LB_PAGE=Page %d, size: %d x %d pixels
+HINT_DOC_LB_DPI=%g DPI
+HINT_DOC_LB_DOC_DPI=%g DPI (global DPI)
 HINT_DOC_LB_PNG=will be PNG-compressed when saving document as .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Zoom
 HINT_DOC_NODES=%d nodes
@@ -496,6 +557,8 @@ HINT_RES_FOLDER=Please select a folder for the extracted files
 HINT_STARTUP_HELP=Help
 HINT_TEST_BGR_LOAD=Load background
 HINT_TEST_BGR_DEFAULT=Default background
+HINT_TEST_OBJ_LOAD=Load 3D object
+HINT_TEST_LIGHTING=Lighting
 
 HINT_TEXT_FACE=Font face
 HINT_TEXT_BOLD=Bold

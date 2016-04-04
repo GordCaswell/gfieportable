@@ -6,11 +6,15 @@
 LABEL_WIDTH=너비
 LABEL_HEIGHT=높이
 LABEL_SIZE=크기
+LABEL_DPI=DPI
+LABEL_PIXELS_SHORT=px
 LABEL_COLOR=색상
 LABEL_KIND=종류
 LABEL_ANTIALIAS=안티-앨리어싱
 LABEL_POSITION=위치
 LABEL_FILE_SIZE=파일 크기
+LABEL_REDRAW=다시 그리기
+LABEL_REFRESH=새로 고침
 UNTITLED=제목 없음
 
 ; Buttons
@@ -33,14 +37,15 @@ B_COMPILE=컴파일
 ; Shown messages
 MSG_CONFIRMATION=확인
 MSG_NOT_EXIST="%s" 존재하지 않음
-MSG_OVERWRITE="%s"을(를) 덮어씌우기하시겠습니까?
+MSG_OVERWRITE="%s" 파일을 덮어쓰기하시겠습니까?
+MSG_OVERWRITE_MULTIPLE=정말로 다음의 파일들을 덮어쓰기하시겠습니까?
 MSG_UNKNOWN_FILE_TYPE="%s" 파일 형식은 자동으로 결정할 수 없습니다. 이 파일을 불러올 수 없거나 GIE Pro에 의해 저장되었거나 아니면 잘못된 확장자입니다.
 MSG_INVALID_FILE_FORMAT="%s" 파일은 "%s"의 형식과 맞지 않습니다. 아마 파일 오류나 잘못된 확장자일 겁니다, 잘못된 필터에 대해서는 팝업창에 상세히 설명되어 있습니다.
 MSG_CROPPED=이미지가 %dx%d 보다 커서 잘렸습니다. 저장한 이미지의 일부 데이타는 손실됩니다. 이미지의 크기 설정에 관한 도움말|환경설정을 이용하세요.
-MSG_SAVE_CHANGES=이 파일을 저장하시겠습니까?
-MSG_CONFIRM_REVERT="%s" 모든 변경 내역이 손실됩니다. 그리고 이 작업은 되돌릴 수 없습니다. 정말로 계속하시겠습니까?
-MSG_CONFIRM_REMOVE=선택한 항목을 제거하시겠습니까?
-이 실행 파일 또는 아이콘 라이브러리에서 아이콘/커서를 간단히 대체할 수 없습니다.<br><br>만약 아이콘을 단지 storing하는 다른 목적을 가진 프로그림이거나 DLL 파일이라면, 이러한 다른 호환성은 저장하는 동안에 파기됩니다.<br>이 파일이 아이콘 라이브러리인라면 잘못되는 경우가 발생하지 않을 겁니다.<br><br>계속하시겠습니까?
+MSG_SAVE_CHANGES="%s"(으)로 변경 사항을 저장하시겠습니까?
+MSG_CONFIRM_REVERT="%s"의 모든 변경 내역이 손실됩니다. 그리고 이 작업은 되돌릴 수 없습니다. 정말로 계속하시겠습니까?
+MSG_CONFIRM_REMOVE=정말로 선택한 항목을 제거하시겠습니까?
+MSG_CONFIRM_DESTROY_EXE=이 실행 파일 또는 아이콘 라이브러리에서 아이콘/커서를 간단히 대체할 수 없습니다.<br><br>만약 이 것이 단순히 아이콘을 저장하는 다른 목적의 프로그램 또는 DLL 파일이라면, 이러한 다른 호환성은 저장하는 동안에 파기됩니다.<br>이 파일이 아이콘 라이브러리라면 잘못되는 경우가 발생하지 않을 겁니다.<br><br>아무튼 계속하시겠습니까?
 MSG_DATA_LOSS_INFO=데이터의 손실을 예방하기 위해 다른 파일 형식으로 문서 저장
 MSG_DL_MULTIPAGE=이 파일 확장자는 한 파일 안에 여러 이미지 저장이 지원되지 않습니다. 단지 첫페이지에서 저장할 수 있습니다.
 MSG_DL_LAYERS=이 파일 형식은 레이어 정보 저장을 지원하지 않습니다. 이미지는 병합 저장되었습니다.
@@ -48,7 +53,13 @@ MSG_DL_SIZE_256=이 파일 확장자는 256x256 픽셀 보다 큰 사이즈는 �
 MSG_DL_TRANSPARENCY=이 파일 형식은 투명 속성을 지원하지 않습니다.
 MSG_DL_COLOR_DEPTH=색상 정보의 일부분은 저장되지 않습니다.
 MSG_DL_ICNS=ICNS 형식의 제한으로 인해 일부 페이지를 저장할 수 없습니다. 자세한 정보는 파일 형식에서 도움말 부분을 참고하십시오.
+MSG_DL_ERROR=저장을 시도하는 도중에 알 수 없는 오류가 발생했습니다.<br>문서는 저장할 수 없습니다.
 MSG_FT_NO_OPTIONS=선택한 파일 형식은 사용자 정의할 수 없습니다.
+MSG_EXPORT_ANDROID_ERROR=힌트: 아마도 현재 문서는 멀티-DPI 안드로이드 드로어블이 아닌 것 같습니다. 아이콘|안드로이드 드로어블 만들기를 사용해 이미지로부터 안드로이드 드로어블을 만들 수 있습니다.
+MSG_EXPORT_ANDROID_NO_TITLE=원하는 안드로이드 리소스 식별자에 문서 제목을 설정하십시오. (파일|메타데이터 참조)
+MSG_EXPORT_ANDROID_NO_DPI=모든 페이지들에 대한 DPI 값은 %s 사이라야 합니다.
+MSG_EXPORT_ANDROID_SELECT_FOLDER=안드로이드 프로젝트 리소스 폴더를 선택하십시오.
+MSG_EXPORT_ANDROID_INVALID_RES_FOLDER=잘못된 안드로이드 리소스 폴더입니다. drawable-* 하위 디렉터리들이 포함된 폴더를 선택하십시오.
 MSG_ADD_FILES=목록에서 가져올 파일들을 선택해주십시오.
 MSG_SELECT_PAGES=페이지를 선택해주십시오.
 MSG_SELECT_ITEMS=항목을 선택해주십시오.
@@ -60,6 +71,9 @@ MSG_PAGE_SIZE_0=오류: 0 mm 페이지 넓이는 허용되지 않습니다. 다�
 MSG_ERROR_ASSOC=파일 연결을 설정할 수 없습니다. GFIE를 최고 관리자로 실행하면 이 문제를 해결할 수 있습니다.
 MSG_FAIL_SINGLE_OPEN=선택한 파일을 불러올 수 없습니다. 
 MSG_FAIL_MULTIPLE_OPEN=일부 파일을 열 수 없습니다.
+MSG_PROGRAM_NEEDED=%s 요구됨. (%s 파일 처리용)<br>필요한 구성 요소가 제대로 설치되어 있는지 확인하여 주십시오.
+MSG_ERROR_NO_TEXTURE_COORDS=오류: 지정한 3D 객체에서 발견된 텍스처 좌표가 없습니다.
+MSG_ERROR_FILTER_OPAQUE=이 필터는 완전히 불투명 한 이미지로는 아무것도 할 수 없습니다. 이 필터 작업에는 투명 영역이 있는 이미지가 필요합니다.
 
 ; Open/Save dialog filters
 FF_ALL=모든 파일
@@ -73,11 +87,15 @@ FF_XPM=XPM 파일
 FF_BMP=BMP 파일
 FF_JPEG=JPEG 파일
 FF_GIF=GIF 파일
+FF_TIFF=TIF 파일
 FF_JPEG_2000=JPEG 2000 파일 
 FF_PCX=PCX 파일
-FF_EXEC=모든 실행 파일과 아이콘 라이브러리
+FF_SVG=SVG 파일
+FF_EXEC=모든 실행 파일 및 아이콘 라이브러리
 FF_ICL=아이콘 라이브러리
-FF_RES=Win32 리소스 파일들
+FF_RES=Win32 리소스 파일
+FF_PAS=파스칼 소스 파일
+FF_OBJ_3D=웨이브프론트 객체 파일
 
 ; Tool names
 TOOL_SEL_RECT=사각형 선택 윤곽 도구
@@ -111,17 +129,22 @@ KEY_ENTER=Enter
 
 ; Menu items
 MI_FILE=파일
-MI_FILE_NEW_GRAPHIC=새 그래픽 작업
+MI_FILE_NEW_GRAPHIC=새 그래픽
 MI_FILE_NEW_LIBRARY=새 라이브러리
 MI_FILE_OPEN=열기
+MI_FILE_OPEN_SCRIPT=스크립트 열기
 MI_FILE_RECENT_FILES=최근 파일
 MI_FILE_RF_CLEAR=목록 지우기
 MI_FILE_BATCH_CONVERT=일괄 파일 변환
 MI_FILE_CLOSE=닫기
 MI_FILE_CLOSE_ALL=모두 닫기
 MI_FILE_SAVE=저장하기
-MI_FILE_SAVE_AS=다른 이름으로 저장
+MI_FILE_SAVE_SCRIPT=스크립트 저장
+MI_FILE_SAVE_AS=따로 저장
+MI_FILE_SAVE_SCRIPT_AS=스크립트 따로 저장
+MI_FILE_SAVE_COPY=복사본 저장
 MI_FILE_SAVE_ALL=모두 저장
+MI_FILE_EXPORT_ANDROID=안드로이드 드로어블 내보내기
 MI_FILE_REVERT=되돌리기
 MI_FILE_METADATA=메타데이타
 MI_FILE_PRINT=인쇄
@@ -165,6 +188,8 @@ MI_VIEW_TOOLBAR=도구바
 MI_VIEW_COLOR_PICKER=칼라 피커
 MI_VIEW_TOOL_BEHAVIOR=비헤비어
 MI_VIEW_LAYERS=레이어
+MI_VIEW_PANEL_LEFT=좌측 패널
+MI_VIEW_PANEL_RIGHT=우측 패널
 MI_VIEW_STARTUP_SCREEN=시작 화면
 
 MI_FLT=필터
@@ -187,6 +212,7 @@ MI_FLT_PAINT_CONTOUR=윤곽 칠하기
 MI_FLT_DROP_SHADOW=음영 효과
 MI_FLT_GLOW=광선 효과
 MI_FLT_BEVEL=경사 효과
+MI_FLT_SCRIPTING=스크립팅
 
 MI_LAYERS=레이어
 MI_LAYERS_NEW=새 레이어
@@ -208,6 +234,7 @@ MI_ICON_PAGE_EXPORT_ALL=모든 페이지 내보내기
 MI_ICON_UNIFORM_RATE=모든 프레임에 프레임 지속시간 적용
 MI_ICON_CREATE_WIN=이미지로부터 Win 아이콘 만들기
 MI_ICON_CREATE_MAC=이미지로부터 Mac 아이콘 만들기
+MI_ICON_CREATE_ANDROID=이미지로부터 안드로이드 드로어블 만들기
 MI_ICON_TEST=테스트
 
 MI_LIB=라이브러리
@@ -228,6 +255,10 @@ MI_HELP_HOMEPAGE=홈페이지
 MI_HELP_SUPPORT=온라인 지원
 MI_HELP_DONATE=후원하기
 MI_HELP_ABOUT=제품 정보
+
+MI_RUN=실행
+MI_RUN_RUN=실행
+MI_RUN_STOP=중지
 
 ; Pixel Format to String
 PF_1_BIT=1 비트
@@ -266,13 +297,14 @@ PG_CR=색상 감소
 PG_CR_BW=흑백
 PG_CR_16_WIN=16 칼라 (윈도우 팔레트)
 PG_CR_16_MAC=16 칼라 (Mac 팔레트)
-PG_CR_256_ADAPT=256 칼라 (adaptive)
+PG_CR_256_ADAPT=256 칼라 (주 색상)
 PG_CR_256_MAC=256 칼라 (Mac 팔레트)
 PG_CR_24=24-bit RGB
 PG_CR_32=감소 없음 (32-비트)
 
 PG_ANIMATION=애니메이션
-PG_FRAME_RATE=프레임 감소 (ms)
+PG_FRAME_RATE=프레임 길이 (ms)
+PG_DPI=페이지 DPI (0 = 문서 DPI 사용)
 
 PG_CREATE_FROM_SELECTED=선택한 페이지로부터 만들기
 PG_WHEN_RESIZING=크기 조정시
@@ -314,7 +346,7 @@ LABEL_THRESHOLD=경계값
 BC_FILES=파일
 BC_SETTINGS=설정
 BC_FORMAT=변환 형식 선택
-BC_FOLDER=폴드 설정
+BC_FOLDER=폴더 설정
 BC_OPEN=GIE Pro로 변환된 파일 열기
 BC_ICON_FORMATS=제작 아이콘 형식
 
@@ -325,7 +357,15 @@ CG_SPACING=셀 간격
 CG_OFFSET=오프셋
 
 ; Create icon from image dialog
-CI_SELECT_FORMATS=제작하고 싶은 형식을 선택하십시오.
+CI_SELECT_FORMATS=만들고 싶은 형식을 선택하십시오.
+
+; Create Android drawable from image dialog
+CAI_ID=안드로이드 리소스 식별자
+CAI_CURRENT_DPI=현재 DPI
+CAI_RESOLUTIONS=생성할 해상도
+CAI_CREATE_DPI=%s 버전 만들기
+CAI_ERROR_EMPTY_ID=리소스 식별자를 입력하십시오.
+CAI_ERROR_NO_RESOLUTIONS=저어도 하나의 해상도를 선택하십시오.
 
 ; ICL format dialog
 IF_TITLE=ICL 형식을 선택하십시오.
@@ -373,12 +413,13 @@ MD_COPYRIGHT=저작권
 MD_COMMENTS=설명
 MD_QUALITY=저장 품질
 MD_LOOP_COUNT=반복 횟수 (0 = 무한반복)
+MD_DPI=전체 DPI (0 = 미지정됨)
 
 ; Preferences dialog
 PREF_MISC=기타
 PREF_ENVIRONMENT=문서 환경
 PREF_INSTALL=설치
-PREF_IMAGE_MAX=최대. 허용 이미지 크기
+PREF_IMAGE_MAX=최대 허용 이미지 크기
 PREF_PNG_ICONS=.ICO/.CUR 파일에서 PNG 압축 사용
 PREF_PNG_LIMIT=최소 크기로 이미지 압축
 PREF_AA_IMAGES=크기 변경된 모든 이미지 안티-앨리어싱
@@ -411,6 +452,17 @@ SO_TITLE=옵션 저장
 SO_QUALITY=품질 
 SO_LOSSLESS=무손실 
 
+; Scripting dialog
+SC_TITLE=GFIE 스크립ㅌ팅
+SC_RUNNING=실행 중
+SC_CONSOLE=콘솔
+SC_COMPILING_SCRIPT=스크립트 컴파일 중...
+SC_COMPILED=스크립트가 성공적으로 컴파일되었습니다!
+SC_COMPILE_FAILED=컴파일이 실패되었습니다!
+SC_RUNNING_SCRIPT=스크립트 실행 중...
+SC_TERMINATED=스크립트가 종료되었습니다.
+SC_WARNING=스크립트들은 GFIE 손상이나 하드 디스크 엑세스, 인터넷 엑세스, 잠재적으로 데이터와 개인 정보 손실 등 훨씬 더 많은 것을 초래할 수 있습니다. 스크립트를 실행함으로써, 이러한 스크립트들이 귀하 또는 다른 사람들에게 초래할 수 있는 모든 손상은 귀하에게 책임이 있음을 알려드립니다.
+
 ; Startup screen
 ST_WELCOME=환영합니다!
 ST_CHOOSE_ACTION=작업할 항목을 선택해주십시오
@@ -427,8 +479,18 @@ ST_NONE_INFO=이 시작화면 닫기
 ST_RECENT_INFO=GFIE에서 최근 편집한 파일 열기
 ST_SHOW=시작시 이 화면 항상 표시
 
+; SVG open options dialog
+SOO_SVG_OPTIONS=SVG 옵션
+SOO_DEFAULT_SIZE=기본 크기: %g x %g
+SOO_SCALE_FACTOR=스케일 팩터
+
 ; Test dialog
 LABEL_MOVE_OVER_IMAGE=아래 이미지 위로 커서를 이동하십시오.
+TS_CURSOR=커서
+TS_9PATCH=9-Patch (안드로이드 버튼)
+TS_TEXTURE_3D=3D 텍스처
+TS_TEXTURE_MULTIPLIER=텍스처 멀티플라이어
+TS_NOT_9PATCH=이 그림은 9-Patch 이미지로 해석할 수 없습니다.
 
 ; Insert Text dialog
 CAPTION_INSERT_TEXT=글자 입력하십시오.
@@ -471,7 +533,7 @@ HINT_CP_DEFAULT=기본 설정
 HINT_CP_TRANSPARENT=투명
 HINT_CP_INVERTED=반전
 HINT_CP_TOGGLE_CHOOSER=HSB 맵/색상 견본 전환
-HINT_CP_SWATCHES=색상 선택은 좌클릭, 현재 색상으로 대체는 우클릭
+HINT_CP_SWATCHES=색상 선택은 좌-클릭, 현재 색상으로 대체는 우-클릭
 HINT_CP_SWATCH_LOAD=색상 견본 프리셋 불러오기
 HINT_CP_SWATCH_SAVE=색상 견본 프리셋 저장하기
 HINT_CP_RED=적색 콤포넌트
@@ -483,16 +545,20 @@ HINT_CP_WCP=윈도우 칼라 피커
 
 HINT_DOC_LB=페이지 목록 (아이콘 확장자/프레임)
 HINT_DOC_LB_PAGE=페이지 %d, 크기: %d x %d 픽셀
+HINT_DOC_LB_DPI=%g DPI
+HINT_DOC_LB_DOC_DPI=%g DPI (전체 DPI)
 HINT_DOC_LB_PNG=.ICO/.CUR로 저장될 때 PNG-압축이 됩니다.
 HINT_DOC_ZOOM_MENU=확대
 HINT_DOC_NODES=%d 노드
 HINT_DOC_TOGGLE_PAGES=페이지 목록 숨김/보임
 
-HINT_RES_FOLDER=추출한 파일을 저장할 폴드를 선택해주십시오.
+HINT_RES_FOLDER=추출한 파일을 저장할 폴더를 선택해주십시오.
 
 HINT_STARTUP_HELP=도움말
 HINT_TEST_BGR_LOAD=배경 불러오기
 HINT_TEST_BGR_DEFAULT=기본 배경
+HINT_TEST_OBJ_LOAD=3D 객체 불러오기
+HINT_TEST_LIGHTING=조명
 
 HINT_TEXT_FACE=글꼴 종류
 HINT_TEXT_BOLD=짙게

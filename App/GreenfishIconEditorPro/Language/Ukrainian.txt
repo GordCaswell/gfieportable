@@ -121,6 +121,7 @@ MI_FILE_CLOSE=Закрити
 MI_FILE_CLOSE_ALL=Закрити все
 MI_FILE_SAVE=Зберегти
 MI_FILE_SAVE_AS=Зберегти як
+MI_FILE_SAVE_COPY=Зберегти копію
 MI_FILE_SAVE_ALL=Зберегти все
 MI_FILE_REVERT=Повернути
 MI_FILE_METADATA=Метадані

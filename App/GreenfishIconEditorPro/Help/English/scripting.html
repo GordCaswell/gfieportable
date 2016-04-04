@@ -1,0 +1,30 @@
+<html><head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Hack GFIE using the built-in scripting feature [BETA]</title>
+
+</head><body>
+<span class="n">
+
+How to...
+
+<center><h1>Hack GFIE using the built-in scripting feature [BETA]</h1></center>
+
+You can automate Greenfish Icon Editor Pro by writing <a href='https://github.com/remobjects/pascalscript'>PascalScript</a> scripts. GFIE has been developed in Free Pascal, using the <a href='www.lazarus-ide.org'>Lazarus IDE</a>. You can run your own scripts written in PascalScript, which can then access almost all the classes, functions and types defined in GFIE, to augment the editor with almost any functionality.<p>
+
+<em>Warning:</em> Scripts can cause GFIE to crash, access your hard disk, access the internet, and do much more, causing potential data and privacy loss. By running scripts you declare that you are responsible for any damage these scripts may cause to you or others.<p>
+
+You will need to <em>study the source code</em> of GFIE first. You will find it in the <em>src.7z</em> archive file supplied with GFIE. Then you can use <em>Filters|Scripting</em> to bring up the script editor. Write your PascalScript code here, which has to look like a Pascal program. Then select <em>Run|Run</em> to execute your script.<p>
+
+The following global variables are accessible from scripts:<p>
+
+<ul>
+	<li>Application: TApplication</li>
+	<li>frmMain: TfrmMain</li>
+</ul><p>
+
+You may use the <em>Writeln</em> function to log to the console. In contrast to standard Pascal, this version of Writeln accepts only a single string-typed argument. You may use <em>IntToStr</em> and the like to convert integers to strings.<p>
+
+<em>Warning:</em> Virtual constructors are currently not supported and generate various error messages.<p>
+
+</span>
+</body></html>

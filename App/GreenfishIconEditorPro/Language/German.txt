@@ -484,7 +484,7 @@ HINT_CP_GREEN=Grün-Anteil
 HINT_CP_BLUE=Blau-Anteil
 HINT_CP_ALPHA=Alpha-Kanal (Tranparenz)
 HINT_CP_HTML=HTML-Code
-HINT_CP_WCP=Windows-Farbpalette
+HINT_CP_WCP=Farbpalettendialogbox
 
 HINT_DOC_LB=Liste der Seiten (Symbolformate/Frames)
 HINT_DOC_LB_PAGE=Seite %d, Größe: %d x %d Pixel

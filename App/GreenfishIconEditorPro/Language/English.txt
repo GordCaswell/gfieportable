@@ -260,6 +260,14 @@ MI_RUN=Run
 MI_RUN_RUN=Run
 MI_RUN_STOP=Stop
 
+MI_TAB_CLOSE=Close
+MI_TAB_CLOSE_OTHERS=Close all other tabs
+MI_TAB_COPY_FULL_PATH=Copy full path to clipboard
+MI_TAB_COPY_FILENAME=Copy filename to clipboard
+MI_TAB_COPY_FOLDER=Copy folder to clipboard
+MI_TAB_OPEN_FOLDER=Open containing folder
+MI_TAB_OPEN_FOLDER_CMD=Open containing folder in command line
+
 ; Pixel Format to String
 PF_1_BIT=1-bit
 PF_16_COLORS=16 colors
@@ -442,6 +450,10 @@ PRINT_PAGES=Print
 PRINT_PAGES_BUTTONS=All pages<br>Current page
 
 ; Resource properties dialog
+RP_TYPE=Type
+RES_TYPE_ICON=Icon
+RES_TYPE_CURSOR=Cursor
+RES_TYPE_BITMAP=Bitmap
 RP_NAME=Name
 RP_LANGUAGE=Language
 RP_LANG_CUSTOM=Custom language ID

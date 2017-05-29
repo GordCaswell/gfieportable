@@ -345,7 +345,7 @@ HINT_CP_HTML=HTML kod
 HINT_CP_WCP=Vindouz Izabirac Boja
 
 HINT_DOC_LB=Lista stranica (formati ikona/frejmovi)
-HINT_DOC_LB_PAGE=Stranica %d, velicina: %d x %d piksela
+HINT_DOC_LB_PAGE=Stranica %s, velicina: %d x %d piksela
 HINT_DOC_LB_PNG=Bice PNG-kompresije kod cuvanja dokumenta kao .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Zum
 

@@ -487,7 +487,7 @@ HINT_CP_HTML=HTML-Code
 HINT_CP_WCP=Farbpalettendialogbox
 
 HINT_DOC_LB=Liste der Seiten (Symbolformate/Frames)
-HINT_DOC_LB_PAGE=Seite %d, Größe: %d x %d Pixel
+HINT_DOC_LB_PAGE=Seite %s, Größe: %d x %d Pixel
 HINT_DOC_LB_PNG=wird beim Speichern als .ICO/.CUR PNG-komprimiert
 HINT_DOC_ZOOM_MENU=Zoom
 HINT_DOC_NODES=%d Knoten

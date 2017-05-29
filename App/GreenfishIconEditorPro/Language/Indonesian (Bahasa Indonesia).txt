@@ -485,7 +485,7 @@ HINT_CP_HTML=Kode HTML
 HINT_CP_WCP=Pemilih warna Windows
 
 HINT_DOC_LB=Daftar halaman (format ikon/frame)
-HINT_DOC_LB_PAGE=Halaman %d, ukuran: %d x %d pixel
+HINT_DOC_LB_PAGE=Halaman %s, ukuran: %d x %d pixel
 HINT_DOC_LB_PNG=akan dikompress dgn metode .PNG jika disimpan sebagai .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Zoom
 HINT_DOC_NODES=%d nodes

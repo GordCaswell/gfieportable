@@ -1,82 +1,112 @@
 ; Greenfish Icon Editor Pro
 ; Language pack: Português
 ; Created by: Emerson Silva
+; Update by: Paulo Neto in 15.05.2016
 
+; General dictionary
 LABEL_WIDTH=Largura
 LABEL_HEIGHT=Altura
 LABEL_SIZE=Tamanho
+LABEL_DPI=DPI
+LABEL_PIXELS_SHORT=px
 LABEL_COLOR=Cor
 LABEL_KIND=Tipo
-LABEL_ANTIALIAS=Antialias
+LABEL_ANTIALIAS=Suavização
 LABEL_POSITION=Posição
-UNTITLED=Untitled
+LABEL_FILE_SIZE=Tamanho do arquivo
+LABEL_REDRAW=Redesenhar
+LABEL_REFRESH=Atualizar
+UNTITLED=Sem nome
+
+; Buttons
 B_OK=OK
 B_CANCEL=Cancelar
-B_RESET=Restabelecer
+B_YES=Sim
+B_NO=Não
+B_RESET=Redefinir
 B_ADD=Adicionar
 B_REMOVE=Remover
 B_CLEAR=Limpar
 B_CLOSE=Fechar
-B_ALL=Todos
+B_ALL=Tudo
 B_NONE=Nenhum
 B_PRINT=Imprimir
-B_PRINTER_SETUP=Configurações de Impressão
+B_PRINTER_SETUP=Configurar Impressão
 B_PREVIEW=Visualização
-TOOL_NONE=Nenhum
-
-KEY_CTRL=Ctrl
-KEY_ALT=Alt
-KEY_SHIFT=Shift
-KEY_DEL=Del
-KEY_ENTER=Enter
-
-MI_FILE_CLOSE=Fechar
-MI_FILE_PRINT=Imprimir
-PRINT_PAGES=Imprimir
 B_COMPILE=Compilar
+
+; Shown messages
+MSG_CONFIRMATION=Confirmação
 MSG_NOT_EXIST="%s" não existe
 MSG_OVERWRITE=Você deseja substituir "%s"?
+MSG_OVERWRITE_MULTIPLE=Você deseja substituir os seguintes arquivos?
 MSG_UNKNOWN_FILE_TYPE=O formato de arquivo "%s" não pode ser determinado automaticamente.<br>Este arquivo não pode ser carregado ou salvo pelo Greenfish Icon Editor Pro ou tem uma extensão de errado.
 MSG_INVALID_FILE_FORMAT=Arquivo "%s" não tem o formato "%s".<br>O arquivo pode estar danificado, pode ter uma extensão de errado, ou um filtro incorretas podem ter sido especificado na caixa de diálogo Abrir.
 MSG_CROPPED=A imagem era maior do que %dx%d e foi cortada.<br>Salvando a imagem irá causar perda de dados.<br>Utilize Configurações | Preferencias para aumentar o limite de tamanho da imagem.
 MSG_SAVE_CHANGES=Você deseja salvar as alterações "%s"?
-MSG_CONFIRM_REVERT=Todas as alterações "%s" serão perdidas e esta operação não pode ser desfeita.<br>Tem certeza de que continuar?
+MSG_CONFIRM_REVERT=Todas as alterações para "%s" serão perdidas e esta operação não poderá ser desfeita.<br>Você deseja realmente continuar?
+MSG_CONFIRM_REMOVE=Você deseja realmente remover o(s) item(ns) selecionado(s)?
+MSG_CONFIRM_DESTROY_EXE=Os ícones/cursores não pode ser facilmente substituídos nesta biblioteca arquivo ou ícone executável.<br><br>Se este é um programa ou DLL que tem outro propósito que apenas armazenar ícones, então essas outras capacidades serão destruídos durante a gravação.<br>Se este arquivo é apenas uma biblioteca de ícone, então, provavelmente, nada de ruim vai acontecer.<br><br>Continuar mesmo assim?
 MSG_DATA_LOSS_INFO=Para evitar a perda de dados, salve o documento também em um formato de arquivo diferente.
 MSG_DL_MULTIPAGE=Este formato de arquivo não suporta várias páginas armazenadas em um arquivo. <br> Apenas a primeira página pode ser guardada.
 MSG_DL_LAYERS=Este formato de arquivo não suporta informações da camada de poupança. Imagem foi salva achatados.
 MSG_DL_SIZE_256=Este formato de arquivo não suporta guardar imagens maiores que 256x256. <br> Estas imagens foram cortadas.
 MSG_DL_TRANSPARENCY=Este formato de arquivo não suporta transparência.
 MSG_DL_COLOR_DEPTH=Alguma parte das informações de cores não puderam ser salvas.
+MSG_DL_ICNS=Algumas páginas não puderam ser salvas devido às limitações do formato ICNS. Consulte a seção de ajuda sobre formatos de arquivo para obter mais detalhes.
+MSG_DL_ERROR=Ocorreu um erro desconhecido ao tentar salvar.<br>O documento não pôde ser salvo.
+MSG_FT_NO_OPTIONS=O formato de arquivo selecionado não pode ser personalizado
+MSG_EXPORT_ANDROID_ERROR=Dica: O documento atual provavelmente não é um desenho de DPI múltiplo do Android. Vocêpode criar um desenho de DPI múltiplo do Android usando Ícone|Criar desenho do Android da imagem.
+MSG_EXPORT_ANDROID_NO_TITLE=Defina o título do documento para o identificador de recursos Android desejado. (Veja Arquivo|Metadados)
+MSG_EXPORT_ANDROID_NO_DPI=O valor de DPI deve estar entre em %s para todas as páginas.
+MSG_EXPORT_ANDROID_SELECT_FOLDER=Selecione a pasta de recursos do projeto Android
+MSG_EXPORT_ANDROID_INVALID_RES_FOLDER=Pasta de recursos Android inválida. Escolha a pasta que tenha subdiretórios drawable-*.
 MSG_ADD_FILES=Por favor, adicionar alguns arquivos para a lista
 MSG_SELECT_PAGES=Por favor, selecione algumas páginas
 MSG_SELECT_ITEMS=Por favor, selecione alguns itens
-MSG_CONFIRM_REMOVE=Você realmente deseja remover o item selecionado (s)?
+MSG_NO_LAYERS=Não há camadas presentes
+MSG_NO_LAYERS_SELECTED=Não há camadas elecionadas
 MSG_RES_EXIST=Outro recurso com o tipo especificado, o nome ea linguagem já existe. <br> Por favor, escolha outro nome ou linguagem.
 MSG_ERROR_WRITE_RES=Ocorreu um erro ao tentar salvar as alterações para os recursos especificados.
 MSG_PAGE_SIZE_0=Erro: largura da página física não pode ser 0 mm. <br> Escolha um outro formato de papel.
 MSG_ERROR_ASSOC=As associações de arquivo não pôde ser definido. Correndo GFIE no modo de administrador pode resolver o problema.
+MSG_FAIL_SINGLE_OPEN=Não foi possível carregar o arquivo selecionado.
+MSG_FAIL_MULTIPLE_OPEN=Alguns arquivos não puderam ser abertos.
+MSG_PROGRAM_NEEDED=%s precisa processar o arquivo %s.<br>Certifique-se de que os componentes necessários estão instalados corretamente.
+MSG_ERROR_NO_TEXTURE_COORDS=Erro: não há coordenadas de textura encontrados no objeto 3D especificado.
+MSG_ERROR_FILTER_OPAQUE=Este filtro não faz nada em imagens totalmente opacas. A imagem precisa de partes transparentes para que o filtro funcione.
+
+; Open/Save dialog filters
 FF_ALL=Todos os Arquivos
-FF_GFIE=GFIE Pro formato nativo
-FF_ICO=Arquivos de Icone
+FF_GFIE=Formato nativo GFIE Pro
+FF_ICO=Arquivos de Ícone
 FF_CUR=Arquivos de Cursor
 FF_ANI=Cursor Animado
-FF_PNG=Portable Network Graphics
+FF_ICNS=Ícone da Apple
+FF_PNG=Gráficos Portáteis de Rede
 FF_XPM=X-Pixmaps
-FF_BMP=Windows bitmaps
-FF_JPEG=JPEG files
-FF_GIF=Graphics Interchange Format
-FF_PCX=PCX files
-FF_EXEC=All executable files and icon libraries
-FF_ICL=Icon libraries
-FF_RES=Win32 resource files
-TOOL_SEL_RECT=Retangular Selecionado
-TOOL_SEL_ELLIPSE=Elíptica Selecionado
+FF_BMP=Mapa de Bits do Windows
+FF_JPEG=Arquivos JPEG
+FF_GIF=Gráficos Intercambiáveis
+FF_TIFF=Formato de Imagem Incorporada
+FF_JPEG_2000=Arquivos JPEG 2000
+FF_PCX=Arquivos PCX
+FF_SVG=Gráficos de Vetores Redimensionáveis
+FF_EXEC=Todos os arquivos executáveis e bibliotecas de ícones
+FF_ICL=Bibliotecas de Ícones
+FF_RES=Arquivos de Recursos Win32
+FF_PAS=Arquivos de Recursos Pascal
+FF_OBJ_3D=Arquivos de Objetos Wavefront
+
+; Tool names
+TOOL_SEL_RECT=Seleção retangular
+TOOL_SEL_ELLIPSE=Seleção circular
 TOOL_LASSO=Laço
 TOOL_WAND=Varinha
-TOOL_SEL_PENCIL=Lápis Selecionado
+TOOL_SEL_PENCIL=Seleção de lápis
 TOOL_TRANSFORM=Transformar
 TOOL_CROP=Cortar
-TOOL_HOTSPOT=Hot spot
+TOOL_HOTSPOT=Hotspot
 TOOL_EYEDROPPER=Conta-Gotas
 TOOL_RETOUCH=Retocar
 TOOL_RECT=Retângulo
@@ -84,27 +114,43 @@ TOOL_ELLIPSE=Elipse
 TOOL_LINE=Linha
 TOOL_TEXT=Texto
 TOOL_PENCIL=Lápis
-TOOL_BRUSH=Escova
-MI_EDIT_TRANSFORM=Transformar
-PG_CROP=Colheita
-TOOL_ERASER=Apagador
+TOOL_BRUSH=Pincel
+TOOL_ERASER=Borracha
 TOOL_RECOLOR=Recolorir
-TOOL_BUCKET=Bucket fill
-TOOL_GRADIENT=Preenchimento de gradiente
+TOOL_BUCKET=Preenchimento em lote
+TOOL_GRADIENT=Preenchimento gradiente
+TOOL_NONE=Nenhum
+
+; Menu shortcuts
+KEY_CTRL=Ctrl
+KEY_ALT=Alt
+KEY_SHIFT=Shift
+KEY_DEL=Del
+KEY_ENTER=Enter
+
+; Menu items
 MI_FILE=Arquivo
 MI_FILE_NEW_GRAPHIC=Novo gráfico
 MI_FILE_NEW_LIBRARY=Nova biblioteca
 MI_FILE_OPEN=Abrir
-MI_FILE_RECENT_FILES=Arquivos Recentes
-MI_FILE_RF_CLEAR=Limpar Lista
-MI_FILE_BATCH_CONVERT=Converter arquivos Batch
-MI_FILE_CLOSE_ALL=Fechar Todos
+MI_FILE_OPEN_SCRIPT=Abrir script
+MI_FILE_RECENT_FILES=Arquivos recentes
+MI_FILE_RF_CLEAR=Limpar lista
+MI_FILE_BATCH_CONVERT=Converter arquivos em lote
+MI_FILE_CLOSE=Fechar
+MI_FILE_CLOSE_ALL=Fechar tudo
 MI_FILE_SAVE=Salvar
-MI_FILE_SAVE_AS=Salvar Como
-MI_FILE_SAVE_ALL=Salvar Tudos
+MI_FILE_SAVE_SCRIPT=Salvar script
+MI_FILE_SAVE_AS=Salvar como
+MI_FILE_SAVE_SCRIPT_AS=Salvar script como
+MI_FILE_SAVE_COPY=Salvar cópia
+MI_FILE_SAVE_ALL=Salvar tudo
+MI_FILE_EXPORT_ANDROID=Exportar desenho do Android
 MI_FILE_REVERT=Reverter
 MI_FILE_METADATA=Metadados
+MI_FILE_PRINT=Imprimir
 MI_FILE_EXIT=Sair
+
 MI_EDIT=Editar
 MI_EDIT_UNDO=Desfazer
 MI_EDIT_CANT_UNDO=Não é possível desfazer
@@ -113,119 +159,169 @@ MI_EDIT_CANT_REDO=Não é possível refazer
 MI_EDIT_CUT=Recortar
 MI_EDIT_COPY=Copiar
 MI_EDIT_PASTE=Colar
-MI_EDIT_PASTE_PAGE=Colar em nova pagina
-MI_EDIT_DELETE=Deletar
-MI_EDIT_SEL_ALL=Selecionar Tudo
-MI_EDIT_SEL_NONE=Desmarcar todos os
-MI_EDIT_SEL_INVERT=Inverter Seleção
-MI_EDIT_SEL_LOAD=Abrir máscara de Seleção
-MI_EDIT_SEL_SAVE=Salvar máscara de Seleção
-MI_EDIT_CROP_TRANSPARENCY=Cortar as peças transparentes
-MI_EDIT_SEL_TRANSFORM=Transformar Seleção
-MI_EDIT_FLIP_HORIZ=Inverter horizontalmente
-MI_EDIT_FLIP_VERT=Inverter verticalmente
-MI_EDIT_ROTATE_LEFT=Rodar 90 graus para a esquerda
+MI_EDIT_PASTE_PAGE=Colar como nova pagina
+MI_EDIT_PASTE_DOC=Coloar como novo documento
+MI_EDIT_DELETE=Excluir
+MI_EDIT_SEL_ALL=Selecionar tudo
+MI_EDIT_SEL_NONE=Desmarcar tudo
+MI_EDIT_SEL_INVERT=Inverter seleção
+MI_EDIT_SEL_LOAD=Carregar máscara de seleção
+MI_EDIT_SEL_SAVE=Salvar máscara de seleção
+MI_EDIT_CROP_TRANSPARENCY=Cortar partes transparentes
+MI_EDIT_TRANSFORM=Transformar
+MI_EDIT_SEL_TRANSFORM=Transformar seleção
+MI_EDIT_FLIP_HORIZ=Espelhar horizontalmente
+MI_EDIT_FLIP_VERT=Espelhar verticalmente
+MI_EDIT_ROTATE_LEFT=Girar 90 graus à esquerda
 MI_EDIT_ROTATE_RIGHT=Girar 90 graus à direita
 MI_EDIT_ROTATE_180=Girar 180 graus
+
 MI_VIEW=Visualizar
-MI_VIEW_ZOOM_IN=Mais Zoom
-MI_VIEW_ZOOM_OUT=Menos Zoom
+MI_VIEW_ZOOM_IN=Ampliar
+MI_VIEW_ZOOM_OUT=Reduzir
 MI_VIEW_100_PERCENT=100%
-MI_VIEW_FIT_WINDOW=Ajustar Janela
+MI_VIEW_FIT_WINDOW=Ajustar à janela
 MI_VIEW_GRID=Grade
-MI_VIEW_CELL_GRID=grade de células
-MI_VIEW_CENTER_LINES=linhas de centro
+MI_VIEW_CELL_GRID=Grade de células
+MI_VIEW_CENTER_LINES=Linhas de centro
 MI_VIEW_PAGES=Lista de páginas
 MI_VIEW_TOOLBAR=Barra de ferramentas
-MI_VIEW_COLOR_PICKER=Apanhador de Cores
-MI_VIEW_TOOL_BEHAVIOR=Ferramenta de Comportamento
+MI_VIEW_COLOR_PICKER=Seletor de cores
+MI_VIEW_TOOL_BEHAVIOR=Comportamento da ferramenta
 MI_VIEW_LAYERS=Camadas
-MI_VIEW_STARTUP_SCREEN=Tela de Inicialização
-MI_LAYERS=Camadas
+MI_VIEW_PANEL_LEFT=Painel à esquerda
+MI_VIEW_PANEL_RIGHT=Painel à direita
+MI_VIEW_STARTUP_SCREEN=Tela de inicialização
+
 MI_FLT=Filtros
-MI_FLT_GRAYSCALE=Escala Cinza
+MI_FLT_GRAYSCALE=Escala em cinza
 MI_FLT_INVERT=Inverter
 MI_FLT_SOLARIZE=Solarizar
 MI_FLT_RGB=Canais RGB
-MI_FLT_HS=Matiz/Saturação
+MI_FLT_HS=Tonalidade/Saturação
 MI_FLT_EXPOSURE=Exposição
 MI_FLT_FORMULAE=Fórmulas RGB
 MI_FLT_AVERAGE=Média
-MI_FLT_BLUR_SOFT=Borrão Macio
-MI_FLT_BLUR_MORE=Borrar Mais
-MI_FLT_BLUR_CUSTOM=Borrar Personalizado
-MI_FLT_SHARPEN=Afiar
-MI_FLT_UNSHARP_MASK=Máscara desafinada
-MI_FLT_REMOVE_MATTE=Remover matte
+MI_FLT_BLUR_SOFT=Borrão suave
+MI_FLT_BLUR_MORE=Borrar mais
+MI_FLT_BLUR_CUSTOM=Borrão personalizado
+MI_FLT_SHARPEN=Nitidez
+MI_FLT_UNSHARP_MASK=Máscara de desfocagem
+MI_FLT_REMOVE_MATTE=Remover fosco
 MI_FLT_OPACITY=Opacidade
-LABEL_OPACITY=Opacidade
-MI_FLT_PAINT_CONTOUR=Pintura de Cotorno
+MI_FLT_PAINT_CONTOUR=Desenhar cotorno
 MI_FLT_DROP_SHADOW=Sombra
 MI_FLT_GLOW=Brilho
 MI_FLT_BEVEL=Chanfrar
+MI_FLT_SCRIPTING=Scripting
+
+MI_LAYERS=Camadas
 MI_LAYERS_NEW=Nova camada
-MI_LAYERS_DUPLICATE=Dulplicar Camada
-MI_LAYERS_DELETE=Deletar Camada
-MI_LAYERS_PROP=Propiedades da Camada
-MI_LAYERS_MERGE_SELECTED=Fundir Selecionados
-MI_LAYERS_MERGE_VISIBLE=Fundir Visiveis
-MI_LAYERS_FLATTEN=Achatar imagem
-MI_LAYERS_FROM_SEL=Criar camada de seleção
+MI_LAYERS_DUPLICATE=Dulplicar camada
+MI_LAYERS_DELETE=Excluir camada
+MI_LAYERS_PROP=Propiedades da camada
+MI_LAYERS_MERGE_SELECTED=Mesclar selecionados
+MI_LAYERS_MERGE_VISIBLE=Mesclar visiveis
+MI_LAYERS_FLATTEN=Nivelar imagem
+MI_LAYERS_FROM_SEL=Criar camada da seleção
+
 MI_ICON=Icone
-MI_ICON_PAGE_NEW=Nova Página
-MI_ICON_PAGE_DELETE=Deletar Página
-PG_CAPTION_NEW_PAGE=Nova Página
-MI_ICON_PAGE_PROP=Propiedades da Página
-MI_ICON_PAGE_EXPORT=Exportar Página
+MI_ICON_PAGE_NEW=Nova página
+MI_ICON_PAGE_DELETE=Excluir página
+MI_ICON_PAGE_PROP=Propiedades da página
+MI_ICON_PAGE_IMPORT=Importar páginas
+MI_ICON_PAGE_EXPORT=Exportar página
+MI_ICON_PAGE_EXPORT_ALL=Exportar todas as páginas
 MI_ICON_UNIFORM_RATE=Aplicar moldura de duração para todos os quadros
-MI_ICON_CREATE_FROM_IMAGE=Criar um ícone de imagem
+MI_ICON_CREATE_WIN=Criar ícone do Windows da imagem
+MI_ICON_CREATE_MAC=Criar ícone do Mac da imagem
+MI_ICON_CREATE_ANDROID=Criar desenho do Android da imagem
 MI_ICON_TEST=Teste
-PG_CAPTION_PAGE_PROP=Propiedades da Página
+
 MI_LIB=Biblioteca
 MI_LIB_ADD=Adicionar recursos
-MI_LIB_REMOVE=Remova recursos
+MI_LIB_REMOVE=Remover recursos
 MI_LIB_REPLACE=Substituir recursos
-MI_LIB_PROP=Propriedades de recurso
+MI_LIB_PROP=Propriedades do recurso
 MI_LIB_EXTRACT_EDIT=Extrair e editar
-MI_LIB_EXTRACT_SAVE=Extraia e salve
+MI_LIB_EXTRACT_SAVE=Extrair e salvar
+
 MI_SET=Configurações
 MI_SET_PREFERENCES=Preferências
-MI_SET_LANGUAGE=Linguagem
+MI_SET_LANGUAGE=Idioma
+
 MI_HELP=Ajuda
-BC_SETTINGS=Configurações
-RP_LANGUAGE=Linguagem
-HINT_STARTUP_HELP=Ajuda
 MI_HELP_CONTENTS=Conteúdo
-MI_HELP_HOMEPAGE=Homepage
+MI_HELP_HOMEPAGE=Página do site
 MI_HELP_SUPPORT=Suporte on-line
 MI_HELP_DONATE=Doar
 MI_HELP_ABOUT=Sobre
+
+MI_RUN=Executar
+MI_RUN_RUN=Executar
+MI_RUN_STOP=Parar
+
+MI_TAB_CLOSE=Fechar
+MI_TAB_CLOSE_OTHERS=Fechar todas as outras abas
+MI_TAB_COPY_FULL_PATH=Copiar caminho completo para àrea de transferência
+MI_TAB_COPY_FILENAME=Copiar nome do arquivo para àrea de transferência
+MI_TAB_COPY_FOLDER=Copiar pasta para àrea de transferência
+MI_TAB_OPEN_FOLDER=Abrir conteúdo da pasta
+MI_TAB_OPEN_FOLDER_CMD=Abrir conteúdo da pasta na linha de comando
+
+; Pixel Format to String
 PF_1_BIT=1-bit
 PF_16_COLORS=16 cores
 PF_256_COLORS=256 cores
 PF_24_BIT=24-bit
 PF_32_BIT=32-bit
+
+; Undo captions
 UNDO_CREATE_FLOATING=Criar seleção flutuante
 UNDO_MERGE_LAYERS=Mesclar camadas
 UNDO_MOVE_LAYERS=Mover camadas
 UNDO_MOVE_PAGE=Mover página
-UNDO_FLIP_ROTATE=Inverter/Rodar
+UNDO_FLIP_ROTATE=Espelhar/Girar
+
+; Layers glossary
 LY_LAYER=Camada
 LY_BACKGROUND=Fundo
 LY_FLOATING_SEL=Seleção flutuante
-PG_SIZE_ITEMS=16 x 16 (menor) <br> 20 x 20 (XP ícone janela) <br> 24 x 24 (toolbar) <br> 32 x 32 (pequeno) <br> 48 x 48 (médio) 64 x 64 na Last.fm (grande) na Last.fm 256 x 256 (enorme, Vista) <br> Custom
+
+; Page properties dialog
+PG_CAPTION_NEW_PAGE=Nova Página
+PG_CAPTION_PAGE_PROP=Propiedades da página
+
+PG_SIZE_SMALLEST=muito pequeno
+PG_SIZE_TOOLBAR=barra de ferramentas
+PG_SIZE_SMALL=pequeno
+PG_SIZE_MEDIUM=médio
+PG_SIZE_LARGE=grande
+PG_SIZE_HUGE_VISTA=muito grande, Vista
+PG_SIZE_APPLE=Apple
 PG_CUSTOM_SIZE=Tamanho personalizado
 PG_SQUARE=Quadrado
+
 PG_CR=Redução de cor
-PG_CR_ITEMS=Preto e Branco <br> 16 cores (paleta System) <br> 256 cores (adaptativa) <br> 24-bit RGB <br> Nenhuma redução (32 bits)
-PG_ANIMATION=Animação
-PG_FRAME_RATE=Frame duração (milissegundos)
-PG_CREATE_FROM_SELECTED=Criar a partir da página selecionada
+PG_CR_BW=Prento e branco
+PG_CR_16_WIN=16 cores (Windows)
+PG_CR_16_MAC=16 cores (Mac)
+PG_CR_256_ADAPT=256 cores (adaptada)
+PG_CR_256_MAC=256 cores (Mac)
+PG_CR_24=RGB 24-bit
+PG_CR_32=Nenhuma redução (32-bit)
+
+PG_OTHER=Outro
+PG_FRAME_RATE=Duração do quadro (milissegundos)
+PG_DPI=Page DPI (0 = usar DPI do documento)
+
+PG_CREATE_FROM_SELECTED=Criar da página selecionada
 PG_WHEN_RESIZING=Ao redimensionar
 PG_STRETCH=Esticar
-PG_IMAGE_ANCHORS=âncoras Imagem
-TAB_HSB_MAP=HSB Mapa
-TAB_SWATCHES=Amostras
+PG_CROP=Cortar
+PG_IMAGE_ANCHORS=Ancorar imagem
+
+; Filter dialogs
 LABEL_RED=Vermelho
 LABEL_GREEN=Verde
 LABEL_BLUE=Azul
@@ -233,132 +329,253 @@ LABEL_R=R
 LABEL_G=G
 LABEL_B=B
 LABEL_A=A
-LABEL_HUE_SHIFT=Mudar Matiz
+LABEL_HUE_SHIFT=Deslocar tonalização
 LABEL_SATURATION=Saturação
 LABEL_GAMMA=Gama
 LABEL_BRIGHTNESS=Brilho
-LABEL_GAUSSIAN_BLUR=Gaussian Blur
-LABEL_BOX_BLUR=Box Blur
-LABEL_MATTE_COLOR=cor Matte
-LABEL_WHITE_MATTE=White matte
-LABEL_BLACK_MATTE=Black matte
-LABEL_INNER_GLOW=Brilho Interior
-LABEL_OUTER_GLOW=Brilho exterior
+LABEL_TORIC=Modo Torus
+LABEL_GAUSSIAN_BLUR=Desfoque gaussiano
+LABEL_BOX_BLUR=Desfoque em caixa
+LABEL_MATTE_COLOR=Cor fosca
+LABEL_WHITE_MATTE=Branco fosco
+LABEL_BLACK_MATTE=Preto fosco
+LABEL_INNER_GLOW=Incandecência interior
+LABEL_OUTER_GLOW=Incandecência exterior
+
 LABEL_AMOUNT=Quantidade
 LABEL_ANGLE_DEGREES=Ângulo (graus)
-LABEL_BLUR=Borrão
+LABEL_BLUR=Desfocagem
 LABEL_DISTANCE=Distância
 LABEL_INTENSITY=Intensidade
+LABEL_OPACITY=Opacity
 LABEL_RADIUS=Raio
 LABEL_THRESHOLD=Limiar
+
+; Batch conversion dialog
 BC_FILES=Arquivos
+BC_SETTINGS=Configurações
 BC_FORMAT=Converter para
-BC_FOLDER=pasta de destino
-BC_OPEN=Abrir arquivos convertidos em Greenfish Icon Editor Pro
-BC_ICON_FORMATS=Ícone para criar formatos
-CG_ENABLED=Habilitado
-CG_SIZE=tamanho da célula
+BC_FOLDER=Pasta de destino
+BC_OPEN=Abrir arquivos convertidos no Greenfish Icon Editor Pro
+BC_ICON_FORMATS=Formatos de Ícones para criar
+
+; Cell grid dialog
+CG_ENABLED=Ativado
+CG_SIZE=Tamanho da célula
 CG_SPACING=Espaçamento da célula
-CG_OFFSET=Compensar
+CG_OFFSET=Deslocamento
+
+; Create icon from image dialog
 CI_SELECT_FORMATS=Selecione os formatos que você gostaria de criar
-LABEL_LANG_PACK=Pacote de Linguagem
+
+; Create Android drawable from image dialog
+CAI_ID=Identificador de recurso Android
+CAI_CURRENT_DPI=DPI atual
+CAI_RESOLUTIONS=Resoluções para criar
+CAI_CREATE_DPI=Criar versão %s
+CAI_ERROR_EMPTY_ID=Indira um identificador de recurso.
+CAI_ERROR_NO_RESOLUTIONS=Selecione pelomenos uma resolução.
+
+; ICL format dialog
+IF_TITLE=Selecionar formato ICL
+
+; Language dialog
+LABEL_LANG_PACK=Pacote de idioma
+
+; Layer properties dialog
 LP_NAME=Nome
-RP_NAME=Nome
 LP_VISIBLE=Visível
-LP_BLEND_MODE_ITEMS=Normal <br> Mask <br> Atrás <br> Dissolver <br> Escurecer Multiply <br> Color Burn <br> Linear Burn <br> cor mais escura Clarear <br> Screen <br> Color Dodge < br> Linear Dodge (Add) Overlay <br> Lighter Color Soft Light <br> <br> Hard Light <br> Vivid Light <br> Linear <br> Light Pin Light Diferença <br> Hard Mix Exclusão na Last.fm
-MD_TYPE=Para %s Arquivos
+LP_BLEND_MODE=Modo de mistura
+
+LP_BM_NORMAL=Normal
+LP_BM_MASK=Máscara
+LP_BM_BEHIND=Atrás
+LP_BM_DISSOLVE=Dissolver
+LP_BM_HUE=Tonalidade
+LP_BM_HUE_SHIFT=Deslocar tonalidade
+LP_BM_SAT=Saturação
+LP_BM_DARKEN=Escuro
+LP_BM_MULTIPLY=Multiplicar
+LP_BM_COLOR_BURN=Cor da desfocagem
+LP_BM_LINEAR_BURN=Desfocagem linear
+LP_BM_DARKER_COLOR=Cor escura
+LP_BM_LIGHTEN=Clarear
+LP_BM_SCREEN=Tela
+LP_BM_COLOR_DODGE=Subexposição de cores
+LP_BM_LINEAR_DODGE=Subexposição linear (Adicionar)
+LP_BM_LIGHTER_COLOR=Clarear cor
+LP_BM_OVERLAY=Sobreposição
+LP_BM_SOFT_LIGHT=Luz suave
+LP_BM_HARD_LIGHT=Luz clara
+LP_BM_VIVID_LIGHT=Luz forte
+LP_BM_LINEAR_LIGHT=Luz linear
+LP_BM_PIN_LIGHT=Luz fixa
+LP_BM_HARD_MIX=Mistura forte
+LP_BM_DIFFERENCE=Diferença
+LP_BM_EXCLUSION=Exclusão
+
+; Metadata dialog
+MD_TYPE=Para %s arquivos
 MD_TITLE=Título
 MD_AUTHOR=Autor
+MD_COPYRIGHT=Copyright
 MD_COMMENTS=Comentários
-MD_QUALITY=Guardar na qualidade
-MD_LOOP_COUNT=Número de Loop (0 = infinito)
+MD_QUALITY=Salvar na qualidade
+MD_LOOP_COUNT=Número de ciclos (0 = infinito)
+MD_DPI=DPI universal (0 = indefinido)
+
+; Preferences dialog
 PREF_MISC=Geral
 PREF_ENVIRONMENT=Ambiente
 PREF_INSTALL=Instalar
-PREF_IMAGE_MAX=Max. permitiu o tamanho da imagem
-PREF_PNG_ICONS=Usando compressão PNG em .ICO / .CUR arquivos
-PREF_PNG_LIMIT=Comprimir imagens cujo tamanho é de pelo menos
-PREF_AA_IMAGES=Antialias todas as imagens redimensionadas
+PREF_IMAGE_MAX=Tamanho máx. permitido da imagem
+PREF_PNG_ICONS=Usar compressão PNG em arquivos .ICO/.CUR
+PREF_PNG_LIMIT=Comprimir imagens com tamanho
+PREF_AA_IMAGES=Suavizar todas as imagens redimensionadas
 PREF_COLORS=Cores
-PREF_TRANSPARENT_HATCH=escotilha Transparente
+PREF_TRANSPARENT_HATCH=Hachura transparente
 PREF_GRID2=Grade secundária
-PREF_DVM=Ver modo de diálogos Abrir / Salvar
-PREF_DVM_ITEMS=cones Lista <br> Detalhes <br> Miniaturas <br> Azulejo
-PREF_MWA=Mouse ação roda
-PREF_MWA_ITEMS=Nenhum <br> Scroll <br> Zoom
-PREF_SAVE_TOOL_SETTINGS=Salve as configurações da ferramenta entre as sessões
+PREF_DVM=Visualizar modo dos diálogos Abrir/Salvar
+PREF_DVM_ITEMS=Ícones<br>Lista<br>Detalhes<br>Miniaturas<br>Lado-a-Lado
+PREF_MWA=Ação da roda do mouse
+PREF_MWA_ITEMS=Nenhuma<br>Rolar<br>Ampliar/Reduzir
+PREF_SAVE_TOOL_SETTINGS=Salvar configurações da ferramenta entre sessões
 PREF_FILE_ASSOC=Associações de arquivos
-PREF_ADMIN=Note que, se estiver usando Vista ou mais recente, GFIE não pode modificar essas configurações do sistema executar a menos que no modo de administrador.
-PRINT_COPIES=Cópias
-PRINT_ZOOM=Zoom (%)
-PRINT_CAPTION=Título
-PRINT_PAGES_BUTTONS=Todas as páginas <br> A página atual
-RP_LANG_CUSTOM=linguagem Custom ID
-RP_LANG_NEUTRAL=Linguagem neutra
-ST_CHOOSE_ACTION=Escolha uma ação a ser executada
-ST_NG=Criar um novo gráfico
-ST_NG_INFO=Cria um novo ícone, cursor ou animação documento
-ST_NL=Criar uma nova biblioteca
-ST_NL_INFO=Cria uma biblioteca de ícone em branco (. ICL) ou arquivo de recurso (. RES)
-ST_OPEN=Abra um documento existente
-ST_OPEN_INFO=Abre um arquivo de imagem, biblioteca de ícone, executável ou arquivo de recurso de uma mídia de armazenamento
-ST_CONVERT=Batch converter arquivos de imagem
-ST_CONVERT_INFO=Converte vários arquivos de imagem em ícones ou para outro formato de imagem
-ST_NONE=Não executar qualquer ação
-ST_NONE_INFO=Fecha essa tela de inicialização
-ST_RECENT_INFO=Abre um arquivo que foi recentemente editado em Greenfish Icon Editor Pro
+PREF_ADMIN=Observe que, se estiver usando o Vista ou mais recente, GFIE não pode modificar essas configurações do sistema a menos que sejam executadas no modo de administrador.
 
+; Print dialog
+PRINT_COPIES=Cópias
+PRINT_ZOOM=Ampliação (%)
+PRINT_CAPTION=Título
+PRINT_PAGES=Imprimir
+PRINT_PAGES_BUTTONS=Todas as páginas<br>Página atual
+
+; Resource properties dialog
+RP_TYPE=Tipo
+RES_TYPE_ICON=Ícone
+RES_TYPE_CURSOR=Cursor
+RES_TYPE_BITMAP=Imagem
+RP_NAME=Nome
+RP_LANGUAGE=Idioma
+RP_LANG_CUSTOM=Personalizar ID do idioma
+RP_LANG_NEUTRAL=Idioma neutro
+
+; Save options dialog
+SO_TITLE=Salvar opções
+SO_QUALITY=Qualidade
+SO_LOSSLESS=Menos perda
+
+; Scripting dialog
+SC_TITLE=Scripting GFIE
+SC_RUNNING=Executando
+SC_CONSOLE=Console
+SC_COMPILING_SCRIPT=Compilando script...
+SC_COMPILED=Script compilado com êxito!
+SC_COMPILE_FAILED=Falha na compilação!
+SC_RUNNING_SCRIPT=Executando script...
+SC_TERMINATED=Script concluído.
+SC_WARNING=Scripts podem causar paralisação dio GFIE, acesso ao seus disco rígido, acesso à internet e muito mais, causando potencial perda de dados e privacidade. Ao executar scripts você declara que você é responsável por quaisquer danos que esses scripts possam causar a você ou outros.
+
+; Startup screen
+ST_WELCOME=Bem-vindo!
+ST_CHOOSE_ACTION=Escolha uma ação para executar
+ST_NG=Criar um novo gráfico
+ST_NG_INFO=Cria um novo ícone, cursor ou animação
+ST_NL=Criar uma nova biblioteca
+ST_NL_INFO=Criar uma biblioteca de ícone em branco (.ICL) ou arquivo de recurso (.RES)
+ST_OPEN=Abrir um documento existente
+ST_OPEN_INFO=Abrir um arquivo de imagem, biblioteca de ícone, executável ou arquivo de recurso de uma mídia de armazenamento
+ST_CONVERT=Converter arquivos de imagem em lote
+ST_CONVERT_INFO=Converter vários arquivos de imagem em ícones ou para outro formato de imagem
+ST_NONE=Não executar qualquer ação
+ST_NONE_INFO=Fechar essa tela de inicialização
+ST_RECENT_INFO=Abrir um arquivo que foi recentemente editado no Greenfish Icon Editor Pro
 ST_SHOW=Sempre mostrar esta tela na inicialização
-LABEL_MOVE_OVER_IMAGE=Move o cursor sobre a imagem abaixo
-CAPTION_INSERT_TEXT=Insira o texto
-TB_NOTHING=A ferramenta selecionada no momento não pode ser personalizada
+
+; SVG open options dialog
+SOO_SVG_OPTIONS=Opções SVG
+SOO_DEFAULT_SIZE=Tamanho padrão: %g x %g
+SOO_SCALE_FACTOR=Fator da escala
+
+; Test dialog
+LABEL_MOVE_OVER_IMAGE=Mova o cursor sobre a imagem abaixo
+TS_CURSOR=Cursor
+TS_9PATCH=9-patch (botão Android)
+TS_TEXTURE_3D=Textura 3D
+TS_TEXTURE_MULTIPLIER=Multiplicador de textura
+TS_NOT_9PATCH=Esta imagem não pode ser interpretada como uma imagem 9-patch.
+
+; Insert Text dialog
+CAPTION_INSERT_TEXT=Inserir texto
+
+; Tool Behavior dialog
+TB_PATTERN=Padrão
+TB_SAMPLE_ALL_LAYERS=Exemplo de todas as camadas
 TB_BRUSH_SIZE=Tamanho do pincel
-TB_BRUSH_SHAPE=forma de pincel
-TB_BRUSH_ITEMS=Arredondado<br>Afiado<br>Corte<br>Backslash<br>Horizontal<br>Vertical<br>Spray
+TB_BRUSH_SHAPE=Forma de pincel
+TB_BRUSH_ITEMS=Arredondado<br>Afiado<br>Corte<br>Barra invertida<br>Horizontal<br>Vertical<br>Spray
 TB_LINE_WIDTH=Largura da linha
-TB_TOLERANCE=Wand / Recolorir / tolerância Bucket (%)
-TB_SHAPE_FRAMED=Enquadrado formas
+TB_TOLERANCE=Varinha/Recolorir/Tolerância do balde (%)
+TB_CONTIGUOUS=Contíguo
+TB_SHAPE_FRAMED=Formas com moldura
 TB_SHAPE_FILLED=Formas preenchidas
-TB_EYEDROPPER_BACK=Eyedropper volta à ferramenta anterior
-TB_RETOUCH_MODE=modo de retoque
-TB_RETOUCH_ITEMS=Blur<br>Sharpen<br>Dodge<br>Burn<br>Hue<br>Sponge
-TB_ERASER_STRENGTH=Eraser força (%)
-TB_G_LINEAR=gradiente linear
-TB_G_RADIAL=gradiente radial
-TB_G_CONICAL=gradiente cônico
-TB_G_SPIRAL=gradiente Spiral
+TB_EYEDROPPER_BACK=Conta-gotas volta à ferramenta anterior
+TB_RETOUCH_MODE=Modo de retoque
+TB_RETOUCH_ITEMS=Desfocagem<br>Notidez<br>Subexposição<br>Superexposição<br>Tonalidade<br>Esponja
+TB_ERASER_STRENGTH=Intensidade da borracha (%)
+TB_G_LINEAR=Gradiente linear
+TB_G_RADIAL=Gradiente radial
+TB_G_CONICAL=Gradiente cônico
+TB_G_SPIRAL=Gradiente espiral
 TB_REP_NONE=Nenhuma repetição
-TB_REP_SYM=epetição simétrica
-TB_REP_ASYM=repetição assimétrica
+TB_REP_SYM=Repetição simétrica
+TB_REP_ASYM=Repetição assimétrica
 TB_MODE_COLOR=Modo de cor
-TB_MODE_TRANSPARENCY=modo Transparência
+TB_MODE_TRANSPARENCY=Modo de transparência
+
+; Transform Selection dialog
 XF_UNITS_ITEMS=pixels<br>%
-HINT_COMPACT=ver Compacto
+
+; Hints
+HINT_COMPACT=Visualização compacta
+
+HINT_CP_FORE_COLOR=Cor do primeiro plano
 HINT_CP_BACK_COLOR=Cor de fundo
 HINT_CP_SWAP_COLORS=Trocar cores
 HINT_CP_DEFAULT=Restaurar padrão
 HINT_CP_TRANSPARENT=Transparente
 HINT_CP_INVERTED=Invertido
-HINT_CP_SWATCHES=Clique à esquerda para escolher a cor, clique com o botão direito para substituir amostra com a cor atual
-HINT_CP_SWATCH_LOAD=amostra de pré-carga
-HINT_CP_FORE_COLOR=Cor do primeiro plano
-HINT_CP_SWATCH_SAVE=Salvar amostra pré-
-HINT_CP_RED=componente vermelho
-HINT_CP_GREEN=componente Verde
-HINT_CP_BLUE=componente azul
-HINT_CP_ALPHA=Cor alpha (opacidade)
-HINT_CP_HTML=código HTML
-HINT_CP_WCP=Windows Color Picker
-HINT_DOC_LB=Lista de páginas (formatos de ícone / frames)
-HINT_DOC_LB_PAGE=Página %d, size: %d x %d pixels
-HINT_DOC_LB_PNG=será PNG comprimido ao salvar documento como .ICO / .CUR
-HINT_DOC_ZOOM_MENU=Zoom
+HINT_CP_TOGGLE_CHOOSER=Alternar mapa HSB e amostras
+HINT_CP_SWATCHES=Clique com o botão esquerdo para escolher a cor, clique com o botão direito para substituir a amostra com a cor atual
+HINT_CP_SWATCH_LOAD=Carregar predefinição da amostra
+HINT_CP_SWATCH_SAVE=Salvar predefinição da amostra
+HINT_CP_RED=Componente vermelho
+HINT_CP_GREEN=Componente verde
+HINT_CP_BLUE=Componente azul
+HINT_CP_ALPHA=Cor alfa (opacidade)
+HINT_CP_HTML=Código HTML
+HINT_CP_WCP=Diálogo seletor de cores
+
+HINT_DOC_LB=Lista de páginas (formatos/quadros do ícone)
+HINT_DOC_LB_PAGE=Página %s, tamanho: %d x %d pixels
+HINT_DOC_LB_DPI=%g DPI
+HINT_DOC_LB_DOC_DPI=%g DPI (DPI universal)
+HINT_DOC_LB_PNG=será PNG comprimido ao salvar documento como .ICO/.CUR
+HINT_DOC_ZOOM_MENU=Ampliação
 HINT_DOC_NODES=%d nós
-HINT_DOC_TOGGLE_PAGES=Ocultar / mostrar lista de páginas
+HINT_DOC_TOGGLE_PAGES=Ocultar/mostrar lista de páginas
+
 HINT_RES_FOLDER=Por favor, selecione uma pasta para os arquivos extraídos
-HINT_TEST_BGR_LOAD=Abrir Fundo
-HINT_TEST_BGR_DEFAULT=Padrão de fundo
-HINT_TEXT_FACE=face da Fonte
+
+HINT_STARTUP_HELP=Ajuda
+HINT_TEST_BGR_LOAD=Carregar Fundo
+HINT_TEST_BGR_DEFAULT=Fundo padrão
+HINT_TEST_OBJ_LOAD=Carregar objeto 3D
+HINT_TEST_LIGHTING=Iluminação
+
+HINT_TEXT_FACE=Fonte
 HINT_TEXT_BOLD=Negrito
 HINT_TEXT_ITALIC=Itálico
 HINT_TEXT_UNDERLINE=Sublinhado
+
+; eof

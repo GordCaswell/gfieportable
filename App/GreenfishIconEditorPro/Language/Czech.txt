@@ -1,0 +1,580 @@
+﻿; Greenfish Icon Editor Pro 3.5
+; Language pack: Čeština
+; Created by: Vladimír Pavlišta
+
+; General dictionary
+LABEL_WIDTH=Šířka
+LABEL_HEIGHT=Výška
+LABEL_SIZE=Velikost
+LABEL_DPI=DPI
+LABEL_PIXELS_SHORT=px
+LABEL_COLOR=Barva
+LABEL_KIND=Kind
+LABEL_ANTIALIAS=Vyhlazování hran
+LABEL_POSITION=Pozice
+LABEL_FILE_SIZE=Velikost souboru
+LABEL_REDRAW=Překreslit
+LABEL_REFRESH=Obnovit
+UNTITLED=Bezejména
+
+; Buttons
+B_OK=ANO
+B_CANCEL=Zrušit
+B_YES=Ano
+B_NO=Ne
+B_RESET=Reset
+B_ADD=Přidat
+B_REMOVE=Odstranit
+B_CLEAR=Vymazat
+B_CLOSE=Zavřít
+B_ALL=Vše
+B_NONE=Nic
+B_PRINT=Tisk
+B_PRINTER_SETUP=Nastavení tisku
+B_PREVIEW=Náhled
+B_COMPILE=Sestavit
+
+; Shown messages
+MSG_CONFIRMATION=Potvrzení
+MSG_NOT_EXIST="%s" neexistuje
+MSG_OVERWRITE=Opravdu chcete přepsat "%s"?
+MSG_OVERWRITE_MULTIPLE=Opravdu chcete přepsat následující soubory?
+MSG_UNKNOWN_FILE_TYPE=Tento formát souboru "%s" nemohl být automaticky určen.<br>Tento soubor nemůže být načten nebo uložen programem Greenfish Icon Editor Pro nebo máte špatné rozšíření.
+MSG_INVALID_FILE_FORMAT=Soubor "%s" nemá správný formát "%s".<br>Tento soubor může být poškozen, máte špatné rozšíření, nebo nesprávný filtr specifikovaný v Open dialog boxu.
+MSG_CROPPED=Obrázek byl větší než %dx%d a byl zmenšen.<br>Uložení obrázku způsobí ztrátu dat.<br>Použijjte Nastavení|Předvolby a zvyšte limit pro rozměr obrázku.
+MSG_SAVE_CHANGES=Opravdu chcete uložit změny "%s"?
+MSG_CONFIRM_REVERT=Všechny změny "%s" budou ztraceny a tato operace nemůže být dokončena.<br>Jste si jisti, že chcete pokračovat?
+MSG_CONFIRM_REMOVE=Opravdu chcete odstranit vybranou položku(y)?
+MSG_CONFIRM_DESTROY_EXE=Ikony/kurzory nemohou být snadno nahrazeny v tomto spustitelném souboru nebo knihovně ikon.<br><br>Jestli je toto program nebo DLL který má další účel ne jen uskladnění ikon, pak tyto další schopnosti budou zničeny během ukládání.<br>Jestliže tento soubor je jen ikona knihovny, pak se pravděpodobně nic špatného nestane.<br><br>Chcete přesto pokračovat?
+MSG_DATA_LOSS_INFO=Aby jste vyhnuli ztrátě dat, musíte uložit dokument také v jiném formátu souboru.
+MSG_DL_MULTIPAGE=Tento formát souboru nepodporuje vícenásobné stránky uložené v jednom souboru.<br>Jen první stránka bude uložena.
+MSG_DL_LAYERS=Tento formát souboru nepodporuje ukládání vrstvové informace. Obrázek byl uložen "flattened".
+MSG_DL_SIZE_256=Tento formát souboru nepodporuje uložení obrázků větších než 256x256.<br>Tyto obrázky budou zmenšeny.
+MSG_DL_TRANSPARENCY=Tento formát souboru nepodporuje průhlednost.
+MSG_DL_COLOR_DEPTH=Některá část barevné informace nemohla být uložena.
+MSG_DL_ICNS=Některé stránky nemohly být uloženy kvůli omezením ICNS formátu. Podívejte se do nápovědy v části o formátech souboru na podrobnosti.
+MSG_DL_ERROR=Unknown error occured while trying to save.<br>The document could not be saved.
+MSG_FT_NO_OPTIONS=Vybraný formát souboru nemůže být přizpůsoben
+MSG_EXPORT_ANDROID_ERROR=Hint: The current document is probably not a multi-DPI Android drawable. You can create an Android drawable using Icon|Create Android drawable from image.
+MSG_EXPORT_ANDROID_NO_TITLE=Please set the document title to the desired Android resource identifier. (See File|Metadata)
+MSG_EXPORT_ANDROID_NO_DPI=DPI hodnota musí být mezi %s pro všechny stránky.
+MSG_EXPORT_ANDROID_SELECT_FOLDER=Vyberte Android projekt zdrojovou složku
+MSG_EXPORT_ANDROID_INVALID_RES_FOLDER=Vadná Android zdrojová složka. Vyberte složku která má drawable -* podsložky.
+MSG_ADD_FILES=Prosím přidejte nějaké soubory do seznamu
+MSG_SELECT_PAGES=Prosím vyberte nějaké stránky
+MSG_SELECT_ITEMS=Prosím vyberte nějaké položky
+MSG_NO_LAYERS=Žádné vrstvy nejsou přítomny
+MSG_NO_LAYERS_SELECTED=Žádné vrstvy nejsou vybrány
+MSG_RES_EXIST=Další zdroj se specifikovaným typem, jménem a jazykem již existuje.<br>Prosím vyberte si jiné jméno nebo jazyk.
+MSG_ERROR_WRITE_RES=Vyskytla se chyba při pokusu uložit změny k specifikovaným zdrojům.
+MSG_PAGE_SIZE_0=Chyba: fyzická šířka stránky nemůže být 0 mm.<br>Vyberte jiný formát papíru.
+MSG_ERROR_ASSOC=Asociace souborů nemohly být nastaveny. Spusťte GFIE jako administrátor pro vyřešení sporné otázky.
+MSG_FAIL_SINGLE_OPEN=Nelze načíst vybraný soubor.
+MSG_FAIL_MULTIPLE_OPEN=Některé soubory nemohly být otevřeny.
+MSG_PROGRAM_NEEDED=%s potřebný pro zpracování souborù %s.<br>prosím ujistěte se, že nezbytné součásti jsou řádně nainstalovány.
+MSG_ERROR_NO_TEXTURE_COORDS=Error: no texture coordinates found in the specified 3d object.
+MSG_ERROR_FILTER_OPAQUE=Tento filtr nedělá nic na plně matných obrazech. Obraz potřebuje prùhledné části aby filtr pracoval.
+
+; Open/Save dialog filters
+FF_ALL=Všechny soubory
+FF_GFIE=GFIE Pro native formát
+FF_ICO=Soubory Ikon
+FF_CUR=Soubory Kursorů
+FF_ANI=Animované kurzory
+FF_ICNS=Apple Icon Image Format
+FF_PNG=Portable Network Graphics
+FF_XPM=X-Pixmaps
+FF_BMP=Windows bitmapy
+FF_JPEG=JPEG soubory
+FF_GIF=Graphics Interchange Format
+FF_TIFF=Tagged Image File Format
+FF_JPEG_2000=JPEG 2000 soubory
+FF_PCX=PCX soubory
+FF_SVG=Scalable Vector Graphics
+FF_EXEC=Všechny EXE soubory a knihovny ikon ICL
+FF_ICL=Knihovny ikon
+FF_RES=Win32 zdrojové soubory
+FF_PAS=Pascal zdrojové soubory
+FF_OBJ_3D=Wavefront object files
+
+; Tool names
+TOOL_SEL_RECT=Vybrat Pravoúhelník
+TOOL_SEL_ELLIPSE=Vybrat Elipsu
+TOOL_LASSO=Laso
+TOOL_WAND=Kouzelný proutek
+TOOL_SEL_PENCIL=Vybrat Tužku
+TOOL_TRANSFORM=Transform
+TOOL_CROP=Ořez
+TOOL_HOTSPOT=Žhavé místo (Hot spot)
+TOOL_EYEDROPPER=Oční kapátko
+TOOL_RETOUCH=Retušovat (opravit)
+TOOL_RECT=Pravoúhelník
+TOOL_ELLIPSE=Elipsa
+TOOL_LINE=Linka
+TOOL_TEXT=Text
+TOOL_PENCIL=Tužka
+TOOL_BRUSH=Štětec
+TOOL_ERASER=Guma
+TOOL_RECOLOR=Znovu obarvit
+TOOL_BUCKET=Kbelík fill
+TOOL_GRADIENT=Gradient fill
+TOOL_NONE=Nic
+
+; Menu shortcuts
+KEY_CTRL=Ctrl
+KEY_ALT=Alt
+KEY_SHIFT=Shift
+KEY_DEL=Del
+KEY_ENTER=Enter
+
+; Menu items
+MI_FILE=Soubor
+MI_FILE_NEW_GRAPHIC=Nová grafika
+MI_FILE_NEW_LIBRARY=Nová knihovna
+MI_FILE_OPEN=Otevřít
+MI_FILE_OPEN_SCRIPT=Otevřít skript
+MI_FILE_RECENT_FILES=Použité soubory
+MI_FILE_RF_CLEAR=Smazat seznam
+MI_FILE_BATCH_CONVERT=Dávková konverze souborů
+MI_FILE_CLOSE=Zavřít
+MI_FILE_CLOSE_ALL=Zavřít vše
+MI_FILE_SAVE=Uložit
+MI_FILE_SAVE_SCRIPT=Uložit skript
+MI_FILE_SAVE_AS=Uložit jako
+MI_FILE_SAVE_SCRIPT_AS=Uložit skript jako
+MI_FILE_SAVE_COPY=Uložit a kopírovat
+MI_FILE_SAVE_ALL=Uložit vše
+MI_FILE_EXPORT_ANDROID=Export Android drawable
+MI_FILE_REVERT=Vrátit (do původního stavu)
+MI_FILE_METADATA=Metadata
+MI_FILE_PRINT=Tisk
+MI_FILE_EXIT=KONEC
+
+MI_EDIT=Úpravy
+MI_EDIT_UNDO=Zpět
+MI_EDIT_CANT_UNDO=Nelze zpět
+MI_EDIT_REDO=Vpřed
+MI_EDIT_CANT_REDO=Nelze vpřed
+MI_EDIT_CUT=Vyjmout
+MI_EDIT_COPY=Kopírovat
+MI_EDIT_PASTE=Vložit
+MI_EDIT_PASTE_PAGE=Vložit jako Novou Stranu
+MI_EDIT_PASTE_DOC=Vložit jako Nový Dokument
+MI_EDIT_DELETE=Smazat
+MI_EDIT_SEL_ALL=Označit Vše
+MI_EDIT_SEL_NONE=Odoznačit Vše
+MI_EDIT_SEL_INVERT=Obrátit výběr
+MI_EDIT_SEL_LOAD=Načíst vybranou masku
+MI_EDIT_SEL_SAVE=Uložit vybranou masku
+MI_EDIT_CROP_TRANSPARENCY=Oříznout průhledné části
+MI_EDIT_TRANSFORM=Transformovat
+MI_EDIT_SEL_TRANSFORM=Transformovat výběr
+MI_EDIT_FLIP_HORIZ=Překlopit vodorovně
+MI_EDIT_FLIP_VERT=Překlopit svisle
+MI_EDIT_ROTATE_LEFT=Otočit o 90 stupnů doleva
+MI_EDIT_ROTATE_RIGHT=Otočit o 90 stupnů doprava
+MI_EDIT_ROTATE_180=Otočit o 180 stupnů
+
+MI_VIEW=Zobrazit
+MI_VIEW_ZOOM_IN=Zoom Plus
+MI_VIEW_ZOOM_OUT=Zoom Minus
+MI_VIEW_100_PERCENT=100%
+MI_VIEW_FIT_WINDOW=Vhodné okno
+MI_VIEW_GRID=Mřížka
+MI_VIEW_CELL_GRID=Síť
+MI_VIEW_CENTER_LINES=Centrální linky
+MI_VIEW_PAGES=Seznam stránek
+MI_VIEW_TOOLBAR=Lišta nástrojů
+MI_VIEW_COLOR_PICKER=Barevný sběrač
+MI_VIEW_TOOL_BEHAVIOR=Panel nástrojů
+MI_VIEW_LAYERS=Vrstvy
+MI_VIEW_PANEL_LEFT=Levý panel
+MI_VIEW_PANEL_RIGHT=Pravý panel
+MI_VIEW_STARTUP_SCREEN=Startovní obrazovka
+
+MI_FLT=Filtry
+MI_FLT_GRAYSCALE=Stupnice šedi
+MI_FLT_INVERT=Převrátit (Invert)
+MI_FLT_SOLARIZE=Solarize
+MI_FLT_RGB=RGB Kanály
+MI_FLT_HS=Hue/Saturace
+MI_FLT_EXPOSURE=Expozice
+MI_FLT_FORMULAE=RGB Formulae
+MI_FLT_AVERAGE=Průměr
+MI_FLT_BLUR_SOFT=Jemně rozmazat
+MI_FLT_BLUR_MORE=Více rozmazat
+MI_FLT_BLUR_CUSTOM=Ručně rozmazat
+MI_FLT_SHARPEN=Zaostřit
+MI_FLT_UNSHARP_MASK=Neostrá maska
+MI_FLT_REMOVE_MATTE=Odstranit matte
+MI_FLT_OPACITY=Průhlednost
+MI_FLT_PAINT_CONTOUR=Malovat kontury
+MI_FLT_DROP_SHADOW=Drop stín
+MI_FLT_GLOW=Záře
+MI_FLT_BEVEL=Úkos
+MI_FLT_SCRIPTING=Scripting
+
+MI_LAYERS=Vrstvy
+MI_LAYERS_NEW=Nová vrstva
+MI_LAYERS_DUPLICATE=Duplikovat vrstvu
+MI_LAYERS_DELETE=Smazat vrstvu
+MI_LAYERS_PROP=Vlastnosti vrstvy
+MI_LAYERS_MERGE_SELECTED=Sloučit vybrané
+MI_LAYERS_MERGE_VISIBLE=Sloučit viditelné
+MI_LAYERS_FLATTEN=Uhladit obrázek
+MI_LAYERS_FROM_SEL=Vytvořit vrstvu podle výběru
+
+MI_ICON=Ikona
+MI_ICON_PAGE_NEW=Nová strana
+MI_ICON_PAGE_DELETE=Smazat stranu
+MI_ICON_PAGE_PROP=Vlastnosti strany
+MI_ICON_PAGE_IMPORT=Import stran
+MI_ICON_PAGE_EXPORT=Export strany
+MI_ICON_PAGE_EXPORT_ALL=Export všech stran
+MI_ICON_UNIFORM_RATE=Apply frame duration to all frames
+MI_ICON_CREATE_WIN=Vytvořit Windows ikonu z obrázku
+MI_ICON_CREATE_MAC=Vytvořit Mac ikonu z obrázku
+MI_ICON_CREATE_ANDROID=Create Android drawable from image
+MI_ICON_TEST=Test
+
+MI_LIB=Knihovna
+MI_LIB_ADD=Přidat zdroje
+MI_LIB_REMOVE=Odstranit zdroje
+MI_LIB_REPLACE=Replace zdroje
+MI_LIB_PROP=Vlastnosti zdroje
+MI_LIB_EXTRACT_EDIT=Vytáhnout a upravit
+MI_LIB_EXTRACT_SAVE=Vytáhnout a uložit
+
+MI_SET=Nastavení
+MI_SET_PREFERENCES=Předvolby
+MI_SET_LANGUAGE=Jazyk
+
+MI_HELP=Nápověda
+MI_HELP_CONTENTS=Obsah
+MI_HELP_HOMEPAGE=Domovská stránka
+MI_HELP_SUPPORT=Online pomoc
+MI_HELP_DONATE=Dar
+MI_HELP_ABOUT=O programu
+
+MI_RUN=Spustit
+MI_RUN_RUN=Spustit
+MI_RUN_STOP=Stop
+
+MI_TAB_CLOSE=Zavřít
+MI_TAB_CLOSE_OTHERS=Zavřít všechny ostatní tabs
+MI_TAB_COPY_FULL_PATH=Kopírovat celou cestu do schránky
+MI_TAB_COPY_FILENAME=Kopírovat název souboru do schránky
+MI_TAB_COPY_FOLDER=Kopírovat složku do schránky
+MI_TAB_OPEN_FOLDER=Otevřít obsahující složku
+MI_TAB_OPEN_FOLDER_CMD=Otevřít obsahující složku v příkazovém řádku
+
+; Pixel Format to String
+PF_1_BIT=1-bit
+PF_16_COLORS=16 barev
+PF_256_COLORS=256 barev
+PF_24_BIT=24-bit
+PF_32_BIT=32-bit
+
+; Undo captions
+UNDO_CREATE_FLOATING=Vytvořit přechodný výběr
+UNDO_MERGE_LAYERS=Sloučit vrstvy
+UNDO_MOVE_LAYERS=Přesunout vrstvy
+UNDO_MOVE_PAGE=Přesunout stranu
+UNDO_FLIP_ROTATE=Převrátit/Otočit
+
+; Layers glossary
+LY_LAYER=Vrstva
+LY_BACKGROUND=Pozadí
+LY_FLOATING_SEL=Přechodný výběr
+
+; Page properties dialog
+PG_CAPTION_NEW_PAGE=Nová strana
+PG_CAPTION_PAGE_PROP=Vlastnosti strany
+
+PG_SIZE_SMALLEST=nejmenší
+PG_SIZE_TOOLBAR=lišta nástrojů
+PG_SIZE_SMALL=malá
+PG_SIZE_MEDIUM=střední
+PG_SIZE_LARGE=velká
+PG_SIZE_HUGE_VISTA=huge, Vista
+PG_SIZE_APPLE=Apple
+PG_CUSTOM_SIZE=Vlastní velikost
+PG_SQUARE=Čtverec
+
+PG_CR=Color reduction
+PG_CR_BW=Černá a Bílá
+PG_CR_16_WIN=16 barev (Windows paleta)
+PG_CR_16_MAC=16 barev (Mac paleta)
+PG_CR_256_ADAPT=256 barev (adaptive)
+PG_CR_256_MAC=256 barev (Mac paleta)
+PG_CR_24=24-bit RGB
+PG_CR_32=No reduction (32-bit)
+
+PG_OTHER=Ostatní
+PG_FRAME_RATE=Trvání snímku (milisekund)
+PG_DPI=Strana DPI (0 = použít DPI dokumentu)
+
+PG_CREATE_FROM_SELECTED=Vytvořit z vybrané stránky
+PG_WHEN_RESIZING=Kdy přenastavit (When resizing)
+PG_STRETCH=Roztáhnout
+PG_CROP=Oříznout
+PG_IMAGE_ANCHORS=Klíčové snímky
+
+; Filter dialogs
+LABEL_RED=Červená
+LABEL_GREEN=Zelená
+LABEL_BLUE=Modrá
+LABEL_R=R
+LABEL_G=G
+LABEL_B=B
+LABEL_A=A
+LABEL_HUE_SHIFT=Hue shift
+LABEL_SATURATION=Saturace
+LABEL_GAMMA=Gamma
+LABEL_BRIGHTNESS=Jas
+LABEL_TORIC=Torus mode
+LABEL_GAUSSIAN_BLUR=Gaussian Blur
+LABEL_BOX_BLUR=Box Blur
+LABEL_MATTE_COLOR=Matte color
+LABEL_WHITE_MATTE=White matte
+LABEL_BLACK_MATTE=Black matte
+LABEL_INNER_GLOW=Inner Glow
+LABEL_OUTER_GLOW=Outer Glow
+
+LABEL_AMOUNT=Obnos (Amount)
+LABEL_ANGLE_DEGREES=Úhel (stupně)
+LABEL_BLUR=Rozmazat (Blur)
+LABEL_DISTANCE=Mezera (Distance)
+LABEL_INTENSITY=Intenzita
+LABEL_OPACITY=Průhlednost
+LABEL_RADIUS=Poloměr (Radius)
+LABEL_THRESHOLD=Práh (Threshold)
+
+; Batch conversion dialog
+BC_FILES=Soubory
+BC_SETTINGS=Nastavení
+BC_FORMAT=Konvertovat do
+BC_FOLDER=Cílová složka
+BC_OPEN=Otevřít konvertorované soubory v Greenfish Icon Editor Pro
+BC_ICON_FORMATS=Vytvořit formáty ikon
+
+; Cell grid dialog
+CG_ENABLED=Povoleno
+CG_SIZE=Velikost buňky
+CG_SPACING=Rozestup buněk
+CG_OFFSET=Offset
+
+; Create icon from image dialog
+CI_SELECT_FORMATS=Vyberte formáty, které chcete vytvořit
+
+; Create Android drawable from image dialog
+CAI_ID=Android resource identifier
+CAI_CURRENT_DPI=Current DPI
+CAI_RESOLUTIONS=Resolutions to create
+CAI_CREATE_DPI=Create %s version
+CAI_ERROR_EMPTY_ID=Please enter a resource identifier.
+CAI_ERROR_NO_RESOLUTIONS=Please select at least one resolution.
+
+; ICL format dialog
+IF_TITLE=Vybrat ICL formát
+
+; Language dialog
+LABEL_LANG_PACK=Jazykový balík
+
+; Layer properties dialog
+LP_NAME=Název
+LP_VISIBLE=Viditelná (Visible)
+LP_BLEND_MODE=Blend mode
+
+LP_BM_NORMAL=Normální
+LP_BM_MASK=Maska
+LP_BM_BEHIND=Behind
+LP_BM_DISSOLVE=Dissolve
+LP_BM_HUE=Hue
+LP_BM_HUE_SHIFT=Hue Shift
+LP_BM_SAT=Saturace
+LP_BM_DARKEN=Zatemnit
+LP_BM_MULTIPLY=Multiply
+LP_BM_COLOR_BURN=Color Burn
+LP_BM_LINEAR_BURN=Linear Burn
+LP_BM_DARKER_COLOR=Tmavší barva
+LP_BM_LIGHTEN=Rozjasnit
+LP_BM_SCREEN=Screen
+LP_BM_COLOR_DODGE=Color Dodge
+LP_BM_LINEAR_DODGE=Linear Dodge (Add)
+LP_BM_LIGHTER_COLOR=Jasnější barva
+LP_BM_OVERLAY=Overlay
+LP_BM_SOFT_LIGHT=Soft Light
+LP_BM_HARD_LIGHT=Hard Light
+LP_BM_VIVID_LIGHT=Vivid Light
+LP_BM_LINEAR_LIGHT=Linear Light
+LP_BM_PIN_LIGHT=Pin Light
+LP_BM_HARD_MIX=Hard Mix
+LP_BM_DIFFERENCE=Diference
+LP_BM_EXCLUSION=Exclusion
+
+; Metadata dialog
+MD_TYPE=Pro %s soubory
+MD_TITLE=Title
+MD_AUTHOR=Autor
+MD_COPYRIGHT=Copyright
+MD_COMMENTS=Komentáře
+MD_QUALITY=Uložit v kvalitě
+MD_LOOP_COUNT=Počet smyček (0 = nekonečno)
+MD_DPI=Global DPI (0 = nedefinováno)
+
+; Preferences dialog
+PREF_MISC=Misc
+PREF_ENVIRONMENT=Environment
+PREF_INSTALL=Install
+PREF_IMAGE_MAX=Max. povolené rozměry obrazu
+PREF_PNG_ICONS=Použít PNG komprese v .ICO/.CUR souborech
+PREF_PNG_LIMIT=Komprimovat obrazy jejichž velikost je přinejmenším
+PREF_AA_IMAGES=Antialias všech přenastavených obrazů
+PREF_COLORS=Barvy
+PREF_TRANSPARENT_HATCH=Prùhledný otvor
+PREF_GRID2=Secondary grid
+PREF_DVM=Zobrazit mód Otevřít/Uložit dialogy
+PREF_DVM_ITEMS=Ikony<br>Seznam<br>Detaily<br>Miniatury<br>Dlaždice
+PREF_MWA=Akce kolečka myši
+PREF_MWA_ITEMS=Žádná<br>Rolování<br>Zoom
+PREF_SAVE_TOOL_SETTINGS=Save tool settings between sessions
+PREF_FILE_ASSOC=Asociace souborů
+PREF_ADMIN=Note that, if using Windows Vista or newer, GFIE cannot modify these system settings unless run in administrator mode.
+
+; Print dialog
+PRINT_COPIES=Kopie
+PRINT_ZOOM=Zoom (%)
+PRINT_CAPTION=Kapitola
+PRINT_PAGES=Tisk
+PRINT_PAGES_BUTTONS=Všechny strany<br>Aktuální strana
+
+; Resource properties dialog
+RP_TYPE=Typ
+RES_TYPE_ICON=Ikona
+RES_TYPE_CURSOR=Kurzor
+RES_TYPE_BITMAP=Bitmap
+RP_NAME=Název
+RP_LANGUAGE=Jazyk
+RP_LANG_CUSTOM=Vlastní jazyk ID
+RP_LANG_NEUTRAL=Neutrální jazyk
+
+; Save options dialog
+SO_TITLE=Uložit nastavení
+SO_QUALITY=Kvalita
+SO_LOSSLESS=Bezeztrátová
+
+; Scripting dialog
+SC_TITLE=GFIE Scripting
+SC_RUNNING=Running
+SC_CONSOLE=Console
+SC_COMPILING_SCRIPT=Compiling script...
+SC_COMPILED=Script compiled successfully!
+SC_COMPILE_FAILED=Compile failed!
+SC_RUNNING_SCRIPT=Running script...
+SC_TERMINATED=Script terminated.
+SC_WARNING=Scripts can cause GFIE to crash, access your hard disk, access the internet, and do much more, causing potential data and privacy loss. By running scripts you declare that you are responsible for any damage these scripts may cause to you or others.
+
+; Startup screen
+ST_WELCOME=Vítejte!
+ST_CHOOSE_ACTION=Prosím vyberte akci k vykonání
+ST_NG=Vytvořit novou grafiku
+ST_NG_INFO=Vytvoří novou ikonu, kurzor nebo animovaný dokument
+ST_NL=Vytvořit novou knihovnu
+ST_NL_INFO=Vytvoří prázdnou knihovnu ikon (.ICL) nebo zdrojový soubor (.RES)
+ST_OPEN=Otevřít existující dokument
+ST_OPEN_INFO=Otevře obrazový soubor, knihovnu ikon, spustitelný nebo zdrojový soubor z USB médií
+ST_CONVERT=Dávkově přeměnit obrazové soubory
+ST_CONVERT_INFO=Promění rozmanité obrazové soubory na ikony nebo na další obrazové formáty
+ST_NONE=Nevykonávat žádnou akci
+ST_NONE_INFO=Zavře tuto startovní obrazovku
+ST_RECENT_INFO=Otevře soubor který byl nedávno upravován v Greenfish Icon Editoru Pro
+ST_SHOW=Vždy zobrazit tuto obrazovku po startu
+
+; SVG open options dialog
+SOO_SVG_OPTIONS=SVG nastavení
+SOO_DEFAULT_SIZE=Default velikost: %g x %g
+SOO_SCALE_FACTOR=Scale factor
+
+; Test dialog
+LABEL_MOVE_OVER_IMAGE=Move the cursor over the image below
+TS_CURSOR=Cursor
+TS_9PATCH=9-patch (Android button)
+TS_TEXTURE_3D=3D texture
+TS_TEXTURE_MULTIPLIER=Texture multiplier
+TS_NOT_9PATCH=This picture cannot be interpreted as a 9-patch image.
+
+; Insert Text dialog
+CAPTION_INSERT_TEXT=Vložit text
+
+; Tool Behavior dialog
+TB_PATTERN=Pattern
+TB_SAMPLE_ALL_LAYERS=Vzorek všech vrstev
+TB_BRUSH_SIZE=Brush size
+TB_BRUSH_SHAPE=Brush shape
+TB_BRUSH_ITEMS=Rounded<br>Sharp<br>Slash<br>Backslash<br>Horizontal<br>Vertical<br>Spray
+TB_LINE_WIDTH=Šířka linky
+TB_TOLERANCE=Wand/Recolor/Bucket tolerance (%)
+TB_CONTIGUOUS=Contiguous
+TB_SHAPE_FRAMED=Framed shapes
+TB_SHAPE_FILLED=Filled shapes
+TB_EYEDROPPER_BACK=Eyedropper switches back to previous tool
+TB_RETOUCH_MODE=Retouch mode
+TB_RETOUCH_ITEMS=Blur<br>Sharpen<br>Dodge<br>Burn<br>Hue<br>Sponge
+TB_ERASER_STRENGTH=Eraser strength (%)
+TB_G_LINEAR=Linear gradient
+TB_G_RADIAL=Radial gradient
+TB_G_CONICAL=Conical gradient
+TB_G_SPIRAL=Spiral gradient
+TB_REP_NONE=No repetition
+TB_REP_SYM=Symmetrical repetition
+TB_REP_ASYM=Asymmetrical repetition
+TB_MODE_COLOR=Color mode
+TB_MODE_TRANSPARENCY=Transparentní mód
+
+; Transform Selection dialog
+XF_UNITS_ITEMS=pixely<br>%
+
+; Hints
+HINT_COMPACT=Compact view
+
+HINT_CP_FORE_COLOR=Barva popředí
+HINT_CP_BACK_COLOR=Barva pozadí
+HINT_CP_SWAP_COLORS=Záměna barev
+HINT_CP_DEFAULT=Obnovit default
+HINT_CP_TRANSPARENT=Transparentní
+HINT_CP_INVERTED=Inverted
+HINT_CP_TOGGLE_CHOOSER=Toggle HSB map and swatches
+HINT_CP_SWATCHES=Levý klik to pick color, Pravý klik to overwrite swatch with current color
+HINT_CP_SWATCH_LOAD=Načíst swatch preset
+HINT_CP_SWATCH_SAVE=Uložit swatch preset
+HINT_CP_RED=Červená složka
+HINT_CP_GREEN=Zelená složka
+HINT_CP_BLUE=Modrá složka
+HINT_CP_ALPHA=Color alpha (opacity)
+HINT_CP_HTML=HTML kód
+HINT_CP_WCP=Color picker dialog
+
+HINT_DOC_LB=Seznam stran (formáty ikon/frames)
+HINT_DOC_LB_PAGE=Page %s, size: %d x %d pixelů
+HINT_DOC_LB_DPI=%g DPI
+HINT_DOC_LB_DOC_DPI=%g DPI (global DPI)
+HINT_DOC_LB_PNG=will be PNG-compressed when saving document as .ICO/.CUR
+HINT_DOC_ZOOM_MENU=Zoom
+HINT_DOC_NODES=%d nodes
+HINT_DOC_TOGGLE_PAGES=Skrýt/zobrazit seznam stran
+
+HINT_RES_FOLDER=Prosím vyberte složku pro vytažené soubory
+
+HINT_STARTUP_HELP=Nápověda
+HINT_TEST_BGR_LOAD=Načíst pozadí
+HINT_TEST_BGR_DEFAULT=Default pozadí
+HINT_TEST_OBJ_LOAD=Load 3D object
+HINT_TEST_LIGHTING=Lighting
+
+HINT_TEXT_FACE=Font vzhled
+HINT_TEXT_BOLD=Tučné
+HINT_TEXT_ITALIC=Šikmé
+HINT_TEXT_UNDERLINE=Podtržené
+
+; eof

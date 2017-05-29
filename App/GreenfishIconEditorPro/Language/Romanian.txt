@@ -479,7 +479,7 @@ HINT_CP_HTML=HTML code
 HINT_CP_WCP=Windows Alegere culoare
 
 HINT_DOC_LB=Lista de pagini (icon formate/cadre)
-HINT_DOC_LB_PAGE=Page %d, mărime: %d x %d pixels
+HINT_DOC_LB_PAGE=Page %s, mărime: %d x %d pixels
 HINT_DOC_LB_PNG=Va fi PNG-comprimat atunci când salvaţi document ca .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Zoom
 HINT_DOC_NODES=%d noduri

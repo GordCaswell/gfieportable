@@ -303,7 +303,7 @@ PG_CR_32=Nincs csökkentés (32-bit)
 
 PG_OTHER=Egyéb
 PG_FRAME_RATE=Képkocka időtartama (ezredmásodperc)
-PG_DPI=Oldal DPI-je (0 = dokumentum-DPI használata)
+PG_DPI=Oldal DPI-je (0: dokumentum-DPI)
 
 PG_CREATE_FROM_SELECTED=Létrehozás a kijelölt oldal alapján
 PG_WHEN_RESIZING=Átméretezéskor
@@ -543,7 +543,7 @@ HINT_CP_HTML=HTML kód
 HINT_CP_WCP=Színválasztó párbeszédablak
 
 HINT_DOC_LB=Oldalak listája (ikonformátumok/képkockák)
-HINT_DOC_LB_PAGE=%d. oldal, méret: %d x %d pixel
+HINT_DOC_LB_PAGE=%s. oldal, méret: %d x %d pixel
 HINT_DOC_LB_DPI=%g DPI
 HINT_DOC_LB_DOC_DPI=%g DPI (globális DPI)
 HINT_DOC_LB_PNG=.ICO/.CUR fájlokban PNG-tömörítve kerül mentésre

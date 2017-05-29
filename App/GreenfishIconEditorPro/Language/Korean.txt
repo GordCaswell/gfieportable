@@ -544,7 +544,7 @@ HINT_CP_HTML=HTML 코드
 HINT_CP_WCP=윈도우 칼라 피커
 
 HINT_DOC_LB=페이지 목록 (아이콘 확장자/프레임)
-HINT_DOC_LB_PAGE=페이지 %d, 크기: %d x %d 픽셀
+HINT_DOC_LB_PAGE=페이지 %s, 크기: %d x %d 픽셀
 HINT_DOC_LB_DPI=%g DPI
 HINT_DOC_LB_DOC_DPI=%g DPI (전체 DPI)
 HINT_DOC_LB_PNG=.ICO/.CUR로 저장될 때 PNG-압축이 됩니다.

@@ -260,6 +260,14 @@ MI_RUN=実行(&R)
 MI_RUN_RUN=実行
 MI_RUN_STOP=停止
 
+MI_TAB_CLOSE=閉じる
+MI_TAB_CLOSE_OTHERS=他のタブをすべて閉じる
+MI_TAB_COPY_FULL_PATH=フルパスをクリップボードにコピー
+MI_TAB_COPY_FILENAME=ファイル名をクリップボードにコピー
+MI_TAB_COPY_FOLDER=フォルダをクリップボードにコピー
+MI_TAB_OPEN_FOLDER=含まれているフォルダを開く
+MI_TAB_OPEN_FOLDER_CMD=コマンドラインで含まれているフォルダを開く
+
 ; Pixel Format to String
 PF_1_BIT=1-bit
 PF_16_COLORS=16 色
@@ -442,6 +450,10 @@ PRINT_PAGES=印刷
 PRINT_PAGES_BUTTONS=すべてのページ<br>現在のページ
 
 ; Resource properties dialog
+RP_TYPE=種類
+RES_TYPE_ICON=アイコン
+RES_TYPE_CURSOR=カーソル
+RES_TYPE_BITMAP=ビットマップ
 RP_NAME=名前
 RP_LANGUAGE=言語
 RP_LANG_CUSTOM=カスタム言語 ID
@@ -544,7 +556,7 @@ HINT_CP_HTML=HTML コード
 HINT_CP_WCP=Windows カラーピッカー
 
 HINT_DOC_LB=ページの一覧 (アイコン形式/フレーム)
-HINT_DOC_LB_PAGE=ページ %d, サイズ: %d x %d ピクセル
+HINT_DOC_LB_PAGE=ページ %s, サイズ: %d x %d ピクセル
 HINT_DOC_LB_DPI=%g DPI
 HINT_DOC_LB_DOC_DPI=%g DPI (グローバル DPI)
 HINT_DOC_LB_PNG=.ICO/.CUR 形式でファイルを保存する時に圧縮(PNG)する

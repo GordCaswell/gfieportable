@@ -22,6 +22,7 @@ B_OK=OK
 B_CANCEL=Cancel
 B_YES=Yes
 B_NO=No
+B_HELP=Help
 B_RESET=Reset
 B_ADD=Add
 B_REMOVE=Remove
@@ -41,6 +42,7 @@ MSG_OVERWRITE=Do you want to overwrite "%s"?
 MSG_OVERWRITE_MULTIPLE=Do you want to overwrite the following files?
 MSG_UNKNOWN_FILE_TYPE=The file format of "%s" could not be automatically determined.<br>This file cannot be loaded or saved by Greenfish Icon Editor Pro or has a wrong extension.
 MSG_INVALID_FILE_FORMAT=File "%s" does not meet the format "%s".<br>The file may be corrupt, may have a wrong extension, or an incorrect filter may have been specified in the Open dialog box.
+MSG_PE_NOT_SUPPORTED="%s" could not be opened because the PE (Portable Executable) format is not supported on this platform.
 MSG_CROPPED=The image was bigger than %dx%d and was cropped.<br>Saving the image will cause loss of data.<br>Use Settings|Preferences to increase the limit of image size.
 MSG_SAVE_CHANGES=Do you want to save changes to "%s"?
 MSG_CONFIRM_REVERT=All changes to "%s" will be lost and this operation cannot be undone.<br>Are you sure you continue?
@@ -52,6 +54,7 @@ MSG_DL_LAYERS=This file format does not support saving layer information. Image 
 MSG_DL_SIZE_256=This file format does not support saving images larger than 256x256.<br>These images were cropped.
 MSG_DL_TRANSPARENCY=This file format does not support transparency.
 MSG_DL_COLOR_DEPTH=Some part of the color information could not be saved.
+MSG_DL_ICNS_LOAD_DROP_PAGES=%d pages could not be loaded from this ICNS file. This is a limitation of GFIE.
 MSG_DL_ICNS=Some pages could not be saved due to the limitations of the ICNS format. See the help section on file formats for more details.
 MSG_DL_ERROR=Unknown error occured while trying to save.<br>The document could not be saved.
 MSG_FT_NO_OPTIONS=The selected file format cannot be customized
@@ -77,6 +80,7 @@ MSG_ERROR_FILTER_OPAQUE=This filter does nothing on fully opaque images. The ima
 
 ; Open/Save dialog filters
 FF_ALL=All files
+FF_ALL_KNOWN=All known file types
 FF_GFIE=GFIE Pro native format
 FF_ICO=Icon files
 FF_CUR=Cursor files
@@ -90,6 +94,12 @@ FF_GIF=Graphics Interchange Format
 FF_TIFF=Tagged Image File Format
 FF_JPEG_2000=JPEG 2000 files
 FF_PCX=PCX files
+FF_TGA=Truevision TGA
+FF_PBM=Portable BitMap (1-bit)
+FF_PGM=Portable GrayMap (8-bit)
+FF_PNM=Portable AnyMap (24-bit)
+FF_PPM=Portable PixMap (24-bit)
+FF_WEBP=WebP
 FF_SVG=Scalable Vector Graphics
 FF_EXEC=All executable files and icon libraries
 FF_ICL=Icon libraries
@@ -556,7 +566,7 @@ HINT_CP_HTML=HTML code
 HINT_CP_WCP=Color picker dialog
 
 HINT_DOC_LB=List of pages (icon formats/frames)
-HINT_DOC_LB_PAGE=Page %d, size: %d x %d pixels
+HINT_DOC_LB_PAGE=Page %s, size: %d x %d pixels
 HINT_DOC_LB_DPI=%g DPI
 HINT_DOC_LB_DOC_DPI=%g DPI (global DPI)
 HINT_DOC_LB_PNG=will be PNG-compressed when saving document as .ICO/.CUR
@@ -576,5 +586,7 @@ HINT_TEXT_FACE=Font face
 HINT_TEXT_BOLD=Bold
 HINT_TEXT_ITALIC=Italic
 HINT_TEXT_UNDERLINE=Underline
+
+HELP_FORMULAE=Available variables/constants: ${vars}<br>Available operations: ${ops}<br>Example expression: ${example}
 
 ; eof

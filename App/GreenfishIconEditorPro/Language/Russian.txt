@@ -468,7 +468,7 @@ HINT_CP_HTML=HTML Код
 HINT_CP_WCP=Цветоподборщик Windows
 
 HINT_DOC_LB=Список страниц (форматы значков/кадры)
-HINT_DOC_LB_PAGE=Страница %d, размер: %d x %d пикселов
+HINT_DOC_LB_PAGE=Страница %s, размер: %d x %d пикселов
 HINT_DOC_LB_PNG=будет PNG-сжата при сохранении документа как .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Масштаб
 HINT_DOC_NODES=%d узлов

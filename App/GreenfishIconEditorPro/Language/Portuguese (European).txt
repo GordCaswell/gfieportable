@@ -485,7 +485,7 @@ HINT_CP_HTML=Código HTML
 HINT_CP_WCP=Pipeta do Windows
 
 HINT_DOC_LB=Lista de páginas (formatos/molduras de ícones)
-HINT_DOC_LB_PAGE=Página %d, tamanho: %d x %d pixels
+HINT_DOC_LB_PAGE=Página %s, tamanho: %d x %d pixels
 HINT_DOC_LB_PNG=será usada compressão PNGao gravar o documento como .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Ampliação
 HINT_DOC_NODES=%d nós

@@ -347,7 +347,7 @@ HINT_CP_HTML=HTML kod
 HINT_CP_WCP=Windows Odabirač Boja
 
 HINT_DOC_LB=Lista stranica (formati ikona/sličice)
-HINT_DOC_LB_PAGE=Stranica %d, veličina: %d x %d piksela
+HINT_DOC_LB_PAGE=Stranica %s, veličina: %d x %d piksela
 HINT_DOC_LB_PNG=Bit će PNG-kompresiran kod cuvanja dokumenta kao .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Povećanje
 HINT_DOC_NODES=%d čvorova

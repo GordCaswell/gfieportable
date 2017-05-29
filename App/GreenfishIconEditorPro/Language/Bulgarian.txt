@@ -491,7 +491,7 @@ HINT_CP_HTML=HTML Код
 HINT_CP_WCP=Цветен показалец на Windows
 
 HINT_DOC_LB=Списък на страниците (формати икони/кадри)
-HINT_DOC_LB_PAGE=Страница %d, размер: %d x %d пиксела
+HINT_DOC_LB_PAGE=Страница %s, размер: %d x %d пиксела
 HINT_DOC_LB_PNG=PNG ще бъде компресиран при запис на документа като .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Мащаб
 HINT_DOC_NODES=%d възела

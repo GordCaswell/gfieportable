@@ -485,7 +485,7 @@ HINT_CP_HTML=HTML-code
 HINT_CP_WCP=Windows kleuren selectie tool
 
 HINT_DOC_LB=Lijst van pagina's (icon formaten/frames)
-HINT_DOC_LB_PAGE=Pagina %d, grootte: %d x %d pixels
+HINT_DOC_LB_PAGE=Pagina %s, grootte: %d x %d pixels
 HINT_DOC_LB_PNG=zal PNG-compressie gebruiken bij op opslaan als .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Zoomen
 HINT_DOC_NODES=%d nodes

@@ -544,7 +544,7 @@ HINT_CP_HTML=HTML-код
 HINT_CP_WCP=Ділог вибору кольору
 
 HINT_DOC_LB=Список сторінок (формати/рамки іконок)
-HINT_DOC_LB_PAGE=Сторінка %d, розмір: %d x %d пікселів
+HINT_DOC_LB_PAGE=Сторінка %s, розмір: %d x %d пікселів
 HINT_DOC_LB_DPI=%g DPI
 HINT_DOC_LB_DOC_DPI=%g DPI (глобальний DPI)
 HINT_DOC_LB_PNG=буде стискання PNG, при збережені документу як .ICO/.CUR

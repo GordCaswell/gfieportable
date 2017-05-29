@@ -1,9 +1,8 @@
 ﻿; Greenfish Icon Editor Pro
 ; Language pack: Swedish
 ; Translator: Åke Engelbrektson
-; Translator Contact: eson@svenskasprakfiler.se
 ; Translator URL: https://svenskasprakfiler.se
-; Last Updated: 24 Mar 2016
+; Last Updated: 14 Apr 2016
 
 ; General dictionary
 LABEL_WIDTH=Bredd
@@ -263,6 +262,14 @@ MI_RUN=Kör
 MI_RUN_RUN=Kör
 MI_RUN_STOP=Stopp
 
+MI_TAB_CLOSE=Stäng
+MI_TAB_CLOSE_OTHERS=Stäng alla andra flikar
+MI_TAB_COPY_FULL_PATH=Kopiera fullständig sökväg till Urklipp
+MI_TAB_COPY_FILENAME=Kopiera filnamn till Urklipp
+MI_TAB_COPY_FOLDER=Kopiera mapp till Urklipp
+MI_TAB_OPEN_FOLDER=Öppna målmapp
+MI_TAB_OPEN_FOLDER_CMD=Öppna målmapp i kommandotolken
+
 ; Pixel Format to String
 PF_1_BIT=1-bit
 PF_16_COLORS=16 färger
@@ -445,6 +452,10 @@ PRINT_PAGES=Skriv ut
 PRINT_PAGES_BUTTONS=Alla bildsidor<br>Aktuell bildsida
 
 ; Resource properties dialog
+RP_TYPE=Typ
+RES_TYPE_ICON=Ikon
+RES_TYPE_CURSOR=Pekare
+RES_TYPE_BITMAP=Bitmap
 RP_NAME=Namn
 RP_LANGUAGE=Språk
 RP_LANG_CUSTOM=Språk-ID
@@ -547,7 +558,7 @@ HINT_CP_HTML=HTML-kod
 HINT_CP_WCP=Windows färgväljare
 
 HINT_DOC_LB=Sidlista (ikon format/bildrutor)
-HINT_DOC_LB_PAGE=Bildsida %d, storlek: %d x %d pixel
+HINT_DOC_LB_PAGE=Bildsida %s, storlek: %d x %d pixel
 HINT_DOC_LB_DPI=%g DPI
 HINT_DOC_LB_DOC_DPI=%g DPI (Global DPI)
 HINT_DOC_LB_PNG=kommer att PNG-komprimeras när dokumentet sparas som .ICO/.CUR

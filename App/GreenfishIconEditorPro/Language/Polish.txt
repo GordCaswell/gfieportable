@@ -6,11 +6,15 @@
 LABEL_WIDTH=Szerokość
 LABEL_HEIGHT=Wysokość
 LABEL_SIZE=Rozmiar
+LABEL_DPI=DPI
+LABEL_PIXELS_SHORT=px
 LABEL_COLOR=Kolor
 LABEL_KIND=Rodzaj
-LABEL_ANTIALIAS=Wygładzanie
+LABEL_ANTIALIAS=Antyalias
 LABEL_POSITION=Pozycja
 LABEL_FILE_SIZE=Rozmiar pliku
+LABEL_REDRAW=Przerysuj
+LABEL_REFRESH=Odśwież
 UNTITLED=Bez tytułu
 
 ; Buttons
@@ -34,6 +38,7 @@ B_COMPILE=Kompiluj
 MSG_CONFIRMATION=Potwierdzenie
 MSG_NOT_EXIST="%s" nie istnieje
 MSG_OVERWRITE=Czy chcesz nadpisać "%s"?
+MSG_OVERWRITE_MULTIPLE=Czy chcesz nadpisać poszczególne pliki?
 MSG_UNKNOWN_FILE_TYPE=Format pliku "%s" nie może być określony automatycznie.<br>Ten plik nie może być załadowany lub zapisany przez Greenfish Icon Editor Pro lub ma złe rozszerzenie.
 MSG_INVALID_FILE_FORMAT=Plik "%s" nie spełnia formatu "%s".<br>Plik może być uszkodzony, może mieć złe rozszerzenie, lub nieprawidłowy filtr został zastosowany w oknie Otwórz.
 MSG_CROPPED=Obraz był większy niż %dx%d i został przycięty.<br>Zapisanie obrazu spowoduje utratę danych.<br>Wybierz Ustawienia|Preferencje aby zwiększyć rozmiar obrazu.
@@ -48,7 +53,13 @@ MSG_DL_SIZE_256=Ten format nie obsługuje obrazów większych niż 256x256.<br>O
 MSG_DL_TRANSPARENCY=Ten format plików nie obsługuje przezroczystości.
 MSG_DL_COLOR_DEPTH=Części informacji o kolorze nie udało się zapisać.
 MSG_DL_ICNS=Niektóre strony nie mogą zostać zapisane (ograniczenie formatu ICNS). Sprawdź plik pomocy aby uzyskać więcej informacji.
+MSG_DL_ERROR=Nieznany błąd podczas próby zapisu.<br>Dokument nie może być zachowany.
 MSG_FT_NO_OPTIONS=Wybrany format pliku nie może zostać zmodyfikowany.
+MSG_EXPORT_ANDROID_ERROR=Podpowiedź: Dokument prawdopodobnie nie jest multi-DPI Android drawable. Możesz stworzyć grafikę dla Androida używając polecenia Ikona|Stwórz grafikę Android z obrazu.
+MSG_EXPORT_ANDROID_NO_TITLE=Proszę, ustaw tytuł dokumentu żądanego w identyfikatorze zasobów Androida. (Zobacz Plik|Metadane)
+MSG_EXPORT_ANDROID_NO_DPI=Wartość DPI musi wynoscić %s dla wszystkich stron.
+MSG_EXPORT_ANDROID_SELECT_FOLDER=Wybierz katalog zasobów dla projektu Android
+MSG_EXPORT_ANDROID_INVALID_RES_FOLDER=Zły katalog zasobów Androida. Wybierz folder, któryego podkatalogi mają właściwość "drawable".
 MSG_ADD_FILES=Proszę dodać kilka plików do listy
 MSG_SELECT_PAGES=Proszę wybrać kilka stron
 MSG_SELECT_ITEMS=Proszę wybrać kilka pozycji
@@ -60,6 +71,9 @@ MSG_PAGE_SIZE_0=Błąd: szerokość strony nie może wynosić 0 mm.<br>Wybierz i
 MSG_ERROR_ASSOC=Skojarzenia plików nie można było ustawić. Uruchomienie GFIE na koncie administratora może rozwiązać ten problem.
 MSG_FAIL_SINGLE_OPEN=Nie można wczytać wybranego pliku.
 MSG_FAIL_MULTIPLE_OPEN=Niektóre pliki nie mogą być otworzone.
+MSG_PROGRAM_NEEDED=%s wymagane do przetwarzania pliku %s.<br>Proszę upewnij się, że wymagane komponenty są zainstalowane prawidłowo.
+MSG_ERROR_NO_TEXTURE_COORDS=Błąd: nie znaleziono współrzędnych tekstur w wybranym obiekcie 3d.
+MSG_ERROR_FILTER_OPAQUE=Ten filtr nie ma zastosowania dla w pełni nie przejrzystych obrazów. Obraz potrzebuje przezroczystych fragmentów dla pracy filtra.
 
 ; Open/Save dialog filters
 FF_ALL=Zapisz wszystkie pliki
@@ -73,11 +87,15 @@ FF_XPM=X-Pixmaps
 FF_BMP=Bitmapy systemu Windows
 FF_JPEG=Pliki JPEG
 FF_GIF=Format wymiany grafiki (GIF)
+FF_TIFF=Pliki formatu TIFF
 FF_JPEG_2000=Pliki formatu JPEG 2000
 FF_PCX=Pliki PCX
+FF_SVG=Pliki grafiki wektorowej (SVG)
 FF_EXEC=Wszystkie pliki wykonywalne oraz pliki bibliotek ikon
 FF_ICL=Biblioteka ikon
 FF_RES=Plik z zasobami Win32
+FF_PAS=Pliki źródłowe Pascala
+FF_OBJ_3D=Pliki typu Wavefront
 
 ; Tool names
 TOOL_SEL_RECT=Zaznaczenie prostokątne
@@ -114,14 +132,19 @@ MI_FILE=Plik
 MI_FILE_NEW_GRAPHIC=Nowa grafika
 MI_FILE_NEW_LIBRARY=Nowa biblioteka
 MI_FILE_OPEN=Otwórz
+MI_FILE_OPEN_SCRIPT=Otwórz skrypt
 MI_FILE_RECENT_FILES=Poprzednio używane
 MI_FILE_RF_CLEAR=Wyczyść listę
 MI_FILE_BATCH_CONVERT=Konwertuj wsadowo pliki
 MI_FILE_CLOSE=Zamknij
 MI_FILE_CLOSE_ALL=Zamknij wszystkie
 MI_FILE_SAVE=Zapisz
+MI_FILE_SAVE_SCRIPT=Zapisz skrypt
 MI_FILE_SAVE_AS=Zapisz jako
+MI_FILE_SAVE_SCRIPT_AS=Zapisz skrypt jako
+MI_FILE_SAVE_COPY=Zapisz kopię
 MI_FILE_SAVE_ALL=Zapisz wszystkie
+MI_FILE_EXPORT_ANDROID=Eksportuj Android drawable
 MI_FILE_REVERT=Odwróc
 MI_FILE_METADATA=Metadane
 MI_FILE_PRINT=Drukuj
@@ -189,6 +212,7 @@ MI_FLT_PAINT_CONTOUR=Malowanie kontury
 MI_FLT_DROP_SHADOW=Cień
 MI_FLT_GLOW=Rozjaśnienie
 MI_FLT_BEVEL=Skos
+MI_FLT_SCRIPTING=Skrypty
 
 MI_LAYERS=Warstwy
 MI_LAYERS_NEW=Nowa warstwa
@@ -210,6 +234,8 @@ MI_ICON_PAGE_EXPORT_ALL=Eksportuj wszystkie strony
 MI_ICON_UNIFORM_RATE=Zatwierdź ilość klatek do wszystkich ramek
 MI_ICON_CREATE_WIN=Tworzenie z obrazu ikony dla Windows
 MI_ICON_CREATE_MAC=Tworzenie z obrazu ikony dla Maca
+MI_ICON_CREATE_ANDROID=Stwórz grafikę Androida z obrazu
+
 MI_ICON_TEST=Test
 
 MI_LIB=Biblioteka
@@ -230,6 +256,11 @@ MI_HELP_HOMEPAGE=Strona domowa
 MI_HELP_SUPPORT=Pomoc online
 MI_HELP_DONATE=Wsparcie
 MI_HELP_ABOUT=O programie
+
+MI_RUN=Uruchom
+MI_RUN_RUN=Uruchom
+MI_RUN_STOP=Stop
+
 
 ; Pixel Format to String
 PF_1_BIT=1-bit
@@ -273,8 +304,9 @@ PG_CR_256_MAC=256 kolorów (paleta Mac)
 PG_CR_24=24-bity RGB
 PG_CR_32=Bez redukcji (32-bity)
 
-PG_ANIMATION=Gdy zapisuję jako animację
+PG_OTHER=Inny
 PG_FRAME_RATE=Częstotliwość klatek (milisekundy)
+PG_DPI=DPI strony (0 = użyj DPI dokumentu)
 
 PG_CREATE_FROM_SELECTED=Utwórz z wybranej strony
 PG_WHEN_RESIZING=Jeśli zmiana rozmiaru
@@ -328,6 +360,14 @@ CG_OFFSET=Offset
 
 ; Create icon from image dialog
 CI_SELECT_FORMATS=Wybierz formaty, które chcesz utworzyć
+; Create Android drawable from image dialog
+CAI_ID=Android resource identifier
+CAI_CURRENT_DPI=Current DPI
+CAI_RESOLUTIONS=Resolutions to create
+CAI_CREATE_DPI=Create %s version
+CAI_ERROR_EMPTY_ID=Please enter a resource identifier.
+CAI_ERROR_NO_RESOLUTIONS=Please select at least one resolution.
+
 
 ; ICL format dialog
 IF_TITLE=Wybór formatu ICL
@@ -375,6 +415,7 @@ MD_COPYRIGHT=Copyright
 MD_COMMENTS=Komentarze
 MD_QUALITY=Zapisz w jakości
 MD_LOOP_COUNT=Liczba powtórzeń (0 = nieskończ.)
+MD_DPI=DPI globalne (0 = niezdefiniowane)
 
 ; Preferences dialog
 PREF_MISC=Różne
@@ -412,6 +453,16 @@ RP_LANG_NEUTRAL=Język neutralny
 SO_TITLE=Opcje zapisu
 SO_QUALITY=Jakość
 SO_LOSSLESS=Bezstratny
+; Scripting dialog
+SC_TITLE=Skrypty GFIE
+SC_RUNNING=Uruchomione
+SC_CONSOLE=Konsola
+SC_COMPILING_SCRIPT=Kompilowanie skryptu...
+SC_COMPILED=Skrypt skompilowany poprawnie!
+SC_COMPILE_FAILED=Błąd kompilacji!
+SC_RUNNING_SCRIPT=Uruchamianie skryptu...
+SC_TERMINATED=Skrypt przerwany.
+SC_WARNING=Skrypty mogą spowodować nieprawidłowe działanie GFIE, dostęp do Twojego twardego dysku, dostęp do Internetu, oraz wiele więcej ... 
 
 ; Startup screen
 ST_WELCOME=Witaj!
@@ -428,9 +479,19 @@ ST_NONE=Nie wykonuj żadnej akcji
 ST_NONE_INFO=Zamknij okno startowe
 ST_RECENT_INFO=Otwórz ostatnio edytowany plik
 ST_SHOW=Zawsze pokazuj to okno przy starcie programu
+; SVG open options dialog
+SOO_SVG_OPTIONS=Opcje SVG
+SOO_DEFAULT_SIZE=Domyślny rozmiar: %g x %g
+SOO_SCALE_FACTOR=Współczynnik skalowania
 
 ; Test dialog
 LABEL_MOVE_OVER_IMAGE=Przesuń kursor nad obraz poniżej
+TS_CURSOR=Kursor
+TS_9PATCH=9-ścieżek (przycisk Android)
+TS_TEXTURE_3D=Tekstura 3D
+TS_TEXTURE_MULTIPLIER=Mnożnik tekstury
+TS_NOT_9PATCH=Ten obraz nie może być zinterpretowany jako 9-ścieżkowy obraz.
+
 
 ; Insert Text dialog
 CAPTION_INSERT_TEXT=Wstaw text
@@ -461,7 +522,7 @@ TB_MODE_COLOR=Tryb koloru
 TB_MODE_TRANSPARENCY=Tryb przezroczystości
 
 ; Transform Selection dialog
-XF_UNITS_ITEMS=pixels<br>%
+XF_UNITS_ITEMS=Piksele<br>%
 
 ; Hints
 HINT_COMPACT=Widok kompaktowy
@@ -485,6 +546,8 @@ HINT_CP_WCP=Próbnik kolorów systemu Windows
 
 HINT_DOC_LB=Lista stron (format ikon/ramek)
 HINT_DOC_LB_PAGE=Strona %d, rozmiar: %d x %d pikseli
+HINT_DOC_LB_DPI=%g DPI
+HINT_DOC_LB_DOC_DPI=%g DPI (globalne DPI)
 HINT_DOC_LB_PNG=kompresja PNG w czasie zapisu dokumentu jako .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Powiększenie
 HINT_DOC_NODES=%d węzłów
@@ -495,6 +558,8 @@ HINT_RES_FOLDER=Proszę wybrać folder dla wypakowanych plików
 HINT_STARTUP_HELP=Pomoc
 HINT_TEST_BGR_LOAD=Załadowanie tła
 HINT_TEST_BGR_DEFAULT=Tło podstawowe
+HINT_TEST_OBJ_LOAD=Ładuj obiekt 3D
+HINT_TEST_LIGHTING=Podświetlenie
 
 HINT_TEXT_FACE=Krój czcionki
 HINT_TEXT_BOLD=Pogrubienie

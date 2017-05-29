@@ -482,7 +482,7 @@ HINT_CP_HTML=HTML-kode
 HINT_CP_WCP=Windows fargevelger
 
 HINT_DOC_LB=Liste med sider (ikon formater/rammer)
-HINT_DOC_LB_PAGE=Side %d, størrelse: %d x %d bildepunkter
+HINT_DOC_LB_PAGE=Side %s, størrelse: %d x %d bildepunkter
 HINT_DOC_LB_PNG=vil bli PNG-komprimert når dokumentet lagres som .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Zoom
 HINT_DOC_NODES=%d noder

@@ -485,7 +485,7 @@ HINT_CP_HTML=HTML-koodi
 HINT_CP_WCP=Windows värinvalitsija
 
 HINT_DOC_LB=Luettelo sivuista  (kuvake muodot/kehykset)
-HINT_DOC_LB_PAGE=Sivu  %d, koko: %d x %d pikseliä
+HINT_DOC_LB_PAGE=Sivu  %s, koko: %d x %d pikseliä
 HINT_DOC_LB_PNG=tallennettaessa .ICO/.CUR formaattiin, käytetään PNG pakkausta
 HINT_DOC_ZOOM_MENU=Zoomaus
 HINT_DOC_NODES=%d solmua

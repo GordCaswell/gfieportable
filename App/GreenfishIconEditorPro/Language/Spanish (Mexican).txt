@@ -423,7 +423,7 @@ HINT_CP_HTML=Código HTML
 HINT_CP_WCP=Selector de color de Windows
 
 HINT_DOC_LB=Lista de páginas (formato de iconos/cuadros)
-HINT_DOC_LB_PAGE=Página %d, tamaño: %d x %d pixeles
+HINT_DOC_LB_PAGE=Página %s, tamaño: %d x %d pixeles
 HINT_DOC_LB_PNG=se comprimirá con compresión PNG al grabar como .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Zoom
 HINT_DOC_NODES=%d nodos

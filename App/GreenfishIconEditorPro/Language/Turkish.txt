@@ -484,7 +484,7 @@ HINT_CP_HTML=HTML kodu
 HINT_CP_WCP=Windows Renk Seçicisi
 
 HINT_DOC_LB=List of pages (icon formats/frames)
-HINT_DOC_LB_PAGE=Page %d, size: %d x %d pixels
+HINT_DOC_LB_PAGE=Page %s, size: %d x %d pixels
 HINT_DOC_LB_PNG=will be PNG-compressed when saving document as .ICO/.CUR
 HINT_DOC_ZOOM_MENU=Yakınlaş
 HINT_DOC_NODES=%d nodes

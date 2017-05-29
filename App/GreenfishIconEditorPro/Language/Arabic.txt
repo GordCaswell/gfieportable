@@ -350,7 +350,7 @@ HINT_CP_HTML=HTML
 HINT_CP_WCP=منتقي الألوان ويندوز
 
 HINT_DOC_LB=قائمة الصفحات
-HINT_DOC_LB_PAGE=صفحة %d, قياس: %d x %d بكسل
+HINT_DOC_LB_PAGE=صفحة %s, قياس: %d x %d بكسل
 HINT_DOC_LB_PNG=.ICO/.CUR سيتم ضغط الملف ببنية اذا تم الحفظ ببنيةPNG
 HINT_DOC_ZOOM_MENU=تكبير
 HINT_DOC_NODES=%d عقد
